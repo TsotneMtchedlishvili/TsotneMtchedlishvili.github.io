@@ -78,7 +78,7 @@
 
 
 
-  .main_Div {
+  .info_Div {
     display: flex;
     justify-content: center;
     gap: 5vw;
@@ -137,7 +137,7 @@
      
     
       .global_Nav {
-        border: 1px solid rgb(182, 182, 182);
+        border: 2px solid rgb(182, 182, 182);
         border-radius: 90px;
         padding: 1vh;
         margin: 0 auto;
