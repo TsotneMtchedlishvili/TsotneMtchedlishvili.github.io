@@ -129,3 +129,45 @@
     color: rgb(255, 255, 255);
     transition: 200ms;
   }
+
+  /* Company Info*/
+
+.company_Info {
+
+    display: flex;
+    padding: 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+.company_Info h2 {
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+
+.about_Us {
+
+    display: flex;
+}
+
+.img_Resizer {
+
+    
+    max-height: 90vh;
+    min-width: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.text_Div {
+
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
