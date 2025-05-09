@@ -4,19 +4,7 @@
     padding: 0;
   }
 
-  .header_Logo {
 
-    width: 2vw;
-    height: 2vw;
-    max-width: 4vw;
-    max-height: 4vw;
-    border-radius:100%;
-    object-fit:cover;
-    transform: scale(1.35);
-    position: sticky;
-    top: 0;
-    
-  }
 
   .generic_Button {
 
@@ -64,6 +52,20 @@
     top: 10px;
     z-index: 5;
 
+  }
+
+  .header_Logo {
+
+    width: 2vw;
+    height: 2vw;
+    max-width: 4vw;
+    max-height: 4vw;
+    border-radius:100%;
+    object-fit:cover;
+    transform: scale(1.35);
+    position: sticky;
+    top: 0;
+    
   }
 
  
