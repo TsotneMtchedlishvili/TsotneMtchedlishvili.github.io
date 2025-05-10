@@ -114,7 +114,8 @@
   footer a {
 
     text-decoration: none;
-    color: rgb(83, 165, 76);
+    /* color: rgb(83, 165, 76); */
+    color: #00b2d6;
   }
 
   .footer_Div {
