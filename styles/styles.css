@@ -180,6 +180,12 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .tos {
+
+    display: flex;
+    gap: 25px;
+  }
+
   /* @media screen {
     
     header {
