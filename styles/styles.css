@@ -73,10 +73,10 @@
   .global_Nav {
     border: 1px solid rgba(170, 170, 170, 0.788);
     width: 700px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0.616);
     backdrop-filter: blur(10px);
     border-radius: 90px;
-    padding: 8px;
     flex-grow: 0.3;
     /* max-width: 80%; */
     margin: 0 auto;
@@ -93,17 +93,35 @@
     justify-content: space-around;
     min-width: fit-content;
     max-width: 100%;
+    height: 100%;
     align-items: center;
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
 
-  .nav_List a {
-
+  .nav_Link {
+    height: 100%;
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
+
+  .nav_List a {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    transition: 200ms;
+  }
+
+  .nav_Link:hover a{
+    cursor: pointer;
+    color: #00b2d6;
+  }
+ 
 
   /* footer */
 
