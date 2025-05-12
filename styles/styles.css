@@ -17,7 +17,6 @@
     font-weight: bold;
     background: #00b2d6;
     background: linear-gradient(220deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
-    
   }
 
   .generic_Button:hover {
@@ -25,7 +24,6 @@
     cursor: pointer;
     background: #00b2d6;
     background: linear-gradient(220deg, rgb(29, 165, 192) 8%, rgb(0, 91, 165) 98%);
-    transition: 500ms;
     
   }
 
@@ -34,14 +32,12 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content: start;
-    gap: 2.5vh;
+    align-items: center;
+    gap: 50px;
     /* background-image: url(https://media.istockphoto.com/id/1162898563/photo/chicago-urban-skyscrapers-usa.jpg?s=1024x1024&w=is&k=20&c=SPcplbsuxJeRrFnVi82OHSf8tvjayNEjDuyu67g5Zdw=); */
     background-color: black;
     background-size: cover;
     background-position: 100% 30%;
-    padding-bottom: 20px;
   }
 
   /* nav bar */
@@ -76,12 +72,12 @@
 
   .global_Nav {
     border: 1px solid rgba(170, 170, 170, 0.788);
-    width: 900px;
+    width: 700px;
     background-color: rgba(0, 0, 0, 0.616);
     backdrop-filter: blur(10px);
     border-radius: 90px;
-    height: 40px;
-
+    padding: 8px;
+    flex-grow: 0.3;
     /* max-width: 80%; */
     margin: 0 auto;
     position:fixed;
@@ -95,35 +91,18 @@
 
     display: flex;
     justify-content: space-around;
-    align-items: center;
     min-width: fit-content;
     max-width: 100%;
+    align-items: center;
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    height: 100%;
   }
 
   .nav_List a {
 
-    text-decoration-line: none;
+    text-decoration: none;
     color: rgb(255, 255, 255);
-  }
-
-  .nav_Link {
-
-    display: flex;
-    align-items: center;
-    height: 100%;
-    
-  }
-
-  .nav_Link:hover a{
-    color: #00b2d6;
-    text-shadow: 0px 0 100px #00b2d6 ;
-    transition: 400ms;
-    
-
   }
 
   /* footer */
@@ -137,14 +116,6 @@
     text-decoration: none;
     /* color: rgb(83, 165, 76); */
     color: #008ca8;
-  }
-
-  footer a:hover {
-
-    text-decoration: none;
-    /* color: rgb(83, 165, 76); */
-    color: #00b2d6;
-    transition: 200ms;
   }
 
   .footer_Div {
