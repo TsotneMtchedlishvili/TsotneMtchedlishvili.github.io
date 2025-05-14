@@ -19,16 +19,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://cdn.prod.website-files.com/6727558e5c774a0b63d63d12/67bb3e1f23b017da45589047_hero-bg.avif);
+    background-size: cover;
+    background-position: top;
+    background-color: rgba(0, 0, 0, 0.082);
+    background-attachment: fixed;
+    background-blend-mode:overlay;
 
-    background-color: black;
-
-    height: 50vh;
+    height: calc(100vh - 200px);
     padding: 150px;
 
     text-align: center;
+    text-shadow: 1px 1px 20px hsla(170, 30%, 8%, 0.829);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-weight: 900;
+    font-size: 48px;
 }
 
 h1 {
@@ -36,10 +42,10 @@ h1 {
     transform: translate(0, -50px);
 }
 
-h1 span{
+/* h1 span{
 
-    color: #00b7ff;
-}
+    color: #00afce;
+} */
 
 .services_List {
 
@@ -52,6 +58,7 @@ h1 span{
     align-items: center;
 
     border-top: 4px #00b7ff solid;
+    border-bottom: 4px #00b7ff solid;
 }
 
 .service_Container {
