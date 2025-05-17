@@ -1,0 +1,108 @@
+.accordion {
+
+    background-color: rgb(27, 27, 27);
+    color: #00b2d6;
+    cursor: pointer;
+    height: 55px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    overflow: hidden;
+    
+
+}
+
+
+.accordion.active {
+
+    animation: heightopen 400ms ease forwards;
+}
+
+.accordion.active .drop_Down_Button_Acc {
+
+    transition: all 400ms ease;
+    rotate: 180deg;
+}
+
+.accordion.disactive {
+
+    animation: heightclose 400ms ease forwards;
+}
+
+/* .active, .accordion:hover {
+    background-color: rgb(20, 20, 20);
+  } */
+
+  .accordion_Q {
+
+    -webkit-user-select: none; /* Safari */
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 18px;
+    padding-right: 10px;
+  }
+
+  .drop_Down_Button_Acc {
+
+    height: 30px;
+    width: 30px;
+    background-image: url(../Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg);
+    background-size: cover;
+    transition: all 400ms ease;
+  }
+
+  .panel {
+
+
+    height: calc(100% - 55px);
+  }
+
+  .hidden {
+
+    display: none;
+  }
+
+  @keyframes heightopen {
+
+    from {
+    height: 55px;
+    
+    }
+    
+    to {
+    height: 200px;
+    
+    }
+}
+
+@keyframes heightclose {
+
+    from {
+    height: 200px;
+    
+    }
+    
+    to {
+    height: 55px;
+    
+    }
+}
+
+@keyframes buttonRotate {
+
+    from {
+    rotate: 0deg;
+    
+    }
+    
+    to {
+    rotate: 180deg;
+    
+    }
+}
