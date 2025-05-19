@@ -12,9 +12,7 @@
   }
 
 
-  a:hover {
-    color: #00b2d6;
-  }
+  
 
   .generic_Button {
 
@@ -146,6 +144,14 @@
     text-decoration: none;
     /* color: rgb(83, 165, 76); */
     color: #008ca8;
+    transition: all 150ms ease;
+  }
+
+  footer a:hover {
+
+    
+    color: #00b2d6;
+    
   }
 
   .footer_Div {
