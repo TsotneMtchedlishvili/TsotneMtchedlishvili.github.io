@@ -1,0 +1,20 @@
+.slide_Up {
+
+    animation: intromove 300ms ease-in-out forwards;
+}
+
+@keyframes intromove {
+
+    from {
+    transform: translateY(100px);
+    
+    }
+    
+    to {
+        transform: translate(0px);
+    
+    }
+}
+
+
+
