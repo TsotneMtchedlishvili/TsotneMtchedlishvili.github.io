@@ -2,6 +2,7 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background-color: black;
 }
 
 .about_Banner {
@@ -470,7 +471,278 @@ h1 {
 
 }
 
-/* Accordion */
+/* Why Choose Us Section */
+
+.why_Choose_Us_Section {
+
+    /* background-color: rgb(12, 12, 12); */
+    background-color: rgb(24, 24, 24);
+    padding: 100px 0;
+}
+
+.why_Choose_Us_Section h2 {
+
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.why_Choose_Container {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 1200px;
+    height: 650px;
+    margin: 100px auto;
+    
+
+    border-radius: 30px;
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(https://img.freepik.com/premium-photo/black-architectural-design-skyscraper-dark-gray-background-highrise-geometric-building-futuristic3d-render_507676-1213.jpg);
+    background-position: bottom;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+
+    /* text-shadow: 0px 0px 15px black; */
+
+
+    overflow: hidden;
+}
+
+.backdrop_Styling {
+
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.backdrop_Styling > div > p {
+
+    /* background-color: rgba(192, 192, 192, 0.384); */
+    background-color: rgba(34, 34, 34, 0.384);
+    border-radius: 20px;
+
+    width: max-content;
+    display: inline-block;
+    padding: 8px  16px;
+    backdrop-filter: blur(12px)
+
+}
+
+.icon_Container {
+
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon_Container img {
+
+    height: 100%;
+    width: auto;
+}
+
+.why_Choose_Centerer {
+
+    display: flex;
+    align-items: center;
+
+    flex-grow: 1;
+
+}
+
+.why_Card_Container {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 700px));
+    grid-template-rows: minmax(auto, max-content);
+    row-gap: 20px;
+    column-gap: 20px;
+
+
+}
+
+.why_Choose_Card {
+
+    padding: 10px 0;
+    height: fit-content;
+    display: flex;
+    /* background-color: rgba(192, 192, 192, 0.384); */
+    background-color: rgba(34, 34, 34, 0.384);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+}
+
+.why_Choose_Heading {
+
+    font-size: 46px;
+}
+
+.why_Choose_Titiling {
+
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Getting Started */
+
+.getting_Started {
+    background-color: #0c0c0c;
+    padding: 100px;
+}
+
+.how_To_Start {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.how_To_Start h2 {
+
+    font-size: 36px;
+    margin-bottom: 3vh;
+}
+
+.how_To_Start > p{
+
+    font-size: 25px;
+    margin-bottom: 3vh;
+}
+
+.get_In_Touch {
+    
+
+}
+
+.steps_To_Reach_Us {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    list-style-type: none;
+
+}
+
+.step_Container {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    width: 900px;
+    
+    font-size: 25px;
+
+    background-color: rgb(24, 24, 24);
+}
+
+.step_Img_Wrapper {
+
+    padding: 10px;
+    background-color: #0c0c0c;
+    border-radius: 15px;
+}
+
+/* conclusion */
+
+.get_In_Touch {
+
+    padding: 100px 0;
+}
+
+.conclusion_Container {
+
+    height: 700px;
+    width: 100%;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.quote_Container {
+    display: flex;
+    max-height: 100%;
+    width: 1200px;
+    justify-content: center;
+    gap: 60px;
+}
+
+.conclusion_Img_Wrapper {
+
+    height: 600px;
+    width: 600px;
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    overflow: hidden;
+}
+
+.img_Quote {
+
+    height: 980px;
+    width: auto;
+}
+
+.conclusion_Desc_Positioner {
+
+    display: flex;
+    align-items: center;
+}
+
+.conc_Desc_Container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 700px;
+    height: 350px;
+    gap: 30px;
+    text-align: center;
+
+}
+
+.conc_Desc_Container h3 {
+
+    font-size: 46px;
+    margin-bottom: 10px;
+
+}
+
+.conc_Desc_Container p {
+
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.conc_Contact_Btn {
+
+    padding: 8px 16px;
+
+}
+
+/* Faq section */
 
 .faq_Section {
 
