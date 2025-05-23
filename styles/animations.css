@@ -17,4 +17,15 @@
 }
 
 
+@keyframes slideright {
 
+    from {
+        background-position-y: -200px;
+    
+    }
+    
+    to {
+        background-position-y: 0px;
+    
+    }
+}

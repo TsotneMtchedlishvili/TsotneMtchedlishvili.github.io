@@ -1,0 +1,72 @@
+.values_Grid {
+
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 100px;
+    gap: 40px 40px;
+    justify-content: center;
+    
+
+}
+
+.value_Card {
+    
+    
+    transition: all 200ms ease-in-out;
+}
+
+.value_Thumbnail {
+
+    background-color: rgb(62, 93, 105);
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    border: 0px solid #00b2d6;
+    transition: all 100ms ease;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+    
+}
+
+.value_Card:hover {
+
+    color: #00b2d6;
+    transform: scale(1.1);
+}
+
+.value_Card:hover > .value_Thumbnail {
+
+    
+    border: 3px solid #00b2d6;
+    
+}
+
+.value_Thumbnail img {
+
+    height: 100%;
+    opacity: 90%;
+    transition: all 400ms ease-in-out;
+
+
+}
+
+.value_Thumbnail:hover img {
+
+    opacity: 100%;
+
+
+}
+
+.values_Grid span {
+
+    margin-top: 20px;
+    font-size: 20px;
+    
+}

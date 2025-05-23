@@ -1,8 +1,8 @@
 const button = Array.from(document.querySelectorAll('.learn_More'));
 const thumbnail = Array.from(document.querySelectorAll('.thumbnail'));
 
-console.log(button);
-console.log(thumbnail);
+// console.log(button);
+// console.log(thumbnail);
 
 button.forEach((item) => {
     item.addEventListener('mouseenter', () => {

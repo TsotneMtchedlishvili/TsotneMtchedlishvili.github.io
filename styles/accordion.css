@@ -1,7 +1,7 @@
 .accordion {
 
     background-color: rgb(27, 27, 27);
-    color: #00b2d6;
+    color: #12bbf8;
     cursor: pointer;
     height: 55px;
     width: 100%;
@@ -61,6 +61,7 @@
 
 
     height: calc(100% - 55px);
+    padding: 20px;
   }
 
   .hidden {

@@ -45,7 +45,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -76,7 +76,7 @@ h1 {
 
 .contact_Card {
     background-color: rgb(27, 27, 27);
-    min-width: 300px;
+    width: 300px;
     height: 300px;
     padding: 20px;
     display: flex;
@@ -105,4 +105,124 @@ h1 {
 .contact_Desc_Wrapper{
 
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.learn_More_Container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto 0;
+
+}
+
+.learn_More_Page {
+
+    text-decoration: none;
+    color:#12bbf8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    transition: all 200ms ease;
+}
+
+.box-Left {
+
+    width: 50px;
+    height: 50px;
+}
+
+.arrow-Right {
+
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    /* background-color: #00b2d6; */
+    background-image: url("../Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-y: -200px;
+    
+    transform: rotate(-90deg);
+
+    
+
+
+}
+
+.learn_More_Page:hover {
+
+    
+    color:#46e0ff;
+    /* color: #00b2d6; */
+
+}
+
+.learn_More_Container:hover .arrow-Right{
+
+    
+
+    
+    animation: slideright 200ms ease forwards;
+    
+}
+
+
+
+/* faq section */
+
+.faq_Section {
+
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px;
+    
+
+}
+
+.faq_Section h2 {
+
+    font-size: 36px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.faq_Body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq_Grid {
+
+    display: grid;
+    grid-template-columns: repeat(2, 740px);
+    gap: 20px 50px;
+
+    width: 80vw;
+    padding: 50px auto;
+}
+
+.faq_Topic_Container {
+
+    border: none;
+    max-width: 100%;
+}
+
+.accordion_Container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     background-color: black;
+    
 }
 
 .about_Banner {
@@ -45,6 +50,7 @@ h1 {
     /* background-color: rgb(24, 24, 24); */
     background-color: rgb(34, 34, 34);
     
+    
 }
 
 .about_Local_Nav ul {
@@ -55,15 +61,17 @@ h1 {
     list-style: none;
     color: white;
     
+    
 }
 
 .subject_Link a {
 
-    color: #00b2d6;
+    color: #12bbf8;
     
     text-decoration: none;
     transition: all 200ms ease;
     font-size: 21px;
+    
 }
 
 .subject_Link a:hover {
@@ -394,7 +402,7 @@ h1 {
 
 .page_Description h3{
 
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .learn_More_Container {
@@ -458,17 +466,64 @@ h1 {
 
 /* vision */
 
-.company_Vision {
+.core_Values {
 
-    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.value_Titling {
+.values_Preface {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100px;
+
+}
+
+.values_Preface h3 {
 
     font-size: 30px;
-    text-align: center; 
 
+}
+
+.values_Preface > p {
+
+    font-size: 25px;
+
+}
+
+.values_List {
+
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.value_Container {
+
+    color: #00b2d6;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.value_Img_Cont {
+
+    background-color: rgb(21, 21, 21);
+    padding: 30px;
+    border-radius: 50%;
+    
 }
 
 /* Why Choose Us Section */
@@ -623,11 +678,6 @@ h1 {
 
     font-size: 25px;
     margin-bottom: 3vh;
-}
-
-.get_In_Touch {
-    
-
 }
 
 .steps_To_Reach_Us {
