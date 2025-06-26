@@ -1,4 +1,6 @@
-
+header {
+    background-color: black;
+}
 .titling_Container {
     text-align: center;
 }
@@ -14,7 +16,7 @@
 }
 
 h1 {
-    font-size: 48px;
+    font-size: clamp(2rem, 8vw + 0.5rem, 3rem);
     margin: 10px 0;
     margin-bottom: 20px;
 }
@@ -25,15 +27,15 @@ h1 {
     background: linear-gradient(90deg, rgb(34, 194, 226), rgb(0, 106, 192));
     background-clip: text;
     color: transparent;
-    font-size: 72px;
+    font-size: clamp(2.5rem, 12vw + 0.5rem, 4rem);
 }
 
 .titling_Desc {
     
     display: inline-block;
-    font-size: 24px;
+    font-size: clamp(0.5rem, 4vw + 0.3rem, 1.5rem);
     margin-bottom: 20px;
-    max-width: 60%;
+    max-width: 90%;
     margin: inherit auto;
 }
 
@@ -45,7 +47,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding: 3vh 0;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -53,9 +55,9 @@ h1 {
 .contact_Banner {
 
     border-radius: 20px;
-    height: 700px;
+    /* height: 700px; */
     width: 80vw;
-    padding: 40px;
+    padding: clamp(10px, 2vh, 40px);
     background-color: rgb(19, 19, 19);
 
     display: flex;
@@ -65,10 +67,10 @@ h1 {
 
 .contact_List {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 15%;
-    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: clamp(10px, 2vh, 200px);
     /* position: absolute;
     top: calc(100vh - 100px - (100vh - 700px)/2);
     transform: translateY(-50%); */
@@ -76,8 +78,8 @@ h1 {
 
 .contact_Card {
     background-color: rgb(27, 27, 27);
-    width: 300px;
-    height: 300px;
+    width: clamp(150px, 70vw, 350px);
+    height: clamp(min-content, 60vw, 350px);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -100,6 +102,11 @@ h1 {
     max-width: max-content;
     background-color: #20a5da62;
     border-radius: 50px;
+}
+
+.contact_desc {
+    font-size: clamp(0.5rem, 3vh, 1.5rem);
+    max-width: 65vw;
 }
 
 .contact_Desc_Wrapper{
@@ -127,7 +134,7 @@ h1 {
     text-decoration: none;
     color:#12bbf8;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: clamp(0.5rem, 7vw, 1.25rem);
     height: 50px;
     display: flex;
     align-items: center;
@@ -185,15 +192,15 @@ h1 {
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 100px;
+    padding: clamp(10px, 8vw, 100px);
     
 
 }
 
 .faq_Section h2 {
 
-    font-size: 36px;
-    margin: 100px auto;
+    font-size: clamp(1rem, 8vw, 2.25rem);
+    margin: clamp(10px, 10vh, 100px) auto;
     text-align: center;
 }
 
@@ -207,7 +214,7 @@ h1 {
 .faq_Grid {
 
     display: grid;
-    grid-template-columns: repeat(2, 740px);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px 50px;
 
     width: 80vw;
@@ -225,4 +232,239 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+
+
+@media (min-width: 1600px) {
+
+    .titling_Container {
+        text-align: center;
+    }
+    
+    .tag {
+    
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #20a5da62;
+        border-radius: 50px;
+        font-weight: 500;
+    
+    }
+    
+    h1 {
+        font-size: 48px;
+        margin: 10px 0;
+        margin-bottom: 20px;
+    }
+    
+    .titling_Container span {
+    
+        background: #00b2d6;
+        background: linear-gradient(90deg, rgb(34, 194, 226), rgb(0, 106, 192));
+        background-clip: text;
+        color: transparent;
+        font-size: 72px;
+    }
+    
+    .titling_Desc {
+        
+        display: inline-block;
+        font-size: 24px;
+        margin-bottom: 40px;
+        max-width: 60%;
+        margin: inherit auto;
+    }
+    
+    .contact_Banner_Container {
+    
+        min-height: calc(100vh - 100px);
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .contact_Banner {
+    
+        border-radius: 20px;
+        height: 700px;
+        width: 80vw;
+        padding: 40px;
+        background-color: rgb(19, 19, 19);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .contact_List {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 15%;
+        height: auto;
+        /* position: absolute;
+        top: calc(100vh - 100px - (100vh - 700px)/2);
+        transform: translateY(-50%); */
+    }
+    
+    .contact_Card {
+        background-color: rgb(27, 27, 27);
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    
+        border-radius: 20px;
+    }
+    
+    .contact_Icon_Wrapper img{
+    
+        margin: 0px;
+    }
+    
+    .contact_Icon_Wrapper {
+    
+        display: flex;
+        padding: 20px;
+        max-width: max-content;
+        background-color: #20a5da62;
+        border-radius: 50px;
+    }
+    
+    .contact_Desc_Wrapper{
+    
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .learn_More_Container {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto 0;
+    
+    }
+    
+    .learn_More_Page {
+    
+        text-decoration: none;
+        color:#12bbf8;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    
+        transition: all 200ms ease;
+    }
+    
+    .box-Left {
+    
+        width: 50px;
+        height: 50px;
+    }
+    
+    .arrow-Right {
+    
+        width: 50px;
+        height: 50px;
+        margin: auto 0;
+        /* background-color: #00b2d6; */
+        background-image: url("../Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg");
+        background-repeat: no-repeat;
+        background-size: 50px;
+        background-position-y: -200px;
+        
+        transform: rotate(-90deg);
+    
+        
+    
+    
+    }
+    
+    .learn_More_Page:hover {
+    
+        
+        color:#46e0ff;
+        /* color: #00b2d6; */
+    
+    }
+    
+    .learn_More_Container:hover .arrow-Right{
+    
+        
+    
+        
+        animation: slideright 200ms ease forwards;
+        
+    }
+    
+    
+    
+    /* faq section */
+    
+    .faq_Section {
+    
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 100px;
+        
+    
+    }
+    
+    .faq_Section h2 {
+    
+        font-size: 36px;
+        margin: 100px auto;
+        text-align: center;
+    }
+    
+    .faq_Body {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .faq_Grid {
+    
+        display: grid;
+        grid-template-columns: repeat(2, 740px);
+        gap: 20px 50px;
+    
+        width: 80vw;
+        padding: 50px auto;
+    }
+    
+    .faq_Topic_Container {
+    
+        border: none;
+        max-width: 100%;
+    }
+    
+    .accordion_Container {
+    
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
 }

@@ -3,115 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>The Space</title>
 </head>
 <body>
-    <header>
+    <header class="home_Header">
         <div class="top_Panel">
-            <img class="header_Logo" src="https://imgs.search.brave.com/twBPsG6XksKU00jO-wNEYEeFnljSamzmzMjWP19bhSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmRlc2lnbi5j/b20vYXNzZXQvbG9n/by8wZDI1ODU2Ny0y/MzM0LTQ4MTEtOTRm/Zi0wOGY3NzhkNTli/YzcvbG9nby1zZWFy/Y2gtZ3JpZC0xeD9s/b2dvVGVtcGxhdGVW/ZXJzaW9uPTEmdj02/Mzg1MTE4NDAyOTE1/MDAwMDA" 
-            alt="The Space Renovations Logo" width="90px">
-            <nav class="global_Nav">
-                <ul class="nav_List">
-                    <li class="nav_Link"><a href="index.html">Home</a></li>
-                    <li class="nav_Link"><a href="pages/about.html">About Us</a></li>
-                    <li class="nav_Link"><a href="pages/projects.html">Products</a></li>
-                    <li class="nav_Link"><a href="pages/services.html">Services</a></li>
-                </ul>
-            </nav>
-            <button class="generic_Button"><a href="../pages/contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+
+            <div class="logo_And_Hamburger">
+                <img class="header_Logo" src="https://imgs.search.brave.com/twBPsG6XksKU00jO-wNEYEeFnljSamzmzMjWP19bhSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmRlc2lnbi5j/b20vYXNzZXQvbG9n/by8wZDI1ODU2Ny0y/MzM0LTQ4MTEtOTRm/Zi0wOGY3NzhkNTli/YzcvbG9nby1zZWFy/Y2gtZ3JpZC0xeD9s/b2dvVGVtcGxhdGVW/ZXJzaW9uPTEmdj02/Mzg1MTE4NDAyOTE1/MDAwMDA" 
+                alt="The Space Renovations Logo" width="90px">
+
+                <div class="navbarToggleBtn">
+                    <div class="hamburger_Line hl1"></div>
+                    <div class="hamburger_Line hl2">
+                        <div class="hl_Piece1"></div>
+                        <div class="hl_Piece2"></div>
+                    </div>
+                    <div class="hamburger_Line hl3"></div>
+                </div>
+            </div>
+
+            <div class="navbarContainer">
+                <nav class="global_Nav">
+                    <ul class="nav_List">
+                        <li class="nav_Link"><a href="index.html">Home</a></li>
+                        <li class="nav_Link"><a href="pages/projects.html">Projects</a></li>
+                        <li class="nav_Link"><a href="pages/services.html">Services</a></li>
+                        <li class="nav_Link"><a href="pages/about.html">Partners</a></li>
+                        <li class="nav_Link"><a href="pages/faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <button class="generic_Button"><a href="../pages/contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+            </div>
+
+            
         </div>
         
-        <div class="intro_Container">
-            <!-- <img src="" alt="" class="company_Image"> -->
-             <div class="intro_Left">
-                <h1 class="main_Title">Introducing <br><span id="tsr_Text">The Space Renovations</span></h1>
-                <p class="slogan">We make your dream home, your real home!</p>
-                <div class="intro_Description">
-                    <p>Explore a wide range of professional and personal development courses. Gain the skills you need to succeed in your career and thrive in life. Start learning today!</p>
-                    <button class="generic_Button"><a href="pages/about.html">Read More</a></button>
-                </div>
-             </div>
-             <div class="intro_Right">
-                <img src="https://imgs.search.brave.com/N5TCtvoVG3D-9zotey9Qiq5G-By73cfHuP0QB-HApts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE1/MDQ5MTgxNy9waG90/by9hcmNoaXRlY3Qt/bG9va2luZy1hdC1m/bG9vci1wbGFuLW9u/LWRlc2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9UOXZi/Vk0xalVmclNLcXd3/WG1scF9VZW9LY3VV/anhtcTdKenFtLXl1/V0k9" 
-            alt="" class="intro_Image" height="500" width="">
-             </div>
-        </div>
-        <div id="header_Image"></div>
+       
     </header>
     <main>
-        <div class="info_Div">
-            <section class="info_Card">
-                <h3 class="card_Title">Construction and Renovations Operations</h3>
-                <p class="card_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="read_More">Read More</button>
-            </section>
-            
-            <section class="info_Card">
-                <h3 class="card_Title">Construction and Renovations Operations</h3>
-                <p class="card_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="read_More">Read More</button>
-            </section>
+            <div class="intro_Home">
 
-            <section class="info_Card">
-                <h3 class="card_Title">Construction and Renovations Operations</h3>
-                <p class="card_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="read_More">Read More</button>
-            </section>
+                <div class="intro_Container">
+                    <!-- <img src="" alt="" class="company_Image"> -->
+                    <div class="intro_Left">
+                        <h1 class="main_Title"><span id="tsr_Text">The Space Renovations</span></h1>
+                        <p class="slogan">We make your dream home, your real home!</p>
+                        <div class="intro_Description">
+                            <p>Explore a wide range of professional and personal development courses. Gain the skills you need to succeed in your career and thrive in life. Start learning today!</p>
+                            <button class="generic_Button"><a href="pages/about.html">Read More</a></button>
+                        </div>
+                    </div>
+                    <div class="intro_Right">
+                        <img src="https://imgs.search.brave.com/N5TCtvoVG3D-9zotey9Qiq5G-By73cfHuP0QB-HApts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE1/MDQ5MTgxNy9waG90/by9hcmNoaXRlY3Qt/bG9va2luZy1hdC1m/bG9vci1wbGFuLW9u/LWRlc2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9UOXZi/Vk0xalVmclNLcXd3/WG1scF9VZW9LY3VV/anhtcTdKenFtLXl1/V0k9" 
+                    alt="" class="intro_Image" height="500" width="">
+                    </div>
+                </div>
+                <div id="header_Image"></div>
+        
+                
+            </div>
+        <div class="about_Local_Nav">
+            <ul>
+                <li class="subject_Link"><a href="#about_Wwr">Who We Are</a></li>
+                <li class="subject_Link"><a href="#about_Why_Us">Why Choose Us</a></li>
+                <li class="subject_Link"><a href="#about_How_To_Start">How To Get Started</a></li>
+                <li class="subject_Link"><a href="#about_Faq">FAQ</a></li>
+            </ul>
         </div>
-        <div class="company_Info">
-            <div class="about_Us">
-                <div class="img_Resizer">
-                    <img src="https://build-lab.ge/wp-content/uploads/2023/11/shutterstock_2124955106-copy-683x1024.webp" 
+
+        <section class="who_We_Are" id="about_Wwr">
+            <div class="wwa_Intro">
+                <div class="wwa_Img_Wrapper">
+                    <img src="https://thumbs.dreamstime.com/b/construction-team-business-man-engineer-architect-brainstorming-working-table-building-plan-195716147.jpg" 
                     alt="">
                 </div>
-                <div class="text_Div">
-                    <section><h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></section>
-                    <section><h2>Why Choose Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></section>
+                <div class="wwa_Info">
+                    <div class="who_We_Are_Text">
+                        <h2>Who We Are</h2>
+                        <p>
+                            At The Space, we transform ideas into beautifully crafted environments.
+                            We specialise in complete renovation services, thoughtful landscaping, and efficient property management — all delivered with precision, transparency, and care. Our team combines certified expertise with a personalised approach to ensure every project reflects your vision while meeting the highest standards. Whether it’s a cozy home, a functional commercial space, or a vibrant outdoor area, we handle every detail — from concept to completion.
+                        </p>
+                    </div>
+                    <div class="mini_Windows_Containers">
+                        <div class="mini_Window">
+                            <div class="mini_Img_Wrapper">
+                                <img src="../Images/Webpage/dart-mission-goal-success-svgrepo-com.svg" 
+                                alt="" height="80" width="auto">
+                            </div>
+                            <div class="mini_Description">
+                                <h3>Our Mission</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mini_Window">
+                            <div class="mini_Img_Wrapper">
+                                <img src="../Images/Webpage/eye-svgrepo-com.svg" 
+                                alt="" height="80" width="auto">
+                            </div>
+                            <div class="mini_Description">
+                                <h3>Our Vision</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="services_Section">
+               
+                <div class="service_Box">
+                    <div class="service_Text">
+                        <h3>What We Offer</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat.
+                        </p>
+                        <button class="generic_Button"><a href="services.html">Explore All Services</a></button>
+                    </div>
+                    <div class="service_Selection">
+                        <!-- Service Container Start -->
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/building-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Renovation Operations</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/construction-crane-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Construction Operations</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/farm-agriculture-hand-plant-grow-nature-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Landscaping</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/architect-blueprint-project-manager-plan-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Coordination with architects and designers</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/air-conditioner-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>HVAC systems installation</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/couch-solid-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Furniture Production Oversight</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/cleaning-clean-broom-housekeeping-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Cleaning Operations</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="service_Container">
+                            <div class="service_Img_Wrapper">
+                                <img src="../Images/Webpage/services_icons/logistics-delivery-cart-svgrepo-com.svg" 
+                                alt="" height="60">
+                            </div>
+                            <div class="service_Container_Desc">
+                                <h4>Purchase and Logistics of Building Material</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service_Info_Page">
+                        <div class="page_Contents">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="core_Values">
+                <div class="values_Preface">
+                    <h3>Our Values</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a gravida nunc. Morbi molestie fermentum feugiat. 
+                    </p>
+                </div>
+                <div class="values_List">
+                    <div class="value_Container">
+                        <div class="value_Img_Cont">
+                            <img src="../Images/Webpage/directory-love-favorite-1616-svgrepo-com.svg" 
+                            class="value_Image" alt="" height="80" width="auto">
+                        </div>
+                        <p>Value #1</p>
+                    </div>
+                    <div class="value_Container">
+                        <div class="value_Img_Cont">
+                            <img src="../Images/Webpage/directory-love-favorite-1616-svgrepo-com.svg" 
+                            class="value_Image" alt="" height="80" width="auto">
+                        </div>
+                        <p>Value #2</p>
+                    </div>
+                    <div class="value_Container">
+                        <div class="value_Img_Cont">
+                            <img src="../Images/Webpage/directory-love-favorite-1616-svgrepo-com.svg" 
+                            class="value_Image" alt="" height="80" width="auto">
+                        </div>
+                        <p>Value #3</p>
+                    </div>
+                    <div class="value_Container">
+                        <div class="value_Img_Cont">
+                            <img src="../Images/Webpage/directory-love-favorite-1616-svgrepo-com.svg" 
+                            class="value_Image" alt="" height="80" width="auto">
+                        </div>
+                        <p>Value #4</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="why_Choose_Us_Section" id="about_Why_Us">
+            <h2>Why Choose Us</h2>
+            <div class="why_Choose_Container">
+                <div class="backdrop_Styling">
+                    <div class="why_Choose_Titiling">
+                        <h3 class="why_Choose_Heading">
+                            The expertise you can trust!
+                        </h3>
+                    </div>
+    
+                    <div class="why_Choose_Centerer">
+                        <div class="why_Card_Container">
+    
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/complete-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        End-to-End Service
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        From planning to execution — we manage every detail so you don’t have to.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/price-tag-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        Transparent Costs
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        No hidden fees. Clear budgeting and honest pricing from day one.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/i-schedule-school-date-time-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        Strict Timelines
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        We deliver on time — every time. Your schedule is our priority.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/certificate-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        Certified Professionals
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        Work with trusted experts in renovation, landscaping, and property management.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/star-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        Tailored Approach
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        Every space is unique. We offer solutions designed specifically for your needs.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="why_Choose_Card">
+                                <div class="icon_Container">
+                                    <img src="../Images/Icons/whyChooseUs/certified-svgrepo-com.svg"
+                                     alt="" class="why_Choose_Icon" height="60" width="auto">
+                                </div>
+                                <div>
+                                    <h3 class="why_Choose_Desc_Title">
+                                        Satisfaction Guarantee
+                                    </h3>
+                                    <p class="why_Choose_Desc">
+                                        We don’t just finish projects — we build long-term satisfaction and trust.
+                                    </p>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+    
                 </div>
             </div>
-        </div>
-        <div class="guide_Section">
-            <h2>How We Work</h2>
-            <div class="guide_Graphics">
-                <div class="steps">
-                    <div class="icon_Wrapper"><img src="Images/Icons/call_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="icon_Step" 
-                        height="100" width="auto"></div>
-                    <p class="icon_Description">You call us</p>
-                </div>
-                <div class="steps">
-                    <div class="icon_Wrapper"><img src="Images/Icons/engineering_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="icon_Step" 
-                        height="100" width="auto"></div>
-                    <p class="icon_Description">Our Representative Arrives</p>
-                </div>
-                <div class="steps">
-                    <div class="icon_Wrapper"><img src="Images/Icons/request_quote_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="icon_Step"
-                    height="100" width="auto"> </div>
-                    <p class="icon_Description">We conduct fee estimations</p>
-                </div>
-                <div class="steps">
-                    <div class="icon_Wrapper"> <img src="Images/Icons/check_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="icon_Step" 
-                        height="100" width="auto"></div>
-                    <p class="icon_Description">We deliver the promised high quality results!</p>
-                </div>
-            </div>
-        </div>
-        <div class="concluding_Statement">
-            <div class="concluding_Text">
-                <h2>Our mission is to deliver a high quality renovation, construction, landscaping and property management services</h2>
+        </section>
+
+        <section class="getting_Started" id="about_How_To_Start">
+            <div class="how_To_Start">
+                <h2>Getting Started</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    We are excited to work with you! Here is how you can reach out to us:
                 </p>
-                <button class="generic_Button"><a href="../pages/contact.html" style="text-decoration: inherit; color: inherit;">Get in touch!</a></button>
+                <ol class="steps_To_Reach_Us">
+                    <li>
+                        <div class="step_Container">
+                            <div class="step_Img_Wrapper">
+                                <img src="../Images/Icons/call_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" 
+                                alt="" height="50" width="auto">
+                            </div>
+                            <div class="step_Description">
+                                <p>You contact us via email, phone, one of our social medias or by visiting our office!</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="step_Container">
+                            <div class="step_Img_Wrapper">
+                                <img src="../Images/Icons/engineering_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" 
+                                alt="" height="50" width="auto">
+                            </div>
+                            <div class="step_Description">
+                                <p>After we agree on the time that best suits you, our representative will arrive on scene.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="step_Container">
+                            <div class="step_Img_Wrapper">
+                                <img src="../Images/Icons/request_quote_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" 
+                                alt="" height="50" width="auto">
+                            </div>
+                            <div class="step_Description">
+                                <p>They will estimate the fee and give you a quote - for free!</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="step_Container">
+                            <div class="step_Img_Wrapper">
+                                <img src="../Images/Icons/check_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg" 
+                                alt="" height="50" width="auto">
+                            </div>
+                            <div class="step_Description">
+                                <p>And once the details are worked out, we complete your project from planning to execution.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ol>
             </div>
-            <div class="image_Wrapper">
-                <img src="https://cdn.prod.website-files.com/66be1e2c791627e193a54f36/66c674b457efef76a890415e_our-mission-image-landscaping-x-webflow-template.jpg"
-                 alt="">
+            <div class="get_In_Touch">
+                <div class="conclusion_Container">
+                    <div class="conclusion_Img_Wrapper">
+                        <img src="https://assets.website-files.com/64a43510ff5f1676dff15f9c/64a43eb8cc880e8ea152390b_REBUILD%20Webflow%20Template%20-%20buildings%20sky.jpeg"
+                         alt="" class="img_Quote" height="1000px" width="auto">
+                    </div>
+                    <div class="conclusion_Desc_Positioner">
+                        <div class="conc_Desc_Container">
+                            <h3>Ready to start your project? <br>Get a quote for free!</h3>
+                            <button class="generic_Button"><a href="contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer_Div">
@@ -157,5 +491,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/accordion.js"></script>
+    <script src="../js/about.js"></script>
+    <script src="../js/services_Script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
+
 </body>
 </html>

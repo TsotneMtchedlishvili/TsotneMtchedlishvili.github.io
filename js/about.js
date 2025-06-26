@@ -92,55 +92,231 @@ const serviceTextContent = {
                                 </div>`
 }
 
+const serviceBox = document.querySelector(".service_Box");
+const serviceText = document.querySelector(".service_Text")
 
 
-console.log(thePage);
+
+
 
 servicesList.forEach((item) => {
 
     item.addEventListener('click', () => {
 
         thePage.classList.remove("slide_Up");
-        
-        if (item.classList.contains("selected")) {
 
-            item.classList.remove("selected");
-            serviceInfoPage.classList.remove('service_Info_Page_Activate');
-            thePage.style.background = "transparent";
-            // for (const child of thePage.children) {
-            //     child.style.display = "none"
-            //   }
+        if (window.innerWidth < 1220) {
 
-            thePage.innerHTML = '';
-            
+            if (item.classList.contains("selected")) {
 
-        }
-        else if (!item.classList.contains("selected")) {
-
-            let selected = document.querySelector(".selected");
-            
-            if (selected) {
-
-                selected.classList.remove("selected");
+                item.classList.remove("selected");
+                serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                thePage.style.background = "transparent";
+                thePage.innerHTML = '';
                 
             }
-            
-            item.classList.add("selected");
-            serviceInfoPage.classList.add('service_Info_Page_Activate');
-            thePage.style.background = "rgb(24, 24, 24)";
+            else if (!item.classList.contains("selected")) {
+    
+                let selected = document.querySelector(".selected");
+                
+                if (selected) {
+    
+                    selected.classList.remove("selected");
+                    
+                }
+                
+                item.classList.add("selected");
+                serviceInfoPage.classList.add('service_Info_Page_Activate');
+                thePage.style.background = "rgb(24, 24, 24)";
+    
+                let topic = item.getElementsByTagName("h4").item(0).textContent;
+                thePage.innerHTML = serviceTextContent[topic];
+                thePage.classList.remove("slide_Up");
+                thePage.classList.add("slide_Up");
 
-            // for (const child of thePage.children) {
-            //     child.style.display = "flex"
-            //   }
 
-            let topic = item.getElementsByTagName("h4").item(0).textContent;
-            thePage.innerHTML = serviceTextContent[topic];
-            thePage.classList.remove("slide_Up")
-            thePage.classList.add("slide_Up")
-            
-            
+                const closeButton = document.createElement("div");
+
+                const closeButtonIcon = document.createElement("img");
+                closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
+                closeButtonIcon.height = 40;
+
+                closeButton.appendChild(closeButtonIcon);
+                closeButton.classList.add("closeBtn");
+                thePage.appendChild(closeButton);
+
+
+                closeButton.addEventListener('click', () => {
+                    item.classList.remove("selected");
+                    serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                    thePage.style.background = "transparent";
+                    if (backdrop) {
+                        backdrop.remove();
+                    }
+                    if (closeButton) {
+                        closeButton.remove();
+                    }
+                    thePage.innerHTML = '';
+                    document.body.style.overflow = "scroll";
+                    document.querySelector(".top_Panel").classList.remove("hidden");
+                });
+
+                const backdrop = document.createElement("div");
+                backdrop.classList.add("page_Background");
+                thePage.appendChild(backdrop);
+                document.body.style.overflow = "hidden"
+                 document.querySelector(".top_Panel").classList.add("hidden");
+
+                
+                
+                
+    
+            }
 
         }
+        else {
+
+            if (item.classList.contains("selected")) {
+
+                item.classList.remove("selected");
+                serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                thePage.style.background = "transparent";
+                // for (const child of thePage.children) {
+                //     child.style.display = "none"
+                //   }
+    
+                thePage.innerHTML = '';
+                
+                
+    
+            }
+            else if (!item.classList.contains("selected")) {
+    
+                let selected = document.querySelector(".selected");
+                
+                if (selected) {
+    
+                    selected.classList.remove("selected");
+                    
+                }
+                
+                item.classList.add("selected");
+                serviceInfoPage.classList.add('service_Info_Page_Activate');
+                thePage.style.background = "rgb(24, 24, 24)";
+    
+                // for (const child of thePage.children) {
+                //     child.style.display = "flex"
+                //   }
+    
+                let topic = item.getElementsByTagName("h4").item(0).textContent;
+                thePage.innerHTML = serviceTextContent[topic];
+                thePage.classList.remove("slide_Up");
+                thePage.classList.add("slide_Up");
+
+                
+                
+                
+    
+            }
+
+        }
+        
+        
         // serviceInfoPage.classList.add('service_Info_Page_Activate');
     })
-})  
+});
+
+    // console.log(serviceBox.clientWidth);
+    // console.log(serviceInfoPage.clientWidth);
+    // console.log(serviceText.clientWidth);
+    if (serviceBox) {
+        
+        if (window.innerWidth < 1220) {
+
+            serviceBox.style.marginLeft = `0px`;
+        }
+        else {
+            serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+        }
+    }
+
+    window.addEventListener("resize", () => {
+
+        if (serviceBox) {
+        
+        if (window.innerWidth < 1220) {
+
+            serviceBox.style.marginLeft = `0px`;
+            console.log(serviceInfoPage.clientHeight);
+
+            if(serviceInfoPage.clientHeight > 1) {
+                
+
+                if (!document.querySelector(".closeBtn")) {
+
+                    console.log("button Made")
+                    const closeButton = document.createElement("div");
+
+                    const closeButtonIcon = document.createElement("img");
+                    closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
+                    closeButtonIcon.height = 40;
+
+                    closeButton.appendChild(closeButtonIcon);
+                    closeButton.classList.add("closeBtn");
+                    thePage.appendChild(closeButton);
+
+
+                    closeButton.addEventListener('click', () => {
+                        const selected = document.querySelector(".selected");
+                        selected.classList.remove("selected");
+                        serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                        thePage.style.background = "transparent";
+                        thePage.innerHTML = '';
+                        document.body.style.overflow = "scroll";
+                        document.querySelector(".top_Panel").classList.remove("hidden");
+                        navbar.style.top = `${header.clientHeight / 2}px`;
+                    });
+
+                }
+
+                if(!document.querySelector(".page_Background")) {
+
+                    const backdrop = document.createElement("div");
+                    console.log("Backdrop Made");
+                    backdrop.classList.add("page_Background");
+                    thePage.appendChild(backdrop);
+                    document.body.style.overflow = "hidden";
+                    document.querySelector(".top_Panel").classList.add("hidden");
+                }
+
+
+
+            }
+        }
+        else {
+            serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+
+            if (serviceInfoPage.clientHeight > 1) {
+
+                console.log("x1")
+
+                    document.body.style.overflow = "scroll";
+                    document.querySelector(".top_Panel").classList.remove("hidden");
+            
+                    if (document.querySelector(".page_Background")){
+                        document.querySelector(".page_Background").remove();
+                        console.log("111")
+                    }
+
+                    if (document.querySelector(".closeBtn")){
+                        document.querySelector(".closeBtn").remove();
+                        console.log("222")
+                    }
+                
+
+            }
+        }
+    }
+    })
+    // console.log(serviceBox.style.marginLeft);
+

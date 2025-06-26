@@ -8,20 +8,40 @@
     <title>Services</title>
 </head>
 <body>
-    <header>
+    <header class="home_Header">
         <div class="top_Panel">
-            <img class="header_Logo" src="https://imgs.search.brave.com/twBPsG6XksKU00jO-wNEYEeFnljSamzmzMjWP19bhSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmRlc2lnbi5j/b20vYXNzZXQvbG9n/by8wZDI1ODU2Ny0y/MzM0LTQ4MTEtOTRm/Zi0wOGY3NzhkNTli/YzcvbG9nby1zZWFy/Y2gtZ3JpZC0xeD9s/b2dvVGVtcGxhdGVW/ZXJzaW9uPTEmdj02/Mzg1MTE4NDAyOTE1/MDAwMDA" 
-            alt="The Space Renovations Logo" width="90px">
-            <nav class="global_Nav">
-                <ul class="nav_List">
-                    <li class="nav_Link"><a href="../index.html">Home</a></li>
-                    <li class="nav_Link"><a href="about.html">About Us</a></li>
-                    <li class="nav_Link"><a href="projects.html">Products</a></li>
-                    <li class="nav_Link"><a href="services.html">Services</a></li>
-                </ul>
-            </nav>
-            <button class="generic_Button"><a href="../pages/contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+
+            <div class="logo_And_Hamburger">
+                <img class="header_Logo" src="https://imgs.search.brave.com/twBPsG6XksKU00jO-wNEYEeFnljSamzmzMjWP19bhSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmRlc2lnbi5j/b20vYXNzZXQvbG9n/by8wZDI1ODU2Ny0y/MzM0LTQ4MTEtOTRm/Zi0wOGY3NzhkNTli/YzcvbG9nby1zZWFy/Y2gtZ3JpZC0xeD9s/b2dvVGVtcGxhdGVW/ZXJzaW9uPTEmdj02/Mzg1MTE4NDAyOTE1/MDAwMDA" 
+                alt="The Space Renovations Logo" width="90px">
+
+                <div class="navbarToggleBtn">
+                    <div class="hamburger_Line hl1"></div>
+                    <div class="hamburger_Line hl2">
+                        <div class="hl_Piece1"></div>
+                        <div class="hl_Piece2"></div>
+                    </div>
+                    <div class="hamburger_Line hl3"></div>
+                </div>
+            </div>
+
+            <div class="navbarContainer">
+                <nav class="global_Nav">
+                    <ul class="nav_List">
+                        <li class="nav_Link"><a href="../index.html">Home</a></li>
+                        <li class="nav_Link"><a href="../pages/projects.html">Projects</a></li>
+                        <li class="nav_Link"><a href="../pages/services.html">Services</a></li>
+                        <li class="nav_Link"><a href="../pages/about.html">Partners</a></li>
+                        <li class="nav_Link"><a href="../pages/faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <button class="generic_Button"><a href="../pages/contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+            </div>
+
+            
         </div>
+        
+       
     </header>
 
     <main>
@@ -250,7 +270,7 @@
                     <div class="quote_Desc_Container">
                         <h2>Get a quote, for free!</h2>
                         <p>At The Space Renovations, we pride ourselves on delivering exceptional service and craftsmanship in every project we undertake. Whether you're envisioning a complete home renovation, transforming your outdoor space, or seeking reliable property management solutions, our dedicated team is here to help bring your vision to life.</p>
-                        <button class="generic_Button"><a href="contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
+                        <button class="generic_Button quote_Contact_Btn"><a href="contact.html" style="text-decoration: inherit; color: inherit;">Contact Us</a></button>
                     </div>
                 </div>
                 
@@ -305,4 +325,9 @@
     </footer>
 </body>
 <script src="../js/services_Script.js"></script>
+<script src="../js/accordion.js"></script>
+<script src="../js/about.js"></script>
+<script src="../js/services_Script.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/home.js"></script>
 </html>

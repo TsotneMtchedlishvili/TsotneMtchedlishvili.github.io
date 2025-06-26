@@ -1,27 +1,150 @@
-.values_Grid {
+
+header {
+
+    background-color: rgb(24, 24, 24);
+}
+
+
+.heading_Part {
+
+    height: 50vh;
+    min-height: 500px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_Span {
+
+    background: #00b2d6;
+    background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+    background-clip: text;
+    color: transparent;
+}
+
+.projects_Main_Heading {
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 13vw + 0.5rem, 4rem);
+    padding: 5vw;
+    text-align: center;
+}
+
+.nav_Filter {
+
+    background-color: rgb(16, 16, 16);
+    border-top: 2px solid #00b2d6;
+    padding: 10px 5vw;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.filter_Button {
+
+    padding: 2vw 5vw;
+    font-size: clamp(0.3rem, 5vw, 1rem);
+    color: #00b2d6;
+    border: 2px solid #00b2d6;
+    border-radius: clamp(10px, 2vw, 30px);
+    background-color: rgb(34, 34, 34);
+    transition: all 200ms ease; 
+}
+
+.filter_Button:hover {
+
+    padding: 2vw 5vw;
+    font-size: clamp(0.3rem, 5vw, 1rem);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: clamp(10px, 2vw, 30px);
+    background-color: #00b2d6;
+    cursor: pointer;
+}
+
+.filter_Element {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 100vw;
+    width: 90vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    border: 2px solid grey;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+
+}
+
+.category {
+
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+
+    transition: all 100ms ease;
+}
+
+.pressed {
+
+    color: #00b2d6;
+}
+
+.category:hover {
+
+    color: #00b2d6;
+    cursor: pointer;
+}
+
+.projects_Grid {
 
 
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    padding: 100px;
-    gap: 40px 40px;
+    grid-template-columns: repeat(auto-fit, clamp(250px,80vw, 400px));
+    padding: clamp(20px, 6vw, 80px);
+    gap: clamp(20px, 8vw, 60px);
+    margin: 0 auto;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 16, 16);
     
 
 }
 
-.value_Card {
+.project_Card {
     
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid transparent;
     transition: all 200ms ease-in-out;
+    width: clamp(250px,80vw, 400px);
+    height: clamp(250px,80vw, 400px);
+
 }
 
-.value_Thumbnail {
+.project_Link {
 
-    background-color: rgb(62, 93, 105);
-    height: 400px;
-    width: 300px;
-    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project_Thumbnail {
+
+    height: 70%;
+    /* width: 100%; */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
     overflow: hidden;
 
     border: 0px solid #00b2d6;
@@ -30,43 +153,78 @@
     display: flex;
     justify-content: center;
 
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    /* box-shadow: 0px 0px 20px rgb(0, 0, 0); */
 
     
 }
 
-.value_Card:hover {
+.project_Thumbnail img {
+
+    width: 100%;
+
+    
+}
+
+.project_Description {
+
+    background-color: rgb(37, 37, 37);
+    height: 30%;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    overflow: hidden;
+
+
+    transition: all 100ms ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.5rem, 6vw, 1.25rem);
+
+    /* box-shadow: 0px 0px 20px rgb(0, 0, 0); */
+
+    
+}
+
+.project_Info {
+
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project_Card:hover {
 
     color: #00b2d6;
     transform: scale(1.1);
 }
 
-.value_Card:hover > .value_Thumbnail {
+.project_Card:hover {
 
     
-    border: 3px solid #00b2d6;
+    border: 5px solid #00b2d6;
     
 }
 
-.value_Thumbnail img {
+.project_Thumbnail img {
 
     height: 100%;
-    opacity: 90%;
+
     transition: all 400ms ease-in-out;
 
 
 }
 
-.value_Thumbnail:hover img {
-
-    opacity: 100%;
 
 
-}
 
-.values_Grid span {
+/* .project_Description span {
 
     margin-top: 20px;
     font-size: 20px;
     
-}
+} */

@@ -4,52 +4,51 @@
     padding: 0;
   }
 
-  header {
+.intro_Home {
 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-
-  }
-
-/* Intro Section */
+  height: 100vh;
+  width: 100vw;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .intro_Container {
     background-color: rgb(19, 19, 19);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    padding: 5px;
+    justify-content: center;
+    padding: clamp(10px, 1vw, 50px);
     width: 80vw;
-    min-height: 700px;
-    height: 80vh;
+    height: clamp(min-height, 60vh, 800px);
     gap: 40px;
     border-radius: 10px;
     
-    
-    
-    
+  }
+
+  span {
+    margin: 0;
   }
 
   .intro_Left {
 
-    min-width: 60%;
-    max-width: 60%;
-    height: 100%;
-    padding: 20px;
     text-align: center;
     /* background-color: rgb(0, 143, 187); */
     z-index: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: clamp(10px, 1vh + 1vw, 50px); */
   }
 
   .main_Title {
 
-    margin: 0;
-    font-size: 72px;
+    margin-bottom: clamp(10px, 1vh, 50px);
+    font-size: clamp(2rem, min(10vw, 10vh), 4rem);
+
   }
 
   #tsr_Text {
@@ -57,30 +56,31 @@
     background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
     background-clip: text;
     color: transparent;
+    
   }
 
   .slogan {
-
-    margin: 5px 20px;
-    font-size: 32px;
+    font-size: clamp(1rem, min(5vw, 5vh), 2.3rem);
     font-weight: bold;
+    width: 90%;
+    text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: clamp(10px, 1vh + 1vw, 50px);
   }
 
   .intro_Description {
+    height: unset;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 25px;
-    font-size: 32px;
+    padding: 1.8px 3vw;
+    font-size: clamp(0.5rem, min(4vw, 4.5vh), 1.5rem);
+    gap: clamp(10px, 1vh + 1vw, 50px);;
   }
 
   .intro_Right {
-    height: 100%;
-    overflow: hidden;
-    border-radius: 15px;
+    display: none;
     
   }
   
@@ -91,208 +91,86 @@
     
   }
 
-/* Info Div */
+  .intro_Description > .generic_Button {
 
-.info_Div {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 50px 0;
-    background-color: rgb(24, 24, 24);
-    
-    
+    font-size: clamp(0.5rem, min(4vw, 4.5vh), 1.5rem);
+    padding: 1% 2%;
   }
 
-  .info_Card {
-
-    width: 380px;
-    height: 400px;
-    padding: 10px;
-    border-radius: 8px;
-    color: white;
-  }
-
-  .card_Title{
-
-    text-align: center;
-  }
-
-  .card_Description {
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    height: 300px;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .read_More {
-
-    display: block;
-    margin: 10px auto 0 auto;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    font-size: 20px;
-  }
-
-  .read_More:hover {
-
-    background-color: rgb(17, 17, 17);
-    color: rgb(255, 255, 255);
-    transition: 200ms;
-  }
-
-  /* Company Info*/
-
-.company_Info {
-
-    display: flex;
-    padding: 20px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 2;
-    background-color: rgb(24, 24, 24);
-    color: white;
-}
-
-.company_Info h2 {
-
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-}
 
 
-.about_Us {
+@media (min-width: 1200px) {
 
-    display: flex;
-}
+  /* Intro Section */
 
-.img_Resizer {
-
-    
-    max-height: 90vh;
-    min-width: fit-content;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.text_Div {
-
-    padding: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.guide_Section {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-
-    background-color: rgb(24, 24, 24);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-
-    padding: 20vh 0;
-}
-
-.guide_Section h2 {
-
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-}
-
-.guide_Graphics {
-
-    padding: 100px 0;
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-}
-
-.icon_Wrapper{
-
-    border: 6px solid rgb(34, 194, 226);
-    border-radius: 50%;
-    padding: 20px;
-    max-width: min-content;
-    margin-bottom: 20px;
-    
-}
-
-
-.steps {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    color: rgb(34, 194, 226);
-    font-size: 20px;
-    font-weight:700;
-    min-width: 240px;
-    max-width: 240px;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Concluding Section */
-
-.concluding_Statement {
-
-  background-color: rgb(24, 24, 24);
-  padding: 20px;
-  display: flex;
-  justify-content: flex-end;
+.intro_Container {
+  background-color: rgb(19, 19, 19);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  padding: clamp(10px, 1vw, 50px);
+  width: 80vw;
+  height: clamp(max-content, 90%, 800px);
+  gap: 40px;
+  border-radius: 10px;
+  
 }
 
-.concluding_Text {
+.intro_Left {
 
-  width: auto;
-  padding: 60px;
+  min-width: 60%;
+  max-width: 60%;
+  height: 100%;
+  padding: 2vw;
+  text-align: center;
+  /* background-color: rgb(0, 143, 187); */
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.main_Title {
+
+  margin: 0;
+}
+
+#tsr_Text {
+  background: #00b2d6;
+  background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+  background-clip: text;
+  color: transparent;
+}
+
+.slogan {
+
+  margin: 5px 20px;
+  font-weight: bold;
+  width: 90%;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.intro_Description {
+  display: flex;
+  flex-grow: 0.5;
+  flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  padding: 1.8px 3vw;
 }
 
-.concluding_Text h2{
-
-
-  font-size: 36px;
-  text-align: center;
-
-}
-.concluding_Text p{
-
-
-  text-align: center;
-  padding: 0 80px;
-  font-size: 24px;
-
+.intro_Right {
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  display: block;
+  
 }
 
-.concluding_Text button{
-
-  font-size: 28px;
-  border-radius: 50px;
-  font-weight: 900;
-
+.intro_Image {
+  height: 100%;
+  
+  transform: translate(-10%);
+  
 }
-
-.image_Wrapper{
-
-    min-height: 800px;
-    min-width: 700px;
-    max-height: 800px;
-    max-width: 700px;
-    overflow: hidden;
-    border-radius: 20px;
 }
