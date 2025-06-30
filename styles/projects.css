@@ -229,46 +229,6 @@ header {
     
 } */
 
-@media (min-width: 1200px) {
-  .projects_Main_Heading {
-    font-size: clamp(2rem, 8vw, 6rem);
-    padding: 8vw;
-  }
-  .nav_Filter {
-    padding: 1.5vw 10vw;
-  }
-  .filter_Button {
-    font-size: clamp(0.75rem, 2vw, 1.25rem);
-    padding: 1.5vw 4vw;
-  }
-  .projects_Grid {
-    gap: clamp(30px, 5vw, 80px);
-    padding: clamp(40px, 8vw, 100px);
-  }
-  .project_Card {
-    width: clamp(300px, 25vw, 500px);
-    height: clamp(300px, 25vw, 500px);
-  }
-  .project_Description {
-    font-size: clamp(0.75rem, 3vw, 1.5rem);
-  }
-}
-
-@media (min-width: 1600px) {
-  .projects_Main_Heading {
-    font-size: 6rem;
-    padding: 10vw;
-  }
-  .projects_Grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5vw;
-    padding: 10vw 15vw;
-  }
-  .project_Card {
-    transition: transform 200ms ease, border 200ms ease;
-  }
-}
-
 
 @media (min-width: 2000px) {
 
