@@ -1,5 +1,7 @@
 const button = Array.from(document.querySelectorAll('.learn_More'));
 const thumbnail = Array.from(document.querySelectorAll('.thumbnail'));
+const serviceContainer = querySelector(".service_Container");
+const serviceDescripton = document.querySelectorAll(".service_Description")
 
 // console.log(button);
 // console.log(thumbnail);

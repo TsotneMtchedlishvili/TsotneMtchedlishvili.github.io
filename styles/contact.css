@@ -468,3 +468,229 @@ h1 {
     }
     
 }
+
+/* @media (min-width: 1200px) {
+  .titling_Container h1 { font-size: clamp(3rem, 5vw, 4rem); }
+  .titling_Container span { font-size: clamp(4rem, 8vw, 5rem); }
+  .titling_Desc { font-size: clamp(1rem, 3vw, 2rem); max-width: 70%; }
+  .contact_Banner {
+    width: 60vw;
+    padding: 3vw;
+    min-height: 80vh;
+  }
+  .contact_List {
+    gap: clamp(20px, 4vw, 150px);
+  }
+  .contact_Card {
+    width: clamp(200px, 20vw, 350px);
+    height: clamp(200px, 20vw, 350px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .titling_Container h1 { font-size: 4.5rem; }
+  .titling_Container span { font-size: 6rem; }
+  .titling_Desc { font-size: 2.25rem; max-width: 50%; }
+  .contact_Banner {
+    width: 50vw;
+    padding: 4vw;
+    min-height: calc(100vh - 120px);
+  }
+  .contact_List {
+    flex-direction: row;
+    gap: 10vw;
+  }
+  .contact_Card {
+    width: 300px;
+    height: 300px;
+  }
+} */
+
+@media (min-width: 2000px) {
+
+    
+    .tag {
+        padding: Clamp(10px, 0.55vw, 20px) clamp(15px, 1.8vw, 30px);
+        font-size: clamp(1.25rem, 1.2vw, 2.5rem);
+        border-radius: 50px;
+    
+    }
+    
+    h1 {
+        font-size: clamp(4rem, 4.5vw, 8rem);
+        margin: Clamp(10px, 0.55vw, 20px) 0;
+        margin-bottom: Clamp(20px, 1.2vw, 40px);
+    }
+    
+    .titling_Container span {
+    
+        font-size: clamp(4rem, 4.5vw, 8rem);
+    }
+    
+    .titling_Desc {
+        
+        display: inline-block;
+        font-size: clamp(1.5rem, 1.25vw, 3rem);
+        margin-bottom: Clamp(40px, 2.4vw, 80px);
+        max-width: 60%;
+    }
+    
+    .contact_Banner_Container {
+    
+        min-height: calc(100vh - clamp(100px, 5.3vw, 200px));
+
+    }
+    
+    .contact_Banner {
+    
+        border-radius: Clamp(20px, 1.2vw, 40px);
+        height: max(80vh, 1400px);
+        width: 80vw;
+        padding: Clamp(40px, 2.4vw, 80px);
+    }
+    
+    .contact_Card {
+        background-color: rgb(27, 27, 27);
+        width: clamp(300px, 20.5vw, 800px);
+        height: clamp(300px, 15.5vw, 600px);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: Clamp(20px, 1.2vw, 40px);
+    
+        border-radius: Clamp(20px, 1.2vw, 40px);
+    }
+    
+    .contact_Icon_Wrapper img{
+    
+        margin: 0px;
+        height: Clamp(50px, 2.6vw, 100px);
+        width: Clamp(50px, 2.6vw, 100px);
+    }
+    
+    .contact_Icon_Wrapper {
+    
+        display: flex;
+        padding: Clamp(20px, 1.2vw, 40px);
+        max-width: max-content;
+        background-color: #20a5da62;
+        border-radius: Clamp(50px, 2.6vw, 100px);
+    }
+    
+    .contact_Desc_Wrapper{
+    
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: clamp(1.25rem, 1.3vw, 2.5rem);
+    }
+
+    .contact_desc{
+
+        font-size: clamp(1.25rem, 1.3vw, 2.3rem);
+    }
+    
+    .learn_More_Container {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto 0;
+        margin-bottom: 3%;
+    
+    }
+    
+    .learn_More_Page {
+    
+        text-decoration: none;
+        color:#12bbf8;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(1.25rem, 1.3vw, 2.5rem);
+        height: clamp(50px, 2.6vw, 100px);
+        display: flex;
+        align-items: center;
+    
+        transition: all 200ms ease;
+    }
+    
+    .box-Left {
+    
+        width: clamp(50px, 2.6vw, 100px);
+        height: clamp(50px, 2.6vw, 100px);
+    }
+    
+    .arrow-Right {
+    
+        width: clamp(50px, 2.6vw, 100px);
+        height: clamp(50px, 2.6vw, 100px);
+        margin: auto 0;
+        /* background-color: #00b2d6; */
+        background-image: url("../Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position-y: -200px;
+        
+        transform: rotate(-90deg);
+    
+        
+    
+    
+    }
+    
+    
+    
+    /* faq section */
+    
+    .faq_Section {
+    
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: Clamp(100px, 5.2vw, 200px);
+        
+    
+    }
+    
+    .faq_Section h2 {
+    
+        font-size: clamp(2.25rem, 2vw, 5rem);
+        margin: Clamp(100px, 5.2vw, 200px) auto;
+    }
+    
+    .faq_Body {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .faq_Grid {
+    
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        gap: 20px 50px;
+    
+        width: 80vw;
+        padding: 50px auto;
+    }
+    
+    .faq_Topic_Container {
+    
+        border: none;
+        max-width: 100%;
+    }
+    
+    .accordion_Container {
+    
+        display: flex;
+        flex-direction: column;
+        gap: clamp(5px, 0.3vw, 15px);
+    }
+
+}

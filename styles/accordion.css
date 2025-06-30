@@ -9,7 +9,7 @@
     border: none;
     border-radius: 10px;
     outline: none;
-
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     
 
@@ -69,15 +69,16 @@
     display: none;
   }
 
+
   @keyframes heightopen {
 
     from {
-    height: 55px;
+    height: clamp(55px, 2.3vw, 110px);
     
     }
     
     to {
-    height: 200px;
+    height: clamp(200px, 12vw, 400px);
     
     }
 }
@@ -85,12 +86,12 @@
 @keyframes heightclose {
 
     from {
-    height: 200px;
+    height: clamp(200px, 12vw, 400px);
     
     }
     
     to {
-    height: 55px;
+    height: clamp(55px, 2.3vw, 110px);
     
     }
 }
@@ -107,3 +108,63 @@
     
     }
 }
+
+  @media (min-width: 2000px) {
+
+  .accordion {
+
+    height: clamp(110px, 2.3vw, 220px);
+  }
+
+  .accordion_Q {
+
+    height: clamp(100px, 2.3vw, 110px);
+    padding: clamp(18px, 0.9vw, 36px);
+    padding-right: clamp(10px, 0.5vw, 20px);
+  }
+
+  .accordion_Q span {
+
+    font-size: clamp(1.5rem, 1vw, 3rem);
+  }
+
+  .drop_Down_Button_Acc {
+
+    height: clamp(30px, 1.5vw, 60px);
+    width: clamp(30px, 1.5vw, 60px);
+  }
+
+  .panel {
+    height: calc(100% - clamp(110px, 2.3vw, 220px));
+    padding: clamp(20px, 1.1vw, 40px);
+    font-size: clamp(1.5rem, 1vw, 2rem);
+    
+  }
+
+  @keyframes heightopen {
+
+    from {
+    height: clamp(110px, 2.3vw, 220px);
+    
+    }
+    
+    to {
+    height: clamp(200px, 12vw, 400px);
+    
+    }
+  }
+
+  @keyframes heightclose {
+
+      from {
+      height: clamp(200px, 12vw, 400px);
+      
+      }
+      
+      to {
+      height: clamp(110px, 2.3vw, 220px);
+      
+      }
+  }
+
+  }

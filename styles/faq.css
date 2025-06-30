@@ -60,10 +60,6 @@ header {
 
 @media (min-width: 1000px) {
 
-
-
-
-
 .faq_Section {
     
     background-color: black;
@@ -96,5 +92,38 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 2vh;
 }
+
+}
+
+@media (min-width: 2000px) {
+
+.faq_Section {
+    
+    background-color: black;
+    padding: clamp(100px, 5vw, 200px) 0px;
+
+}
+
+.accordion_Container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 40vw);
+    gap: 50px;
+    justify-content: center;
+
+    
+}
+
+.subtopic {
+
+  gap: clamp(5px, 0.28vw, 10px);
+}
+
+.subtopic h2 {
+
+  font-size: clamp(1rem, 1.8vw, 2.3rem);
+  margin-bottom: 2vh;
+}
+
 
 }

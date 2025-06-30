@@ -11,10 +11,11 @@ if (window.innerWidth < 1000) {
     topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
     topPanel.style.borderRadius = `${topPanel.clientHeight * 0.6}px`;
     // console.log(parseInt(topPanel.style.margin));
-    header.style.height = `${logoAndHamburger.clientHeight}px`
+    header.style.height = `${logoAndHamburger.clientHeight}px`;
 }
 else {
 
+    header.style.height = `max-content`;
     navbar.style.top = `${header.clientHeight / 2}px`;
 }
 
@@ -81,6 +82,7 @@ toggleBtn.addEventListener("click", () => {
     else {
         
 
+        header.style.height = `max-content`;
         navbar.style.top = `${header.clientHeight / 2}px`;
     }
     
