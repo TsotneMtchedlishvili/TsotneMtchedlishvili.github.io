@@ -1,7 +1,7 @@
 
 header {
 
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
 }
 
 
@@ -9,7 +9,7 @@ header {
 
     height: 50vh;
     min-height: 500px;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,16 @@ header {
 
 .heading_Span {
 
-    background: #00b2d6;
-    background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+    background: var(--accent-color-one);
+    background: linear-gradient(100deg, #22c2e2 8%, #006ac0 98%);
     background-clip: text;
     color: transparent;
 }
 
 .projects_Main_Heading {
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     font-size: clamp(1rem, 13vw + 0.5rem, 4rem);
     padding: 5vw;
     text-align: center;
@@ -34,8 +34,8 @@ header {
 
 .nav_Filter {
 
-    background-color: rgb(16, 16, 16);
-    border-top: 2px solid #00b2d6;
+    background-color: var(--primary-darker);
+    border-top: 2px solid var(--accent-color-one);
     padding: 10px 5vw;
 
     display: flex;
@@ -46,10 +46,10 @@ header {
 
     padding: 2vw 5vw;
     font-size: clamp(0.3rem, 5vw, 1rem);
-    color: #00b2d6;
-    border: 2px solid #00b2d6;
+    color: var(--accent-color-one);
+    border: 2px solid var(--accent-color-one);
     border-radius: clamp(10px, 2vw, 30px);
-    background-color: rgb(34, 34, 34);
+    background-color: var(--quaternary-color);
     transition: all 200ms ease; 
 }
 
@@ -57,10 +57,10 @@ header {
 
     padding: 2vw 5vw;
     font-size: clamp(0.3rem, 5vw, 1rem);
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
     border-radius: clamp(10px, 2vw, 30px);
-    background-color: #00b2d6;
+    background-color: var(--accent-color-one);
     cursor: pointer;
 }
 
@@ -69,14 +69,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: var(--background-color);
     height: 100vw;
     width: 90vw;
     position: fixed;
     top: 50%;
     left: 50%;
 
-    border: 2px solid grey;
+    border: 2px solid var(--accent-color-one);
     border-radius: 20px;
     transform: translate(-50%, -50%);
 
@@ -86,8 +86,8 @@ header {
 
     border: none;
     background-color: transparent;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     font-size: 21px;
 
     transition: all 100ms ease;
@@ -95,12 +95,12 @@ header {
 
 .pressed {
 
-    color: #00b2d6;
+    color: var(--accent-color-one);
 }
 
 .category:hover {
 
-    color: #00b2d6;
+    color: var(--accent-color-one);
     cursor: pointer;
 }
 
@@ -114,7 +114,7 @@ header {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    background-color: rgb(16, 16, 16);
+    background-color: var(--primary-darker);
     
 
 }
@@ -147,7 +147,7 @@ header {
     border-top-right-radius: 10px; */
     overflow: hidden;
 
-    border: 0px solid #00b2d6;
+    border: 0px solid var(--accent-color-one);
     transition: all 100ms ease;
 
     display: flex;
@@ -167,7 +167,7 @@ header {
 
 .project_Description {
 
-    background-color: rgb(37, 37, 37);
+    background-color: var(--quaternary-color);
     height: 30%;
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
@@ -181,8 +181,8 @@ header {
     justify-content: space-evenly;
     align-items: center;
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     font-size: clamp(0.5rem, 6vw, 1.25rem);
 
     /* box-shadow: 0px 0px 20px rgb(0, 0, 0); */
@@ -199,14 +199,14 @@ header {
 
 .project_Card:hover {
 
-    color: #00b2d6;
+    color: var(--accent-color-one);
     transform: scale(1.1);
 }
 
 .project_Card:hover {
 
     
-    border: 5px solid #00b2d6;
+    border: 5px solid var(--accent-color-one);
     
 }
 
@@ -241,8 +241,8 @@ header {
 
 .nav_Filter {
 
-    background-color: rgb(16, 16, 16);
-    border-top: clamp(2px, 0.5vw, 6px) solid #00b2d6;
+    background-color: var(--primary-darker);
+    border-top: clamp(2px, 0.5vw, 6px) solid var(--accent-color-one);
     padding: clamp(10px, 0.55vw, 20px) clamp(5px, 0.25vw, 10px);
 }
 
@@ -250,7 +250,7 @@ header {
 
     padding: 2vw 5vw;
     font-size: clamp(1.25rem, 1vw, 2.5rem);
-    border: 4px solid #00b2d6;
+    border: 4px solid var(--accent-color-one);
     transition: all 200ms ease; 
 }
 
@@ -258,7 +258,7 @@ header {
 
     padding: 2vw 5vw;
     font-size: clamp(1.25rem, 1vw, 2.5rem);
-    border: 4px solid #ffffff;
+    border: 4px solid var(--accent-color-one);
 }
 
 .filter_Element {
@@ -273,7 +273,7 @@ header {
     top: 50%;
     left: 50%;
 
-    border: 2px solid grey;
+    border: 2px solid var(--accent-color-one);
     border-radius: 20px;
     transform: translate(-50%, -50%);
 
@@ -281,7 +281,7 @@ header {
 
 .category {
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: clamp(1.25rem, 1.5vw, 2.4rem);
 
     transition: all 100ms ease;
@@ -297,7 +297,7 @@ header {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    background-color: rgb(16, 16, 16);
+    background-color: var(--primary-darker);
     
 
 }
@@ -330,7 +330,7 @@ header {
     border-top-right-radius: 10px; */
     overflow: hidden;
 
-    border: 0px solid #00b2d6;
+    border: 0px solid var(--accent-color-one);
     transition: all 100ms ease;
 
     display: flex;
@@ -350,7 +350,7 @@ header {
 
 .project_Description {
 
-    background-color: rgb(37, 37, 37);
+    background-color: var(--quaternary-color);
     height: 30%;
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
@@ -364,8 +364,8 @@ header {
     justify-content: space-evenly;
     align-items: center;
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     font-size: clamp(1.25rem, 3vw, 2.5rem);
 
     /* box-shadow: 0px 0px 20px rgb(0, 0, 0); */
@@ -384,7 +384,7 @@ header {
 
 .project_Card:hover {
 
-    border: clamp(5px, 0.25vw, 10px) solid #00b2d6;
+    border: clamp(5px, 0.25vw, 10px) solid var(--accent-color-one);
     
 }
 

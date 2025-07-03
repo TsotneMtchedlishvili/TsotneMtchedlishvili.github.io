@@ -1,6 +1,6 @@
 header {
 
-    background-color:black;
+    background-color:var(--background-color);
     position: static;
     /* height: 0; */
 
@@ -8,10 +8,10 @@ header {
 
 .faq_Banner {
     height:30vh;
-    background-color: black;
+    background-color: var(--background-color);
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var( --text-color);
+    font-family: var(--default-font-family);
 
     display:flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ header {
 
 .faq_Section {
 
-    background-color: black;
+    background-color: var(--background-color);
     padding: 100px 0px;
 
 }
@@ -49,9 +49,9 @@ header {
 
 .subtopic h2 {
 
-    color: white;
+    color: var(--text-color);
     font-size: clamp(1rem, 1.8vw, 2.3rem);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     margin-bottom: 2vh;
     text-align: center;
 }
@@ -62,7 +62,7 @@ header {
 
 .faq_Section {
     
-    background-color: black;
+    background-color: var(--background-color);
     padding: 100px 0px;
 
 }
@@ -87,9 +87,9 @@ header {
 
 .subtopic h2 {
 
-    color: white;
+    color: var(--text-color);
     font-size: clamp(1rem, 1.8vw, 2.3rem);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     margin-bottom: 2vh;
 }
 
@@ -99,7 +99,7 @@ header {
 
 .faq_Section {
     
-    background-color: black;
+    background-color: var(--background-color);
     padding: clamp(100px, 5vw, 200px) 0px;
 
 }

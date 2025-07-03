@@ -3,13 +3,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background-color);
 }
 
 main {
 
     min-height: auto;
-    background-color: rgb(22, 22, 22);
+    background-color: var(--primary-color);
+    /* background-color: #161616; */
     padding-bottom: 100px;
 
     /* background-color: black; */
@@ -21,7 +22,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background-color);
     background-attachment: fixed;
     background-blend-mode:overlay;
 
@@ -31,14 +32,14 @@ main {
     text-align: center;
     text-shadow: 1px 1px 20px hsla(170, 30%, 8%, 0.829);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-weight: 900;
     font-size: clamp(1rem, 4vw, 1.3rem);
 }
 
 h1 span{
 
-    color: #20a5da;
+    color: var(--accent-color-one);
 }
 
 /* intro */
@@ -54,9 +55,9 @@ h1 span{
 
     color: white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
 
-    border-top: 4px #00b7ff solid;
+    border-top: 4px var(--accent-color-one) solid;
 }
 
 .services_Heading {
@@ -89,7 +90,7 @@ h1 span{
     width: clamp(100px, 90vw, 500px);
     height: 600px;
 
-    background-color: rgb(12, 12, 12);
+    background-color: var(--distinguished-window);
     /* background-color: rgb(19, 19, 19); */
     border-radius: 10px;
     padding: 20px;
@@ -111,9 +112,9 @@ h1 span{
     align-items: center;
     gap: clamp(1rem, 1.3vw, 3rem);
 
-    color: white;
+    color: var(--text-color);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
 }
 
 .service_Description h3 {
@@ -149,7 +150,7 @@ h1 span{
 
     height: max(20vw, 150px);
     width: 100%;
-    background: rgb(26, 26, 26);
+    /* background: #1a1a1a; */
     overflow: hidden;
     
 
@@ -181,8 +182,8 @@ h1 span{
     background-size: cover;
     background-image: url(https://cdn.prod.website-files.com/6727558e5c774a0b63d63d12/67bb3e1f23b017da45589047_hero-bg.avif);
 
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     overflow: hidden;
 }
 
@@ -273,12 +274,12 @@ h1 span{
 .quote_Section {
 
     height: clamp(min-content, 1vw, 800px);
-    background-color: rgb(12, 12, 12);
+    background-color: var(--distinguished-window);
     display: flex;
     justify-content: center;
 
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
 }
 
 .quote_Container {
@@ -364,11 +365,11 @@ h1 span{
         justify-content: center;
         align-items: center;
     
-        color: white;
+        color: var(--text-color);
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
     
-        border-top: 4px #00b7ff solid;
+        border-top: 4px var(--accent-color-one) solid;
     }
     
     .services_Heading {
@@ -401,7 +402,7 @@ h1 span{
         width: 550px; */
         width: clamp(100px, 40vw, 500px);
 
-        background-color: rgb(12, 12, 12);
+        background-color: var(--distinguished-window);
         /* background-color: rgb(19, 19, 19); */
         border-radius: 10px;
         padding: 20px;
@@ -417,7 +418,7 @@ h1 span{
     
         max-height: 200px;
         width: 100%;
-        background: rgb(26, 26, 26);
+        /* background: #1a1a1a; */
         overflow: hidden;
         
     
@@ -430,9 +431,9 @@ h1 span{
         justify-content: space-evenly;
         align-items: center;
     
-        color: white;
+        color: var(--text-color);
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
     }
     
 
@@ -487,8 +488,8 @@ h1 span{
         background-size: cover;
         background-image: url(https://cdn.prod.website-files.com/6727558e5c774a0b63d63d12/67bb3e1f23b017da45589047_hero-bg.avif);
 
-        color:white;
-        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text-color);
+        font-family: var(--default-font-family);
         overflow: hidden;
     }
 
@@ -503,7 +504,7 @@ h1 span{
 
     .backdrop_Styling > div > p {
 
-        background-color: rgba(192, 192, 192, 0.384);
+        background-color: #c0c0c062;
         border-radius: 20px;
 
         width: max-content;
@@ -580,12 +581,12 @@ h1 span{
 .quote_Section {
 
     height: clamp(min-content, 1vw, 800px);
-    background-color: rgb(12, 12, 12);
+    background-color: var(--distinguished-window);
     display: flex;
     justify-content: center;
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
 }
 
 .quote_Container {
@@ -682,11 +683,11 @@ h1 span{
         justify-content: center;
         align-items: center;
     
-        color: white;
+        color: var(--text-color);
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
     
-        border-top: 4px #00b7ff solid;
+        border-top: 4px var(--accent-color-one) solid;
     }
     
     .services_Heading {
@@ -718,7 +719,7 @@ h1 span{
         width: 550px; */
         width: clamp(100px, 25vw, 550px);
 
-        background-color: rgb(12, 12, 12);
+        background-color: var(--distinguished-window);
         /* background-color: rgb(19, 19, 19); */
         border-radius: 10px;
         padding: 20px;
@@ -734,7 +735,7 @@ h1 span{
     
         height: 42%;
         width: 100%;
-        background: rgb(26, 26, 26);
+        /* background: rgb(26, 26, 26); */
         overflow: hidden;
         
     
@@ -747,9 +748,9 @@ h1 span{
         justify-content: space-evenly;
         align-items: center;
     
-        color: white;
+        color: var(--text-color);
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         gap: unset;
 
         height: clamp(300px, 40vw, 350px);
@@ -853,13 +854,13 @@ h1 span{
     .quote_Section {
 
         height: 700px;
-        background-color: rgb(12, 12, 12);
+        background-color: var(--distinguished-window);
         padding: 40px 80px;
         display: flex;
         justify-content: center;
     
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text-color);
+        font-family: var(--default-font-family);
     }
     
     .quote_Container {
@@ -942,7 +943,7 @@ h1 span{
 
         padding: clamp(80px,4vw, 160px);
         padding-bottom: 0;
-        border-top: clamp(4px, 0.25vw, 10px) #00b7ff solid;
+        border-top: clamp(4px, 0.25vw, 10px) var(--accent-color-one) solid;
     }
     
     .services_Heading {
@@ -1120,9 +1121,9 @@ h1 span{
     .quote_Section {
 
         height: clamp(700px, 36.45vw, 1400px);
-        background-color: rgb(12, 12, 12);
+        background-color: var(--distinguished-window);
         padding: clamp(40px, 2.2vw, 80px) clamp(80px, 2.2vw, 160px);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--text-color);
     }
     
     .quote_Container {

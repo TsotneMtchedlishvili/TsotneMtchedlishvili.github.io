@@ -1,5 +1,5 @@
 header {
-    background-color: black;
+    background-color: var(--background-color);
 }
 .titling_Container {
     text-align: center;
@@ -9,7 +9,7 @@ header {
 
     display: inline-block;
     padding: 10px 15px;
-    background-color: #20a5da62;
+    background-color: var(--contact-tag);
     border-radius: 50px;
     font-weight: 500;
 
@@ -23,7 +23,7 @@ h1 {
 
 .titling_Container span {
 
-    background: #00b2d6;
+    background: var(--accent-color-one);
     background: linear-gradient(90deg, rgb(34, 194, 226), rgb(0, 106, 192));
     background-clip: text;
     color: transparent;
@@ -42,14 +42,14 @@ h1 {
 .contact_Banner_Container {
 
     min-height: calc(100vh - 100px);
-    background-color: black;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 3vh 0;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    font-family: var(--default-font-family);
 }
 
 .contact_Banner {
@@ -58,7 +58,7 @@ h1 {
     /* height: 700px; */
     width: 80vw;
     padding: clamp(10px, 2vh, 40px);
-    background-color: rgb(19, 19, 19);
+    background-color: var(--primary-color);
 
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .contact_Card {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--contact-card);
     width: clamp(150px, 70vw, 350px);
     height: clamp(min-content, 60vw, 350px);
     padding: 20px;
@@ -100,7 +100,7 @@ h1 {
     display: flex;
     padding: 20px;
     max-width: max-content;
-    background-color: #20a5da62;
+    background-color: var(--contact-tag);
     border-radius: 50px;
 }
 
@@ -132,8 +132,8 @@ h1 {
 .learn_More_Page {
 
     text-decoration: none;
-    color:#12bbf8;
-    font-family: Arial, Helvetica, sans-serif;
+    color:var(--accent-color-two);
+    font-family: var(--default-font-family);
     font-size: clamp(0.5rem, 7vw, 1.25rem);
     height: 50px;
     display: flex;
@@ -189,9 +189,9 @@ h1 {
 
 .faq_Section {
 
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--default-font-family);
     padding: clamp(10px, 8vw, 100px);
     
 
@@ -246,7 +246,7 @@ h1 {
     
         display: inline-block;
         padding: 10px 15px;
-        background-color: #20a5da62;
+        background-color: var(--contact-tag);
         border-radius: 50px;
         font-weight: 500;
     
@@ -260,7 +260,7 @@ h1 {
     
     .titling_Container span {
     
-        background: #00b2d6;
+        background: var(--accent-color-one);
         background: linear-gradient(90deg, rgb(34, 194, 226), rgb(0, 106, 192));
         background-clip: text;
         color: transparent;
@@ -279,13 +279,13 @@ h1 {
     .contact_Banner_Container {
     
         min-height: calc(100vh - 100px);
-        background-color: black;
+        background-color: var(--background-color);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         
-        color: white;
+        color: var(--text-color);
         font-family: Arial, Helvetica, sans-serif;
     }
     
@@ -295,7 +295,7 @@ h1 {
         height: 700px;
         width: 80vw;
         padding: 40px;
-        background-color: rgb(19, 19, 19);
+        background-color: var(--primary-color);
     
         display: flex;
         flex-direction: column;
@@ -315,7 +315,7 @@ h1 {
     }
     
     .contact_Card {
-        background-color: rgb(27, 27, 27);
+        background-color: var(--contact-card);
         width: 300px;
         height: 300px;
         padding: 20px;
@@ -338,7 +338,7 @@ h1 {
         display: flex;
         padding: 20px;
         max-width: max-content;
-        background-color: #20a5da62;
+        background-color: var(--contact-tag);
         border-radius: 50px;
     }
     
@@ -365,8 +365,8 @@ h1 {
     .learn_More_Page {
     
         text-decoration: none;
-        color:#12bbf8;
-        font-family: Arial, Helvetica, sans-serif;
+        color:var(--accent-color-one);
+        font-family: var(--default-font-family);
         font-size: 18px;
         height: 50px;
         display: flex;
@@ -422,9 +422,7 @@ h1 {
     
     .faq_Section {
     
-        background-color: black;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
+
         padding: 100px;
         
     
@@ -550,7 +548,7 @@ h1 {
     }
     
     .contact_Card {
-        background-color: rgb(27, 27, 27);
+        background-color: var(--contact-card);
         width: clamp(300px, 20.5vw, 800px);
         height: clamp(300px, 15.5vw, 600px);
         padding: 20px;
@@ -575,7 +573,7 @@ h1 {
         display: flex;
         padding: Clamp(20px, 1.2vw, 40px);
         max-width: max-content;
-        background-color: #20a5da62;
+        background-color: var(--contact-tag);
         border-radius: Clamp(50px, 2.6vw, 100px);
     }
     
@@ -609,8 +607,8 @@ h1 {
     .learn_More_Page {
     
         text-decoration: none;
-        color:#12bbf8;
-        font-family: Arial, Helvetica, sans-serif;
+        /* color:#12bbf8; */
+        /* font-family: Arial, Helvetica, sans-serif; */
         font-size: clamp(1.25rem, 1.3vw, 2.5rem);
         height: clamp(50px, 2.6vw, 100px);
         display: flex;
@@ -649,9 +647,9 @@ h1 {
     
     .faq_Section {
     
-        background-color: black;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: black;
+        color: white; 
+        font-family: Arial, Helvetica, sans-serif; */
         padding: Clamp(100px, 5.2vw, 200px);
         
     

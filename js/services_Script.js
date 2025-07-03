@@ -1,20 +1,20 @@
-const button = Array.from(document.querySelectorAll('.learn_More'));
+const buttonServices = Array.from(document.querySelectorAll('.learn_More'));
 const thumbnail = Array.from(document.querySelectorAll('.thumbnail'));
-const serviceContainer = querySelector(".service_Container");
+const serviceContainer = document.querySelector(".service_Container");
 const serviceDescripton = document.querySelectorAll(".service_Description")
 
 // console.log(button);
 // console.log(thumbnail);
 
-button.forEach((item) => {
+buttonServices.forEach((item) => {
     item.addEventListener('mouseenter', () => {
-        thumbnail[button.indexOf(item)].style.transform = 'scale(1.2)';
+        thumbnail[buttonServices.indexOf(item)].style.transform = 'scale(1.2)';
       });
 });
 
-button.forEach((item) => {
+buttonServices.forEach((item) => {
     item.addEventListener('mouseleave', () => {
-        thumbnail[button.indexOf(item)].style.transform = 'scale(1)';
+        thumbnail[buttonServices.indexOf(item)].style.transform = 'scale(1)';
       });
 })
 

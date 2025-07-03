@@ -15,9 +15,9 @@
 }
 
 .intro_Container {
-    background-color: rgb(19, 19, 19);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--primary-color);
     display: flex;
     justify-content: center;
     padding: clamp(10px, 1vw, 50px);
@@ -52,10 +52,11 @@
   }
 
   #tsr_Text {
-    background: #00b2d6;
-    background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+    background: var(--accent-color);
+    background: linear-gradient(100deg, #22c2e2 8%, #006ac0 98%);
     background-clip: text;
     color: transparent;
+    font-weight: 100;
     
   }
 
@@ -64,7 +65,7 @@
     font-weight: bold;
     width: 90%;
     text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--default-font-family);
     margin-bottom: clamp(10px, 1vh + 1vw, 50px);
   }
 
@@ -104,8 +105,8 @@
   /* Intro Section */
 
 .intro_Container {
-  background-color: rgb(19, 19, 19);
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   padding: clamp(10px, 1vw, 50px);
@@ -135,7 +136,7 @@
 }
 
 #tsr_Text {
-  background: #00b2d6;
+  background: var(--accent-color);
   background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
   background-clip: text;
   color: transparent;
@@ -147,7 +148,7 @@
   font-weight: bold;
   width: 90%;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--default-font-family);
 }
 
 .intro_Description {
@@ -181,9 +182,9 @@
   /* Intro Section */
 
 .intro_Container {
-  background-color: rgb(19, 19, 19);
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--default-font-family);
   display: flex;
   padding: clamp(50px, 2vw, 80px);
   width: 80vw;
@@ -214,7 +215,7 @@
   }
 
 #tsr_Text {
-  background: #00b2d6;
+  background: var(--accent-color);
   background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
   background-clip: text;
   color: transparent;
@@ -226,7 +227,7 @@
   font-weight: bold;
   width: 90%;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--default-font-family);
   
 }
 

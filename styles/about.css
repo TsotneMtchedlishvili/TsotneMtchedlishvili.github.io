@@ -4,18 +4,18 @@ html {
 
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: black;
+    font-family: var(--default-font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
     
 }
 
 .about_Banner {
     height:50vh;
-    background-color: black;
+    background-color: var(--background-color);
 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    /* color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif; */
 
     display:flex;
     flex-direction: column;
@@ -46,10 +46,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     height: 100px;
     /* background-color: rgb(24, 24, 24); */
-    background-color: rgb(34, 34, 34);
+    background-color: var(--secondary-color);
     
     
 }
@@ -63,7 +63,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
-    color: white;
+    /* color: white; */
     flex-wrap: wrap;
     text-align: center;
     gap: 35% 15%;
@@ -73,7 +73,7 @@ body {
 
 .subject_Link a {
 
-    color: #12bbf8;
+    color: var(--accent-color-two);
     
     text-decoration: none;
     transition: all 200ms ease;
@@ -84,7 +84,7 @@ body {
 
 .subject_Link a:hover {
 
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ body {
 
 .who_We_Are {
 
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -116,7 +116,7 @@ body {
     padding: clamp(20px, 5%, 30px);
     border-radius: 30px;
 
-    background-color: rgb(36, 36, 36);
+    background-color: var(--quaternary-color);
 }
 
 .wwa_Img_Wrapper {
@@ -175,7 +175,7 @@ body {
 
 .mini_Window {
 
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
 
     padding: 10px 10px;
     border-radius: 15px;
@@ -184,7 +184,7 @@ body {
     align-items: center;
     
     gap: 15px;
-    max-width: 100%;
+    width: 100%;
     
 
 }
@@ -193,7 +193,7 @@ body {
 
     height: clamp(50px, 6vw, 80px);
     width: clamp(50px, 6vw, 80px);
-    background: rgb(48, 48, 48);
+    background: var(--quaternary-lighter);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -243,7 +243,7 @@ body {
 
     padding: 50px 20px;
     width: 90vw;
-    background-color: rgb(36, 36, 36);
+    background-color: var(--quaternary-color);
 
     /* height: 60vh; */
     border-radius: 30px;
@@ -295,17 +295,17 @@ body {
 
 .service_Selection {
 
-    background-color: rgb(31, 30, 30);
+    background-color: var(--tertiary-darker);
     width: 100%;
-    height: 50vh;
-    
+    /* Height was previously 50vh */
+
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     overflow-y: scroll;
-    scrollbar-color: #00b2d6 rgb(24, 24, 24);
+    scrollbar-color: var(--accent-color-one) var(--tertiary-color);
 }
 
 .service_Container {
@@ -318,8 +318,8 @@ body {
     height: 100px;
     border-radius: 15px;
 
-    border: 2px solid #00b2d600;
-    background-color: rgb(24, 24, 24);
+    border: 2px solid transparent;
+    background-color: var(--tertiary-color);
 
    
 }
@@ -340,7 +340,7 @@ body {
 
 .service_Img_Wrapper {
     padding: 5px;
-    background-color: rgb(36, 36, 36);
+    background-color: var(--quaternary-color);
     border-radius: 10px;
 }
 
@@ -351,7 +351,7 @@ body {
 
 .selected {
 
-    border: 2px solid #00b2d6;
+    border: 2px solid var(--accent-color-one);
     /* border-right: none;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -384,7 +384,7 @@ body {
 .service_Info_Page_Activate {
 
     display: flex;
-    color: white;
+    color: var(--text-color);
     z-index: 1;
 
  
@@ -468,7 +468,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    border:2px #12bbf8 solid;
+    border:2px var(--accent-color-two) solid;
 
     /* transform: translateY(200px); */
 }
@@ -479,7 +479,6 @@ body {
     height: max-content;
     overflow: hidden;
     contain: paint;
-    background-color: aliceblue;
 
     display: flex;
     align-items: center;
@@ -521,8 +520,8 @@ body {
 .learn_More_Page {
 
     text-decoration: none;
-    color:#00b2d6;
-    font-family: Arial, Helvetica, sans-serif;
+    color:var(--accent-color-one);
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: clamp(1rem, 3vw, 1.4rem);
     height: 50px;
     display: flex;
@@ -624,7 +623,7 @@ body {
 
 .value_Container {
 
-    color: #00b2d6;
+    color: var(--accent-color-one);
     font-size: clamp(0.8rem, 5vw, 1.5rem);
     font-weight: 700;
     display: flex;
@@ -635,7 +634,7 @@ body {
 
 .value_Img_Cont {
 
-    background-color: rgb(21, 21, 21);
+    background-color: #151515;
     padding: clamp(10px, 8vw, 30px);
     border-radius: 50%;
     
@@ -656,7 +655,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10vh;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
     padding: 100px 0;
     align-items: center;
 }
@@ -686,8 +685,8 @@ body {
     background-size: cover;
     background-image: url(https://img.freepik.com/premium-photo/black-architectural-design-skyscraper-dark-gray-background-highrise-geometric-building-futuristic3d-render_507676-1213.jpg);
     background-position: bottom;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    color:var(--text-color);
+    font-family: var(--default-font-family);
     font-weight: 400;
     font-size: 21px;
 
@@ -709,7 +708,7 @@ body {
 .backdrop_Styling > div > p {
 
     /* background-color: rgba(192, 192, 192, 0.384); */
-    background-color: rgba(34, 34, 34, 0.384);
+    background-color: #22222262;
     border-radius: 20px;
 
     width: max-content;
@@ -764,7 +763,7 @@ body {
     display: flex;
     /* background-color: rgba(192, 192, 192, 0.384); */
 
-    background-color: rgba(34, 34, 34, 0.384);
+    background-color: #22222262;
     border-radius: 20px;
     backdrop-filter: blur(12px);
 }
@@ -795,7 +794,7 @@ body {
 /* Getting Started */
 
 .getting_Started {
-    background-color: #0c0c0c;
+    background-color: var(--distinguished-window);
     padding: clamp(20px, 10%, 100px);
     /* display: none; */
 }
@@ -839,7 +838,7 @@ body {
     
     font-size: 25px;
     border-radius: 10px;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--tertiary-color);
 }
 
 .step_Container {
@@ -850,7 +849,7 @@ body {
 .step_Img_Wrapper {
 
     padding: 10px;
-    background-color: #0c0c0c;
+    background-color: var(--distinguished-window);
     border-radius: 15px;
 }
 
@@ -938,7 +937,7 @@ body {
 
 .faq_Section {
 
-    background-color: black;
+    background-color: var(--background-color);
     padding: 100px 0px;
 
 }
@@ -1043,10 +1042,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
         height: max-content;
         /* background-color: rgb(24, 24, 24); */
-        background-color: rgb(34, 34, 34);
+        /* background-color: #222222; */
         
         
     }
@@ -1062,7 +1061,7 @@ body {
     
     .subject_Link a {
     
-        color: #12bbf8;
+        /* color: #12bbf6; */
         
         text-decoration: none;
         transition: all 200ms ease;
@@ -1073,7 +1072,7 @@ body {
     
     .subject_Link a:hover {
     
-        color: white;
+        /* color: white; */
         text-decoration: none;
     }
     
@@ -1081,7 +1080,7 @@ body {
     
     .who_We_Are {
     
-        background-color: rgb(24, 24, 24);
+        /* background-color: #181818; */
         padding-top: 100px;
         padding-bottom: 100px;
     
@@ -1105,7 +1104,7 @@ body {
         padding: clamp(10px, 10%, 20px);
         border-radius: 30px;
     
-        background-color: rgb(36, 36, 36);
+        /* background-color: #242424; */
     }
     
     .wwa_Img_Wrapper {
@@ -1165,7 +1164,7 @@ body {
     
     .mini_Window {
     
-        background-color: rgb(24, 24, 24);
+        /* background-color: #181818; */
     
         padding: 10px 10px;
         border-radius: 15px;
@@ -1183,7 +1182,7 @@ body {
     
         height: clamp(50px, 6vw, 80px);
         width: clamp(50px, 6vw, 80px);
-        background: rgb(48, 48, 48);
+        /* background: #303030; */
         border-radius: 15px;
         display: flex;
         justify-content: center;
@@ -1232,7 +1231,7 @@ body {
     
         padding: 2vw;
         width: max-content;
-        background-color: rgb(36, 36, 36);
+        /* background-color: #242424; */
         margin: 0;
         /* height: 60vh; */
         border-radius: 30px;
@@ -1288,10 +1287,8 @@ body {
     
     .service_Selection {
     
-        background-color: rgb(31, 30, 30);
-        /* min-width: 500px;
-        max-width: 500px; */
-        height: clamp(250px, 30vw, 500px);
+        /* background-color: rgb(31, 30, 30); */
+        /* height: clamp(250px, 30vw, 500px); */
        
         width: clamp(300px, 30vw, 600px);;
         
@@ -1300,8 +1297,6 @@ body {
         flex-direction: column;
         gap: 5px;
     
-        overflow-y: scroll;
-        scrollbar-color: #00b2d6 rgb(24, 24, 24);
 
         background-color: rgb(31, 30, 30);
 
@@ -1309,21 +1304,22 @@ body {
         
         gap: 5px;
         overflow-y: scroll;
-        scrollbar-color: #00b2d6 rgb(24, 24, 24);
+        /* scrollbar-color: #00b2d6 #181818; */
     }
     
     .service_Container {
     
-        padding: 10px;
+        /* padding: 10px; */
         display: flex;
         gap: 10px;
     
         align-items: center;
-        height: 100px;
+        height: unset;
+        /* was - height: 100px; */
         border-radius: 15px;
     
-        border: 2px solid #00b2d600;
-        background-color: rgb(24, 24, 24);
+        /* border: 2px solid #00b2d600;
+        background-color: rgb(24, 24, 24); */
         
        
     }
@@ -1344,25 +1340,16 @@ body {
     
     .service_Img_Wrapper {
         padding: 5px;
-        background-color: rgb(36, 36, 36);
+        /* background-color: #242424; */
         border-radius: 10px;
     }
     
     .service_Img_Wrapper img {
-        width: clamp(40px, 3.1vw, 60px);
-        height: clamp(40px, 3.1vw, 60px);
+        width: clamp(40px, 3.1vw, 40px);
+        /* Was - height: clamp(40px, 3.1vw, 60px); */
+        height: clamp(40px, 3.1vw, 40px);
     }
     
-    .selected {
-    
-        border: 2px solid #00b2d6;
-        /* border-right: none;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        top: 0; */
-        /* width: 520px; */
-         
-    }
     
     .service_Info_Page {
     
@@ -1390,7 +1377,7 @@ body {
     .service_Info_Page_Activate {
     
         display: flex;
-        color: white;
+        color: var(--text-color);
         width: clamp(300px, 30vw, 600px);
         /* width: 500px; */
         z-index: 5;
@@ -1398,55 +1385,7 @@ body {
      
     }
     
-    .closeBtn{
-    
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: clamp(30px, 8vw, 35px);
-        width: clamp(30px, 8vw, 35px);
-        background-color: #2b2b2b;
-        border:3px #12bbf8 solid;
-        border-radius: 50px;
-        transform: translate(50%, -50%);
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-     
-    }
-    
-    .closeBtn img{
-    
-        height: 90%;
-        width: 90%;
-        transition: all 500ms ease-in-out;
-     
-    }
-    
-    .closeBtn:hover, .closeBtn:hover img {
-    
-        cursor:pointer;
-     
-    }
-    
-    .closeBtn:hover img {
-    
-        transform: rotate(270deg);
-     
-    }
-    
-    .page_Background {
-    
-        position: fixed;
-        width: 100vw;
-        height: 105vh;
-        background-color: rgba(37, 37, 37, 0.068);
-        background-blend-mode:color-dodge;
-        backdrop-filter: blur(10px);
-        z-index: 1;
-     
-    }
+
     
     /* post selection */
     
@@ -1487,7 +1426,7 @@ body {
         height: max-content;
         overflow: hidden;
         contain: paint;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
     
         display: flex;
         align-items: center;
@@ -1532,8 +1471,8 @@ body {
     .learn_More_Page {
     
         text-decoration: none;
-        color:#00b2d6;
-        font-family: Arial, Helvetica, sans-serif;
+        /* color:#00b2d6;
+        font-family: Arial, Helvetica, sans-serif; */
         font-size: clamp(1rem, 3vw, 1.4rem);
         height: 50px;
         display: flex;
@@ -1568,13 +1507,6 @@ body {
     
     }
     
-    .learn_More_Page:hover {
-    
-        
-        color:#46e0ff;
-        /* color: #00b2d6; */
-    
-    }
     
     .learn_More_Container:hover .arrow-Right{
     
@@ -1666,7 +1598,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10vh;
-        background-color: rgb(24, 24, 24);
+        /* background-color: rgb(24, 24, 24); */
         padding: 100px 0;
         align-items: center;
     }
@@ -1695,8 +1627,8 @@ body {
         background-size: cover;
         background-image: url(https://img.freepik.com/premium-photo/black-architectural-design-skyscraper-dark-gray-background-highrise-geometric-building-futuristic3d-render_507676-1213.jpg);
         background-position: bottom;
-        color:white;
-        font-family: Arial, Helvetica, sans-serif;
+        /* color:white; */
+        /* font-family: Arial, Helvetica, sans-serif; */
         font-weight: 400;
         font-size: 21px;
     
@@ -1718,7 +1650,7 @@ body {
     .backdrop_Styling > div > p {
     
         /* background-color: rgba(192, 192, 192, 0.384); */
-        background-color: rgba(34, 34, 34, 0.384);
+        /* background-color: rgba(34, 34, 34, 0.384); */
         border-radius: 20px;
     
         width: max-content;
@@ -1773,7 +1705,7 @@ body {
         display: flex;
         /* background-color: rgba(192, 192, 192, 0.384); */
     
-        background-color: rgba(34, 34, 34, 0.384);
+        /* background-color: rgba(34, 34, 34, 0.384); */
         border-radius: 20px;
         backdrop-filter: blur(12px);
     }
@@ -1804,7 +1736,7 @@ body {
     /* Getting Started */
     
     .getting_Started {
-        background-color: #0c0c0c;
+        /* background-color: #0c0c0c; */
         padding: clamp(20px, 10%, 100px);
         /* display: none; */
     }
@@ -1848,7 +1780,7 @@ body {
         
         font-size: 25px;
         border-radius: 10px;
-        background-color: rgb(24, 24, 24);
+        /* background-color: rgb(24, 24, 24); */
     }
     
     .step_Container {
@@ -1859,7 +1791,7 @@ body {
     .step_Img_Wrapper {
     
         padding: 10px;
-        background-color: #0c0c0c;
+        /* background-color: #0c0c0c; */
         border-radius: 15px;
     }
     
@@ -1964,7 +1896,7 @@ body {
     
     .faq_Section {
     
-        background-color: black;
+        /* background-color: black; */
         padding: 100px 0px;
     
     }
@@ -2007,7 +1939,7 @@ body {
         height: clamp(180px, 40%, 300px);
         overflow: hidden;
         contain: paint;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
     
         display: flex;
         align-items: center;
@@ -2027,7 +1959,7 @@ body {
     
     .subject_Link a {
     
-        color: #12bbf8;
+        /* color: #12bbf8; */
         
         text-decoration: none;
         transition: all 200ms ease;
@@ -2038,7 +1970,7 @@ body {
     
     .subject_Link a:hover {
     
-        color: white;
+        /* color: white; */
         text-decoration: none;
     }
     
@@ -2046,7 +1978,7 @@ body {
     
     .who_We_Are {
     
-        background-color: rgb(24, 24, 24);
+        /* background-color: #181818; */
         padding-top: clamp(100px, 10vh, 250px);
         padding-bottom: clamp(100px, 10vh, 250px);
     }
@@ -2109,7 +2041,7 @@ body {
     
     .mini_Window {
     
-        background-color: rgb(24, 24, 24);
+        /* background-color: #181818; */
     
         padding: 20px 20px;
         border-radius: 30px;
@@ -2127,7 +2059,7 @@ body {
     
         height: clamp(80px, 6vw, 200px);
         width: clamp(80px, 6vw, 200px);
-        background: rgb(48, 48, 48);
+        /* background: #303030; */
         border-radius: clamp(15px, 1vw, 30px);
         display: flex;
         justify-content: center;
@@ -2184,7 +2116,7 @@ body {
     
         padding: 2vw;
         width: max-content;
-        background-color: rgb(36, 36, 36);
+        /* background-color: rgb(36, 36, 36); */
         margin: 0;
         /* height: 60vh; */
         border-radius: 30px;
@@ -2235,15 +2167,17 @@ body {
     .service_Text button {
     
         margin: 0 0;
+        font-size: clamp(1.5rem, 1.25vw, 4.5rem);
+        padding: clamp(20px, 0.25vw, 40px);
     
     }
     
     .service_Selection {
     
-        background-color: rgb(31, 30, 30);
+        /* background-color: rgb(31, 30, 30); */
         /* min-width: 500px;
         max-width: 500px; */
-        height: clamp(500px, 30vw, 1000px);
+        /* height: clamp(500px, 30vw, 1000px); */
        
         width: clamp(600px, 30vw, 1200px);
         
@@ -2251,6 +2185,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: clamp(7px, 0.6vw, 20px);
+        
     
         border-radius: clamp(20px, 1vw, 40px);
     }
@@ -2263,8 +2198,9 @@ body {
         height: unset;
         border: clamp(2px, 0.15vw, 6px) solid #00b2d600;
         border-radius: clamp(15px, 0.7vw, 30px);
-        background-color: rgb(24, 24, 24);
+        /* background-color: rgb(24, 24, 24); */
         font-size: clamp(1.5rem, 1.5vw, 2.2rem);
+        
         
         
        
@@ -2279,18 +2215,18 @@ body {
     
     .service_Img_Wrapper {
         padding: clamp(10px, 0.6vw, 20px);
-        background-color: rgb(36, 36, 36);
+        /* background-color: rgb(36, 36, 36); */
         border-radius: clamp(10px, 0.6vw, 20px);
     }
     
     .service_Img_Wrapper img {
-        width: clamp(60px, 4.1vw, 150px);
-        height: clamp(60px, 4.1vw, 150px);
+        width: clamp(40px, 4.1vw, 90px);
+        height: clamp(40px, 4.1vw, 90px);
     }
     
     .selected {
     
-        border: clamp(2px, 0.15vw, 6px) solid #00b2d6;
+        border: clamp(2px, 0.15vw, 6px) solid var(--accent-color-one);
 
          
     }
@@ -2322,7 +2258,7 @@ body {
         height: max-content;
         overflow: hidden;
         contain: paint;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
     
         display: flex;
         align-items: center;
@@ -2519,7 +2455,7 @@ body {
     /* Getting Started */
     
     .getting_Started {
-        background-color: #0c0c0c;
+        /* background-color: #0c0c0c; */
         padding: clamp(20px, 10%, 100px);
         /* display: none; */
     }
@@ -2558,7 +2494,7 @@ body {
         gap: clamp(15px, 0.8vw, 30px);
         padding: clamp(10px, 0.5vw, 20px);
         border-radius: clamp(15px, 0.8vw, 30px);
-        background-color: rgb(24, 24, 24);
+        /* background-color: rgb(24, 24, 24); */
     }
     
     .step_Container {
@@ -2569,7 +2505,7 @@ body {
     .step_Img_Wrapper {
     
         padding: clamp(10px, 0.5vw, 20px);
-        background-color: #0c0c0c;
+        /* background-color: #0c0c0c; */
         border-radius: clamp(15px, 0.8vw, 30px);
     }
 
@@ -2578,7 +2514,7 @@ body {
         padding: 10px;
         width: clamp(50px, 4.1vw, 150px);
         height: clamp(50px, 4.1vw, 150px);
-        background-color: #0c0c0c;
+        /* background-color: #0c0c0c; */
         border-radius: clamp(15px, 0.8vw, 30px);
     }
     
@@ -2659,6 +2595,7 @@ body {
     .conc_Contact_Btn {
     
         padding: 8px 16px;
+        font-size: clamp(1rem, 1.25vw, 1.5rem)
     
     }
     
