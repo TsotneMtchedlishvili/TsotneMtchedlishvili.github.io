@@ -52,8 +52,8 @@
   }
 
   #tsr_Text {
-    background: var(--accent-color);
-    background: linear-gradient(100deg, #22c2e2 8%, #006ac0 98%);
+    /* background: var(--accent-color); */
+    background: linear-gradient(100deg, var(--gradient-one) 8%, var(--gradient-two) 98%);
     background-clip: text;
     color: transparent;
     font-weight: 100;
@@ -136,8 +136,8 @@
 }
 
 #tsr_Text {
-  background: var(--accent-color);
-  background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+  /* background: var(--accent-color);
+  background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%); */
   background-clip: text;
   color: transparent;
 }
@@ -215,8 +215,8 @@
   }
 
 #tsr_Text {
-  background: var(--accent-color);
-  background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+  /* background: var(--accent-color);
+  background: linear-gradient(100deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%); */
   background-clip: text;
   color: transparent;
 }

@@ -1,6 +1,6 @@
 .accordion {
 
-    background-color: var(--contact-card);
+    background-color: var(--secondary-color);
     color: var(--accent-color-one);
     cursor: pointer;
     height: 55px;

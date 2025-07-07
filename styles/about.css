@@ -49,7 +49,7 @@ body {
     /* font-family: Arial, Helvetica, sans-serif; */
     height: 100px;
     /* background-color: rgb(24, 24, 24); */
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     
     
 }
@@ -182,7 +182,7 @@ body {
 
     display: flex;
     align-items: center;
-    
+    color: var(--text-color-alt);
     gap: 15px;
     width: 100%;
     
@@ -193,7 +193,7 @@ body {
 
     height: clamp(50px, 6vw, 80px);
     width: clamp(50px, 6vw, 80px);
-    background: var(--quaternary-lighter);
+    background: var(--primary-color);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -295,7 +295,6 @@ body {
 
 .service_Selection {
 
-    background-color: var(--tertiary-darker);
     width: 100%;
     /* Height was previously 50vh */
 
@@ -303,7 +302,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
+    background-color: var(--primary-darker);
     overflow-y: scroll;
     scrollbar-color: var(--accent-color-one) var(--tertiary-color);
 }
@@ -317,9 +316,9 @@ body {
     align-items: center;
     height: 100px;
     border-radius: 15px;
-
+    color: var(--accent-color-one);
     border: 2px solid transparent;
-    background-color: var(--tertiary-color);
+    background-color: var( --primary-color);
 
    
 }
@@ -340,7 +339,7 @@ body {
 
 .service_Img_Wrapper {
     padding: 5px;
-    background-color: var(--quaternary-color);
+    background-color: var(--primary-darker);
     border-radius: 10px;
 }
 
@@ -853,6 +852,10 @@ body {
     border-radius: 15px;
 }
 
+.step_Description {
+
+    color: var(--text-color-alt);
+}
 /* conclusion */
 
 .get_In_Touch {
@@ -1298,7 +1301,7 @@ body {
         gap: 5px;
     
 
-        background-color: rgb(31, 30, 30);
+        /* background-color: rgb(31, 30, 30); */
 
         border-radius: 20px;
         

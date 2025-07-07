@@ -5,36 +5,51 @@
 
     /* Variables */
 
-    --text-color: white;
-    --text-color-alt: ;
+    --text-color: #EDDFD3;
+    --text-color-alt: #6E352D;
+    --text-color-alt-two: #fcf3ec;
     --default-font-family: Arial, Helvetica, sans-serif;
 
-    --nav-color: #0000009d;
-    --nav-text-color: #aaaaaac9;
+    --nav-color: #FFF7F09d;
+    --nav-text-color: #80572E;
 
-    --primary-color: #131313;
-    --primary-darker: #101010;
-    --secondary-color: #222222;
-    --tertiary-color: #181818;
+    --primary-color: #246E67; 
+    --primary-darker: #174440;
+    --secondary-color: #6E352D;
+    --tertiary-color: #EDDFD3;
     --tertiary-darker: #1f1e1e;
-    --quaternary-color: #242424;
+    --quaternary-color: #246E67;
     --quaternary-lighter: #303030;
     --quinary-color: #2b2b2b;
 
-    --distinguished-window: #0c0c0c;
+    --gradient-one: #8ad88c;
+    --gradient-two: #3ea041;
 
-    --footer-background-color: #111111;
-    --dimmed-link: #008ca8;
+    --gradient-one-hover: #79be7c;
+    --gradient-two-hover: #348536;
+
+
+    --distinguished-window: #8DAE8E; 
+
+    --footer-background-color: #d1e7db;
+    --dimmed-link: #7ca17d;
 
     --contact-tag: #20a5da62;
-    --contact-card: #1b1b1b;
+    --contact-card: #174440;  
 
-    --background-color: black;
-    --accent-color-one: #00b2d6;
-    --accent-color-two: #12bbf8;
+    --background-color: #FAF3E0;
+    --accent-color-one: #A5D6A7;
+    --accent-color-two: #A5D6A7;
     --accent-color-three: #20a5da;
     
   }
+
+
+
+    h1, h2, h3, h4, h5, h6 {
+
+      font-weight: 100 !important;
+    }
 
 
   .unselectable {
@@ -53,8 +68,8 @@
     /* padding: clamp(5px, 1vw, 25px) clamp(10px, 1.4vw, 50px); */
     border-radius: 50px;
     font-weight: bold;
-    background: #00b2d6;
-    background: linear-gradient(220deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+    background: #A5D6A7;
+    background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%);
   }
 
   .generic_Button a{
@@ -71,7 +86,7 @@
 
     cursor: pointer;
     background: var(--accent-color-one);
-    background: linear-gradient(220deg, #1da5c0 8%, #005ba5 98%);
+    background: linear-gradient(220deg, var(--gradient-one-hover) 8%, var(--gradient-two-hover) 98%);
     
   }
 
@@ -370,7 +385,7 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--nav-text-color);
     
   }
 
@@ -381,7 +396,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--nav-text-color);
     text-align: center;
     transition: 200ms;
   }
@@ -456,7 +471,8 @@
 
   footer address {
 
-    width: clamp(300px, 80vw, 600px)
+    width: clamp(300px, 80vw, 600px);
+    font-style: normal;
   }
 
   .footer_Column ul {
@@ -614,8 +630,8 @@
       /* padding: 0.4vw 0.3vw; */
       border-radius: 2vw;
       font-weight: bold;
-      background: var(--accent-color-one);
-      background: linear-gradient(220deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%);
+      /* background: var(--accent-color-one); */
+      /* background: linear-gradient(220deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%); */
     }
   
     .generic_Button a{
@@ -631,8 +647,8 @@
     .generic_Button:hover {
   
       cursor: pointer;
-      background: var(--accent-color-one);
-      background: linear-gradient(220deg, rgb(29, 165, 192) 8%, rgb(0, 91, 165) 98%);
+      /* background: var(--accent-color-one); */
+      /* background: linear-gradient(220deg, rgb(29, 165, 192) 8%, rgb(0, 91, 165) 98%); */
       
     }
 
@@ -755,7 +771,7 @@
     .nav_Link {
       height: 100%;
       text-decoration: none;
-      color: var(--text-color);
+      color: var(--nav-text-color);
     }
 
 
@@ -766,7 +782,7 @@
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      color: var(--text-color);
+      color: var(--nav-text-color);
       text-align: center;
       transition: 200ms;
     }
@@ -796,7 +812,7 @@
     .nav_Link {
       height: 100%;
       text-decoration: none;
-      color: var(--text-color);
+      color: var(--nav-text-color);
     }
   
     .nav_List a {
@@ -805,7 +821,7 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: var(--text-color);
+      color: var(--nav-text-color);
   
       transition: 200ms;
     }
@@ -892,7 +908,8 @@
   
     .footer_Logo {
   
-      float: left;
+      float: unset;
+      margin: auto 0;
       height: clamp(40px, 8vh, 80px);
       width: auto;
       margin-right: 8px;
@@ -1101,7 +1118,7 @@
     height: 100%;
     width: fit-content;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--nav-text-color);
   }
 
   
@@ -1178,7 +1195,7 @@
   
     .footer_Logo {
   
-      float: left;
+
       height: clamp(80px, 8vh, 160px);
       width: auto;
       margin-right: 8px;
