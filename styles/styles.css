@@ -1,46 +1,96 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
-    /* Variables */
+margin: 0;
 
-    --text-color: #EDDFD3;
-    --text-color-alt: #6E352D;
-    --text-color-alt-two: #fcf3ec;
-    --default-font-family: Arial, Helvetica, sans-serif;
+padding: 0;
 
-    --nav-color: #FFF7F09d;
-    --nav-text-color: #80572E;
+  
 
-    --primary-color: #246E67; 
-    --primary-darker: #174440;
-    --secondary-color: #6E352D;
-    --tertiary-color: #EDDFD3;
-    --tertiary-darker: #1f1e1e;
-    --quaternary-color: #246E67;
-    --quaternary-lighter: #303030;
-    --quinary-color: #2b2b2b;
+/* Variables */
 
-    --gradient-one: #8ad88c;
-    --gradient-two: #3ea041;
+  
 
-    --gradient-one-hover: #79be7c;
-    --gradient-two-hover: #348536;
+--text-color: #ffffff;
 
+--text-color-alt: #0f304b;
 
-    --distinguished-window: #8DAE8E; 
+--text-color-alt-two: #ffffff;
 
-    --footer-background-color: #d1e7db;
-    --dimmed-link: #7ca17d;
+--default-font-family: Arial, Helvetica, sans-serif;
 
-    --contact-tag: #20a5da62;
-    --contact-card: #174440;  
+  
 
-    --background-color: #FAF3E0;
-    --accent-color-one: #A5D6A7;
-    --accent-color-two: #A5D6A7;
-    --accent-color-three: #20a5da;
+--nav-color: #85A1B89d;
+
+--nav-text-color: #0D2539;
+
+  
+
+--primary-color: #4F728E;
+
+--primary-darker: #274863;
+
+--secondary-color: #274863;
+
+--tertiary-color: #CFDAE3;
+
+--tertiary-darker: #1f1e1e;
+
+--quaternary-color: #4F728E;
+
+--quaternary-lighter: #303030;
+
+--quinary-color: #2b2b2b;
+
+  
+
+--gradient-one: #8ad88c;
+
+--gradient-two: #3ea041;
+
+  
+
+--gradient-one-hover: #79be7c;
+
+--gradient-two-hover: #348536;
+
+  
+  
+
+--distinguished-window: #0D2539;
+
+  
+
+--footer-background-color: #85A1B8;
+
+--dimmed-link: #3b566e;
+
+  
+
+--contact-tag: #20a5da62;
+
+--contact-card: #0D2539;
+
+  
+
+--background-color: #CFDAE3;
+
+--accent-color-one: #A5D6A7;
+
+--accent-color-two: #A5D6A7;
+
+--accent-color-three: #20a5da;
+
+  
+
+/* DO NOT DELETE BELOW THIS */
+
+  
+
+--footer-Text: #174163;
+
+--footer-headers: #072d4d;
     
   }
 
@@ -48,7 +98,7 @@
 
     h1, h2, h3, h4, h5, h6 {
 
-      font-weight: 100 !important;
+      font-weight: 100;
     }
 
 
@@ -68,8 +118,8 @@
     /* padding: clamp(5px, 1vw, 25px) clamp(10px, 1.4vw, 50px); */
     border-radius: 50px;
     font-weight: bold;
-    background: #A5D6A7;
-    background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%);
+    background: rgb(90, 179, 87);
+    /* background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%); */
   }
 
   .generic_Button a{
@@ -85,8 +135,9 @@
   .generic_Button:hover {
 
     cursor: pointer;
-    background: var(--accent-color-one);
-    background: linear-gradient(220deg, var(--gradient-one-hover) 8%, var(--gradient-two-hover) 98%);
+    background: rgb(58, 168, 54);
+    transition: all 100ms ease-in-out;
+    /* background: linear-gradient(220deg, var(--gradient-one-hover) 8%, var(--gradient-two-hover) 98%); */
     
   }
 
@@ -429,6 +480,12 @@
     
   }
 
+  footer h4 {
+
+    color: var(--footer-headers);
+    font-weight: 900 ;
+  }
+
   .footer_Div {
 
     display: flex;
@@ -439,12 +496,12 @@
 
     background-color: var(--footer-background-color);
 
-    border-top: 5px solid grey;
+    border-top: 5px solid var(--footer-Text);
     padding: 5vh 20px;
 
     font-family: var(--default-font-family);
     font-size: clamp(0.5rem, 0.5rem + 4vw, 1.2rem);
-    color: #7e7e7e;
+    color: var(--footer-Text);
   }
 
   .footer_Column {
@@ -500,7 +557,7 @@
 
   .footer-divider {
 
-    background-color: #3a3838;
+    background-color: var(--footer-Text);
     width: 84vw;
     height: 0.4vh;
     position: absolute;
@@ -522,9 +579,9 @@
     padding-top: 1.3vh;;
     margin: 0 auto;
 
-    background-color: rgb(17, 17, 17);
+    /* background-color: rgb(17, 17, 17); */
 
-    color: rgb(150, 150, 150);
+    color: var(--footer-Text);
     font-size: clamp(0.5rem, 0.3rem + 3vw, 1.2rem);
     font-family: var(--default-font-family);
   }
@@ -867,12 +924,12 @@
   
       background-color: var(--footer-background-color);
   
-      border-top: 5px solid grey;
+      border-top: 5px solid var(--footer-Text);
       padding: 5vh 20px;
   
       font-family: var(--default-font-family);
       font-size: 1.2vw;
-      color: #7e7e7e;
+      color: var(--footer-Text);
     }
   
     .footer_Column {
@@ -923,7 +980,7 @@
   
     .footer-divider {
   
-      background-color: #3a3838;
+      background-color: var(--footer-Text);
       width: 84vw;
       height: 0.4vh;
   
@@ -945,7 +1002,7 @@
   
       background-color: var(--footer-background-color);
   
-      color: rgb(150, 150, 150);
+      color: var(--footer-Text);
       font-size: 1.2vw;
       font-family: var(--default-font-family);
     }
@@ -1127,9 +1184,6 @@
    
     /* footer */
   
-    footer {
-      background-color: rgb(17, 17, 17);
-    }
   
     footer a {
 
@@ -1154,12 +1208,12 @@
   
       background-color: var(--footer-background-color);
   
-      border-top: 5px solid grey;
+      border-top: 5px solid var(--footer-Text);
       padding: 5vh 20px;
   
       font-family: var(--default-font-family);
       font-size: 1.2vw;
-      color: #7e7e7e;
+      color: var(--footer-Text);
     }
   
     .footer_Column {
@@ -1209,7 +1263,7 @@
   
     .footer-divider {
   
-      background-color: #3a3838;
+      /* background-color: #3a3838; */
       width: 84vw;
       height: 0.4vh;
   
@@ -1231,7 +1285,7 @@
   
       background-color: var(--footer-background-color);
   
-      color: #969696;
+      color: var(--footer-Text);
       font-size: 1.2vw;
       font-family: var(--default-font-family);
     }

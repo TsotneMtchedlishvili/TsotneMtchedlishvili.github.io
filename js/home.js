@@ -12,10 +12,10 @@ else {
 }
 
 
-intro_Home.style.height = `${window.innerHeight - header.clientHeight}px`;
-console.log(intro_Container.style.height);
-intro_Container.style.height = `${intro_Home.clientHeight * multiplier}px`;
-console.log(intro_Container.style.height);
+// intro_Home.style.height = `${window.innerHeight - header.clientHeight}px`;
+// console.log(intro_Container.style.height);
+// intro_Container.style.height = `${intro_Home.clientHeight * multiplier}px`;
+// console.log(intro_Container.style.height);
 
 window.addEventListener("resize", () => {
 
@@ -28,6 +28,6 @@ window.addEventListener("resize", () => {
     }
     
     
-    intro_Home.style.height = `${window.innerHeight - header.clientHeight}px`;
+    // intro_Home.style.height = `${window.innerHeight - header.clientHeight}px`;
     intro_Container.style.height = `${intro_Home.clientHeight * multiplier}px`;
 })

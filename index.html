@@ -10,7 +10,7 @@
     <title>The Space</title>
 </head>
 <body>
-    <header class="home_Header">
+    <header class="home_Header home_Intro">
         <div class="top_Panel">
 
             <div class="logo_And_Hamburger">
@@ -45,28 +45,38 @@
         
        
     </header>
-    <main>
-            <div class="intro_Home">
 
-                <div class="intro_Container">
-                    <!-- <img src="" alt="" class="company_Image"> -->
-                    <div class="intro_Left">
-                        <h1 class="main_Title"><span id="tsr_Text">The Space Renovations</span></h1>
-                        <p class="slogan">One Place. Endless Solutions</p>
-                        <div class="intro_Description">
-                            <p>From renovation to landscaping to property management — we provide expert-led, end-to-end services that transform your space and your peace of mind</p>
-                            <button class="generic_Button"><a href="pages/about.html">Read More</a></button>
-                        </div>
-                    </div>
-                    <div class="intro_Right">
-                        <img src="https://imgs.search.brave.com/N5TCtvoVG3D-9zotey9Qiq5G-By73cfHuP0QB-HApts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE1/MDQ5MTgxNy9waG90/by9hcmNoaXRlY3Qt/bG9va2luZy1hdC1m/bG9vci1wbGFuLW9u/LWRlc2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9UOXZi/Vk0xalVmclNLcXd3/WG1scF9VZW9LY3VV/anhtcTdKenFtLXl1/V0k9" 
-                    alt="" class="intro_Image" height="500" width="">
-                    </div>
+    <div class="intro_Home">
+        <div class="carousel">
+            <button class="carousel_Button carousel_Button--left">
+                <img src="./Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                height="30px" width="auto" alt="">
+            </button>
+            <ul class="carousel_List">
+                <li class="carousel_Item">
+                    <img src="./Images/Carousel/renovation1.jpg" alt="">
+                </li>
+                <li class="carousel_Item">
+                     <img src="./Images/Carousel/renovation2.jpg" alt="">
+                </li>
+                <li class="carousel_Item">
+                     <img src="./Images/Carousel/renovation3.jpeg" alt="">
+                </li>
+            </ul>
+            <button class="carousel_Button carousel_Button--right">
+                <img src="./Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                height="30px" width="auto" alt="">
+            </button>
+            <div class="carousel_Tracker">
+                <div class="carousel_Centerer">
+                    <button class="carousel_Indicator active_Slide"></button>
+                    <button class="carousel_Indicator"></button>
+                    <button class="carousel_Indicator"></button>
                 </div>
-                <div id="header_Image"></div>
-        
-                
             </div>
+        </div>
+    </div>
+    <main>
         <div class="about_Local_Nav">
             <ul>
                 <li class="subject_Link"><a href="#about_Wwr">Who We Are</a></li>
@@ -500,6 +510,8 @@
     <script src="../js/services_Script.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/home.js"></script>
+    <script src="./js/carousel.js"></script>
+    <!-- <script src="js/homeNew.js"></script> -->
 
 </body>
 </html>
