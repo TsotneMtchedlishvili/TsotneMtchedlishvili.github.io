@@ -118,7 +118,7 @@ padding: 0;
     /* padding: clamp(5px, 1vw, 25px) clamp(10px, 1.4vw, 50px); */
     border-radius: 50px;
     font-weight: bold;
-    background: rgb(90, 179, 87);
+    background: #274863;
     /* background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%); */
   }
 
@@ -135,7 +135,7 @@ padding: 0;
   .generic_Button:hover {
 
     cursor: pointer;
-    background: rgb(58, 168, 54);
+    background: #4e8abb;
     transition: all 100ms ease-in-out;
     /* background: linear-gradient(220deg, var(--gradient-one-hover) 8%, var(--gradient-two-hover) 98%); */
     

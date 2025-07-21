@@ -29,5 +29,5 @@ window.addEventListener("resize", () => {
     
     
     // intro_Home.style.height = `${window.innerHeight - header.clientHeight}px`;
-    intro_Container.style.height = `${intro_Home.clientHeight * multiplier}px`;
+    // intro_Container.style.height = `${intro_Home.clientHeight * multiplier}px`;
 })

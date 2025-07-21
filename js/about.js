@@ -1,4 +1,4 @@
-const servicesList =Array.from( document.getElementsByClassName("service_Container"));
+const servicesList = Array.from( document.getElementsByClassName("service_Container"));
 const serviceInfoPage = document.querySelector(".service_Info_Page");
 const thePage = document.querySelector(".page_Contents");
 const serviceTextContent = {
@@ -95,13 +95,7 @@ const serviceTextContent = {
 const serviceBox = document.querySelector(".service_Box");
 const serviceText = document.querySelector(".service_Text")
 
-
-
-
-
-servicesList.forEach((item) => {
-
-    item.addEventListener('click', () => {
+const selectServiceFunction = (item) => {
 
         thePage.classList.remove("slide_Up");
 
@@ -127,7 +121,7 @@ servicesList.forEach((item) => {
                 
                 item.classList.add("selected");
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
-                thePage.style.background = "rgb(24, 24, 24)";
+                thePage.style.background = "var(--distinguished-window)";
     
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
@@ -202,7 +196,7 @@ servicesList.forEach((item) => {
                 
                 item.classList.add("selected");
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
-                thePage.style.background = "rgb(24, 24, 24)";
+                thePage.style.background = "var(--distinguished-window)";
     
                 // for (const child of thePage.children) {
                 //     child.style.display = "flex"
@@ -223,7 +217,65 @@ servicesList.forEach((item) => {
         
         
         // serviceInfoPage.classList.add('service_Info_Page_Activate');
-    })
+}
+
+
+if (window.innerWidth > 1220) {
+
+    let isPaused = false;
+    let selectedService = () => document.querySelector(".selected");
+    console.log(selectedService())
+    let selectedServiceIndex;
+    let nextSelection;
+
+    if(!selectedService()) {
+
+        selectServiceFunction(servicesList[0]);
+    }
+    // else {
+
+    //     selectedService = servicesList.findIndex((selection) => {selection.classList.contains("selected")});
+    //     console.log(selectedService)
+    // }
+
+    let autoSlide = () => {
+            if (isPaused) {
+                setTimeout(autoSlide, 5000); // checks again later if paused
+                return;
+            }
+            selectedServiceIndex = servicesList.findIndex((x) => x.classList.contains("selected"));
+            nextSelection = selectedServiceIndex + 1;
+
+            if(selectedServiceIndex === servicesList.length - 1) {
+                selectServiceFunction(servicesList[0])
+                selectedServiceIndex = 0;
+            }
+            else {
+
+                selectServiceFunction(servicesList[nextSelection])
+
+            }
+            
+            setTimeout(autoSlide, 5000);
+
+        }
+
+    setTimeout(autoSlide, 5000);
+    serviceBox.addEventListener('mouseenter', () => {isPaused = true;});
+    serviceBox.addEventListener('mouseleave', () => {isPaused = false;});
+    if (serviceBox.matches(':hover')) {
+        isPaused = true;
+    }
+}
+
+
+servicesList.forEach((item) => {
+
+
+    let selectItem = () => {selectServiceFunction(item);};
+    
+    item.addEventListener('click', selectItem);
+
 });
 
     // console.log(serviceBox.clientWidth);
@@ -298,7 +350,7 @@ servicesList.forEach((item) => {
 
             if (serviceInfoPage.clientHeight > 1) {
 
-                console.log("x1")
+                // console.log("x1")
 
                     document.body.style.overflow = "scroll";
                     document.querySelector(".top_Panel").classList.remove("hidden");
