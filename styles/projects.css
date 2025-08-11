@@ -109,7 +109,7 @@ header {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(250px,80vw, 400px));
-    padding: clamp(20px, 6vw, 80px);
+    padding: var(--section-separator-unit-big) clamp(20px, 6vw, 80px);
     gap: clamp(20px, 8vw, 60px);
     margin: 0 auto;
     justify-content: center;
@@ -292,7 +292,7 @@ header {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(400px,20vw, 800px));
-    padding: clamp(20px, 6vw, 80px);
+    padding: calc(2*var(--section-separator-unit)) 0;
     gap: clamp(20px, 8vw, 60px);
     margin: 0 auto;
     justify-content: center;

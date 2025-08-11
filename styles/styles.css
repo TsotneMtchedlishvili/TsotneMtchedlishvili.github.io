@@ -19,7 +19,9 @@ padding: 0;
 
 --default-font-family: Arial, Helvetica, sans-serif;
 
-  
+--section-separator-unit: clamp(48px, 3rem, 96px);
+
+--section-separator-unit-big: clamp(48px, 6rem, 96px);
 
 --nav-color: #85A1B89d;
 

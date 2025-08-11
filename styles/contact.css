@@ -284,7 +284,8 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        padding: var(--section-separator-unit-big) 0;
+        padding-bottom: var(--section-separator-unit-big);
         color: var(--text-color);
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -529,6 +530,7 @@ h1 {
     .contact_Banner_Container {
     
         min-height: calc(100vh - clamp(100px, 5.3vw, 200px));
+        padding: 0;
 
     }
     

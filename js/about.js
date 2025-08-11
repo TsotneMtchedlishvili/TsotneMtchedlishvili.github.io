@@ -92,6 +92,7 @@ const serviceTextContent = {
                                 </div>`
 }
 
+const wwaIntro = document.querySelector('.wwa_Intro');
 const serviceBox = document.querySelector(".service_Box");
 const serviceText = document.querySelector(".service_Text")
 
@@ -289,6 +290,8 @@ servicesList.forEach((item) => {
         }
         else {
             serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+            wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
+
         }
     }
 
@@ -299,7 +302,7 @@ servicesList.forEach((item) => {
         if (window.innerWidth < 1220) {
 
             serviceBox.style.marginLeft = `0px`;
-            console.log(serviceInfoPage.clientHeight);
+            // console.log(serviceInfoPage.clientHeight);
 
             if(serviceInfoPage.clientHeight > 1) {
                 
@@ -347,7 +350,7 @@ servicesList.forEach((item) => {
         }
         else {
             serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
-
+            wwaIntro.style.width = wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
             if (serviceInfoPage.clientHeight > 1) {
 
                 // console.log("x1")

@@ -93,12 +93,12 @@ body {
 .who_We_Are {
 
     background-color: var(--tertiary-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--section-separator-unit);
+    padding-bottom: var(--section-separator-unit);
 
     display: flex;
     flex-direction: column;
-    gap: 15vh;
+    gap: var(--section-separator-unit);
     
     
 
@@ -668,9 +668,10 @@ body {
     /* background-color: rgb(12, 12, 12); */
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: var(--section-separator-unit);
     background-color: var(--tertiary-color);
-    padding: 100px 0;
+    /* padding: var(--section-separator-unit) 0; */
+    padding-bottom: var(--section-separator-unit);
     align-items: center;
 }
 
@@ -809,7 +810,7 @@ body {
 
 .getting_Started {
     background-color: var(--distinguished-window);
-    padding: clamp(20px, 10%, 100px);
+    padding: var(--section-separator-unit) clamp(20px, 10%, 100px);
     /* display: none; */
 }
 
@@ -875,7 +876,8 @@ body {
 
 .get_In_Touch {
 
-    padding: 100px 0;
+    padding: calc(2*var(--section-separator-unit)) 0;
+    padding-bottom: var(--section-separator-unit);
 }
 
 .conclusion_Container {
@@ -1099,12 +1101,12 @@ body {
     .who_We_Are {
     
         /* background-color: #181818; */
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: calc(2*var(--section-separator-unit));
+        padding-bottom: calc(2*var(--section-separator-unit));
     
         display: flex;
         flex-direction: column;
-        gap: 15vh;
+        gap: calc(2*var(--section-separator-unit));
         
         
     
@@ -1621,9 +1623,9 @@ body {
         /* background-color: rgb(12, 12, 12); */
         display: flex;
         flex-direction: column;
-        gap: 10vh;
+        gap: var(--section-separator-unit);
         /* background-color: rgb(24, 24, 24); */
-        padding: 100px 0;
+        padding: calc(2*var(--section-separator-unit)) 0;
         align-items: center;
     }
     
@@ -1761,7 +1763,7 @@ body {
     
     .getting_Started {
         /* background-color: #0c0c0c; */
-        padding: clamp(20px, 10%, 100px);
+        padding: calc(2*var(--section-separator-unit));
         /* display: none; */
     }
     
@@ -1823,7 +1825,8 @@ body {
     
     .get_In_Touch {
     
-        padding: 100px 0;
+        padding: calc(2*var(--section-separator-unit)) 0;
+        padding-bottom: 0;
     }
     
     .conclusion_Container {
@@ -2003,8 +2006,9 @@ body {
     .who_We_Are {
     
         /* background-color: #181818; */
-        padding-top: clamp(100px, 10vh, 250px);
-        padding-bottom: clamp(100px, 10vh, 250px);
+        padding-top: calc(2*var(--section-separator-unit-big));
+        padding-bottom: calc(2*var(--section-separator-unit-big));
+        gap:calc(2*var(--section-separator-unit-big));
     }
     
     .wwa_Intro {
@@ -2388,8 +2392,8 @@ body {
     
     .why_Choose_Us_Section {
     
-        gap: 10vh;
-        padding: clamp(100px, 5vw, 200px) 0;
+        gap: calc(2*var(--section-separator-unit-big));
+        padding: 0 0 calc(2*var(--section-separator-unit-big)) 0;
     }
     
     .why_Choose_Us_Section h2 {
@@ -2480,7 +2484,7 @@ body {
     
     .getting_Started {
         /* background-color: #0c0c0c; */
-        padding: clamp(20px, 10%, 100px);
+        padding: calc(2*var(--section-separator-unit-big)) clamp(20px, 10%, 100px);
         /* display: none; */
     }
     
@@ -2490,11 +2494,12 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        padding: calc(2*var(--section-separator-unit-big)) auto;
     }
     
     .how_To_Start h2 {
     
-        font-size: clamp(0.5rem, 10vw, 2.24rem);
+        font-size: clamp(0.5rem, 10vw, 5rem);
         margin-bottom: 3vh;
     }
     
@@ -2547,13 +2552,15 @@ body {
     .get_In_Touch {
     
         padding: clamp(100px, 5.3vw, 200px) 0;
+        padding: 0;
     }
     
     .conclusion_Container {
 
         gap: clamp(30px, 1.5vw, 60px);
-        height: clamp(700px, 36.45vw, 1400px);
-        padding: 40px 80px;
+        height: unset;
+        padding: calc(2*var(--section-separator-unit-big)) 80px;
+        padding-bottom: 0;
     
     }
     
@@ -2604,7 +2611,7 @@ body {
     
     .conc_Desc_Container h3 {
     
-        font-size: clamp(3rem, 8vw, 5rem);
+        font-size: clamp(3rem, 8vw, 4.5rem);
         margin-bottom: 10px;
     
     }
@@ -2618,8 +2625,8 @@ body {
     
     .conc_Contact_Btn {
     
-        padding: 8px 16px;
-        font-size: clamp(1rem, 1.25vw, 1.5rem)
+        padding: 10px 20px;
+        font-size: clamp(1rem, 1.25vw, 1.2rem)
     
     }
     

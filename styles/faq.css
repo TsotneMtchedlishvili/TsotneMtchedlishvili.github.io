@@ -7,7 +7,9 @@ header {
 }
 
 .faq_Banner {
-    height:30vh;
+    /* height:30vh; */
+    padding: var(--section-separator-unit-big) 0;
+    /* padding-bottom: 0; */
     background-color: var(--background-color);
 
     color: var( --nav-text-color);
@@ -25,7 +27,8 @@ header {
 .faq_Section {
 
     background-color: var(--background-color);
-    padding: 100px 0px;
+    padding: var(--section-separator-unit) 0px;
+    padding-top: 0;
 
 }
 
@@ -63,7 +66,7 @@ header {
 .faq_Section {
     
     background-color: var(--background-color);
-    padding: 100px 0px;
+    padding-bottom: var(--section-separator-unit-big);
 
 }
 

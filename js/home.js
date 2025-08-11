@@ -1,6 +1,7 @@
 const intro_Home = document.querySelector('.intro_Home');
 // const header = document.querySelector('.home_Header');
-const intro_Container = document.querySelector('.intro_Container')
+const intro_Container = document.querySelector('.intro_Container');
+
 let multiplier = 0;
 
 if (window.innerWidth < 620) {
