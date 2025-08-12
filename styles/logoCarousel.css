@@ -1,0 +1,163 @@
+.quick_Buy {
+    background-color: var(--secondary-color);
+    height: clamp(160px, 25vw + 20vh, 320px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+
+  .quick_Buy_Carousel {
+    padding: clamp(5px, 1.25vh, 200px) 0;
+    gap: clamp(5px, 1.25vh, 200px);
+    color: var(--text-color);
+
+    list-style: none;
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* for Firefox and latest Chromium */
+    scroll-behavior: smooth;
+  }
+
+  .quick_Buy_Carousel::-webkit-scrollbar {
+
+    display: none; /* for safari */
+  }
+
+
+  .carousel_Item {
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    padding: clamp(5px, 2.5%, 15px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: clamp(2.5px, 0.625vh, 100px);
+    background-color: var(--distinguished-window);
+    min-height: min-content;
+    /* max-height: unset; */
+    /* height: calc(clamp(160px, 25vw + 20vh, 320px) - 2*clamp(5px, 1.25vh, 200px)); */
+    width: 0;
+  }
+
+  .item_Thumbnail {
+
+    /* height: 0;
+    min-height: 0;
+    width: 100%; */
+    overflow: hidden;
+    
+
+  }
+
+  .item_Thumbnail img {
+
+    
+    height: 120%;
+    width: auto;
+    object-fit:cover;
+    object-position: center;
+    
+    
+
+  }
+
+  .item_Title {
+    /* overflow: hidden; */
+  }
+
+  .carousel_Item button {
+
+    width: auto;
+    padding: 3%;
+    /* max-height: fit-content; */
+    font-size: var(--btn-text-small);
+    padding: auto;
+    border-radius: clamp(5px, 1vw, 10px);
+
+    text-align: center;
+
+  }
+
+  .carousel_Scroll_Button {
+
+    position: absolute;
+    /* display: none; */
+    /* height: 20px; */
+    background: transparent;
+    backdrop-filter: none;
+    outline:unset;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    width: 10%;
+    /* padding: 2%; */
+    height: 160px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 300ms all ease;
+  }
+
+  .carousel_Scroll_Button:hover {
+
+    background: rgba(131, 131, 131, 0.541) !important;
+    border-color: var(--main-color-one);
+  }
+
+
+  .left_Scroll_Button {
+    left: 1.5vw;
+  }
+  .right_Scroll_Button {
+    right: 1.5vw;
+  }
+
+  .arrow_Right_Svg {
+    fill: transparent;
+    height: 100%;
+    width: 100%;
+    transition: 300ms all ease;
+    
+  }
+  .arrow_Left_Svg {
+    fill: transparent;
+    height: 100%;
+    width: 100%;
+    transition: 300ms all ease;
+  }
+
+  .arrow_Right_Svg:hover {
+    fill: var(--main-color-one);
+  }
+  .arrow_Left_Svg:hover {
+    fill: var(--main-color-one);
+  }
+
+
+  @media (min-width: 900px) {
+
+    .quick_Buy {
+      margin: var(--section-separator-unit-big) 0;
+    
+  }
+
+      .carousel_Scroll_Button {
+
+      position: absolute;
+      /* height: 20px; */
+      /* background: rgba(255, 255, 255, 0.541);
+      backdrop-filter: blur(4px); */
+      outline:unset;
+      border-width: 2px;
+      border-style: solid;
+      /* border-color: var(--text-color-lightened); */
+      width: clamp(50px, 3vw, 100px);
+      /* padding: 2%; */
+      height: clamp(160px, 14vw, 1000px);
+      cursor: pointer;
+      transition: 300ms all ease;
+    }
+  }
