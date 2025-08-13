@@ -1626,6 +1626,7 @@ body {
         gap: var(--section-separator-unit);
         /* background-color: rgb(24, 24, 24); */
         padding: calc(2*var(--section-separator-unit)) 0;
+        padding-top: 0;
         align-items: center;
     }
     
