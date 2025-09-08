@@ -315,6 +315,7 @@ window.addEventListener("resize", () => {
 
         serviceBox.style.marginLeft = `0px`;
         // console.log(serviceInfoPage.clientHeight);
+        wwaIntro.style.width = `${serviceBox.clientWidth}px`;
 
         if(serviceInfoPage.clientHeight > 1) {
             
@@ -353,7 +354,7 @@ window.addEventListener("resize", () => {
     }
     else {
         serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
-        wwaIntro.style.width = wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
+        wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
         if (serviceInfoPage.clientHeight > 1) {
 
             // console.log("x1")
