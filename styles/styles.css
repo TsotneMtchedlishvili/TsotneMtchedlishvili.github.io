@@ -718,6 +718,7 @@ padding: 0;
       width: auto;
       height: clamp(40px, 4.5vw, 80px);
       /* border-radius:100%; */
+      margin-left: 0;
       object-fit:cover;
       transform: scale(1);
       
@@ -769,7 +770,11 @@ padding: 0;
       display: flex;
       width: max-content;
       padding: 10px;
-      height: clamp(80px, max-content, 200px);
+
+      height: max-content;
+      min-height: 80px;
+      max-height: 200px;
+
       justify-content: space-between;
       align-items: center;
       position:relative;
@@ -1103,7 +1108,7 @@ padding: 0;
   @media (min-width: 2000px) {
   /* Nav links bigger */
   .nav_List {
-    font-size: clamp(1.5rem, 1.5vw, 3rem);
+    font-size: clamp(1.5rem, 1vw + 1rem, 3rem);
   }
 
   /* Global button scaling */
@@ -1127,7 +1132,7 @@ padding: 0;
   
   .top_Panel {
 
-    padding: 10px 0;
+    padding: 20px 0;
     width: 95vw;
     height: max-content;
     max-width: 100%;
@@ -1162,15 +1167,10 @@ padding: 0;
   .global_Nav {
 
     width: clamp(800px, 50vw, 1600px);
-    height: clamp(80px, 5vh, 160px);
+    height: clamp(80px, 5vh, 110px);
     
   }
 
-  .nav_List {
-
-    font-size: clamp(3.5rem, 1vw, 5rem);
-
-  }
 
   
   .nav_Link {
@@ -1378,6 +1378,12 @@ padding: 0;
   :root {
     /* Increase base from 16px → 20px (or other) */
     font-size: 125%;  /* 16px * 1.25 = 20px */
+  }
+
+  .nav_List {
+
+    font-size: clamp(2.8rem, 1vw, 4rem);
+
   }
 }
 
