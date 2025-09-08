@@ -81,7 +81,7 @@ toggleBtn.addEventListener("click", () => {
     }
     else {
         
-
+        topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
         header.style.height = `max-content`;
         navbar.style.top = `${header.clientHeight / 2}px`;
     }
