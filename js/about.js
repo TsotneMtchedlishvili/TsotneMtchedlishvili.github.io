@@ -95,7 +95,7 @@ const serviceTextContent = {
 const wwaIntro = document.querySelector('.wwa_Intro');
 const serviceBox = document.querySelector(".service_Box");
 const serviceText = document.querySelector(".service_Text")
-
+let isPaused = false;
 const selectServiceFunction = (item) => {
 
         thePage.classList.remove("slide_Up");
@@ -220,46 +220,52 @@ const selectServiceFunction = (item) => {
         // serviceInfoPage.classList.add('service_Info_Page_Activate');
 }
 
-
-if (window.innerWidth > 1220) {
-
-    let isPaused = false;
+const autoSlide = () => {
     let selectedService = () => document.querySelector(".selected");
     console.log(selectedService())
     let selectedServiceIndex;
     let nextSelection;
+    
+    if(selectedService()) {
 
-    if(!selectedService()) {
+        if (isPaused) {
+            setTimeout(autoSlide, 5000); // checks again later if paused
+            return;
+        }
+        selectedServiceIndex = servicesList.findIndex((x) => x.classList.contains("selected"));
+        nextSelection = selectedServiceIndex + 1;
 
-        selectServiceFunction(servicesList[0]);
+        if(selectedServiceIndex === servicesList.length - 1) {
+            selectServiceFunction(servicesList[0])
+            selectedServiceIndex = 0;
+        }
+        else {
+
+            selectServiceFunction(servicesList[nextSelection])
+
+        }
+        
+        setTimeout(autoSlide, 5000);
+    }
+        
+
+    }
+
+
+if (window.innerWidth > 1220) {
+
+    
+    window.onload = () => {
+        if(!document.querySelector(".selected")) {
+
+            selectServiceFunction(servicesList[0]);
+        }
     }
     // else {
 
     //     selectedService = servicesList.findIndex((selection) => {selection.classList.contains("selected")});
     //     console.log(selectedService)
     // }
-
-    let autoSlide = () => {
-            if (isPaused) {
-                setTimeout(autoSlide, 5000); // checks again later if paused
-                return;
-            }
-            selectedServiceIndex = servicesList.findIndex((x) => x.classList.contains("selected"));
-            nextSelection = selectedServiceIndex + 1;
-
-            if(selectedServiceIndex === servicesList.length - 1) {
-                selectServiceFunction(servicesList[0])
-                selectedServiceIndex = 0;
-            }
-            else {
-
-                selectServiceFunction(servicesList[nextSelection])
-
-            }
-            
-            setTimeout(autoSlide, 5000);
-
-        }
 
     setTimeout(autoSlide, 5000);
     serviceBox.addEventListener('mouseenter', () => {isPaused = true;});
@@ -273,7 +279,9 @@ if (window.innerWidth > 1220) {
 servicesList.forEach((item) => {
 
 
-    let selectItem = () => {selectServiceFunction(item);};
+    let selectItem = () => {selectServiceFunction(item);
+        setTimeout(autoSlide, 5000);
+    };
     
     item.addEventListener('click', selectItem);
 
@@ -282,96 +290,96 @@ servicesList.forEach((item) => {
     // console.log(serviceBox.clientWidth);
     // console.log(serviceInfoPage.clientWidth);
     // console.log(serviceText.clientWidth);
-    if (serviceBox) {
-        
-        if (window.innerWidth < 1220) {
+if (serviceBox) {
+    
+    if (window.innerWidth < 1220) {
 
-            serviceBox.style.marginLeft = `0px`;
-        }
-        else {
-            serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
-            wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
-
-        }
+        serviceBox.style.marginLeft = `0px`;
     }
+    else {
+        serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+        wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
 
-    window.addEventListener("resize", () => {
+    }
+}
 
-        if (serviceBox) {
-        
-        if (window.innerWidth < 1220) {
+window.addEventListener("resize", () => {
 
-            serviceBox.style.marginLeft = `0px`;
-            // console.log(serviceInfoPage.clientHeight);
+    if (serviceBox) {
+    
+    if (window.innerWidth < 1220) {
 
-            if(serviceInfoPage.clientHeight > 1) {
-                
+        serviceBox.style.marginLeft = `0px`;
+        // console.log(serviceInfoPage.clientHeight);
 
-                if (!document.querySelector(".closeBtn")) {
+        if(serviceInfoPage.clientHeight > 1) {
+            
 
-                    console.log("button Made")
-                    const closeButton = document.createElement("div");
+            if (!document.querySelector(".closeBtn")) {
 
-                    const closeButtonIcon = document.createElement("img");
-                    closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
-                    closeButtonIcon.height = 40;
+                console.log("button Made")
+                const closeButton = document.createElement("div");
 
-                    closeButton.appendChild(closeButtonIcon);
-                    closeButton.classList.add("closeBtn");
-                    thePage.appendChild(closeButton);
+                const closeButtonIcon = document.createElement("img");
+                closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
+                closeButtonIcon.height = 40;
 
-
-                    closeButton.addEventListener('click', () => {
-                        const selected = document.querySelector(".selected");
-                        selected.classList.remove("selected");
-                        serviceInfoPage.classList.remove('service_Info_Page_Activate');
-                        thePage.style.background = "transparent";
-                        thePage.innerHTML = '';
-                        document.body.style.overflow = "scroll";
-                        document.querySelector(".top_Panel").classList.remove("hidden");
-                        navbar.style.top = `${header.clientHeight / 2}px`;
-                    });
-
-                }
-
-                if(!document.querySelector(".page_Background")) {
-
-                    const backdrop = document.createElement("div");
-                    console.log("Backdrop Made");
-                    backdrop.classList.add("page_Background");
-                    thePage.appendChild(backdrop);
-                    document.body.style.overflow = "hidden";
-                    document.querySelector(".top_Panel").classList.add("hidden");
-                }
+                closeButton.appendChild(closeButtonIcon);
+                closeButton.classList.add("closeBtn");
+                thePage.appendChild(closeButton);
 
 
-
-            }
-        }
-        else {
-            serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
-            wwaIntro.style.width = wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
-            if (serviceInfoPage.clientHeight > 1) {
-
-                // console.log("x1")
-
+                closeButton.addEventListener('click', () => {
+                    const selected = document.querySelector(".selected");
+                    selected.classList.remove("selected");
+                    serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                    thePage.style.background = "transparent";
+                    thePage.innerHTML = '';
                     document.body.style.overflow = "scroll";
                     document.querySelector(".top_Panel").classList.remove("hidden");
-            
-                    if (document.querySelector(".page_Background")){
-                        document.querySelector(".page_Background").remove();
-                        console.log("111")
-                    }
-
-                    if (document.querySelector(".closeBtn")){
-                        document.querySelector(".closeBtn").remove();
-                        console.log("222")
-                    }
-                
+                    navbar.style.top = `${header.clientHeight / 2}px`;
+                });
 
             }
+
+            if(!document.querySelector(".page_Background")) {
+
+                const backdrop = document.createElement("div");
+                console.log("Backdrop Made");
+                backdrop.classList.add("page_Background");
+                thePage.appendChild(backdrop);
+                document.body.style.overflow = "hidden";
+                document.querySelector(".top_Panel").classList.add("hidden");
+            }
+
+
+
         }
     }
-    })
+    else {
+        serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+        wwaIntro.style.width = wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
+        if (serviceInfoPage.clientHeight > 1) {
+
+            // console.log("x1")
+
+                document.body.style.overflow = "scroll";
+                document.querySelector(".top_Panel").classList.remove("hidden");
+        
+                if (document.querySelector(".page_Background")){
+                    document.querySelector(".page_Background").remove();
+                    console.log("111")
+                }
+
+                if (document.querySelector(".closeBtn")){
+                    document.querySelector(".closeBtn").remove();
+                    console.log("222")
+                }
+            
+
+        }
+    }
+}
+})
     // console.log(serviceBox.style.marginLeft);
 
