@@ -141,20 +141,7 @@ const selectServiceFunction = (item) => {
                 thePage.appendChild(closeButton);
 
 
-                closeButton.addEventListener('click', () => {
-                    item.classList.remove("selected");
-                    serviceInfoPage.classList.remove('service_Info_Page_Activate');
-                    thePage.style.background = "transparent";
-                    if (backdrop) {
-                        backdrop.remove();
-                    }
-                    if (closeButton) {
-                        closeButton.remove();
-                    }
-                    thePage.innerHTML = '';
-                    document.body.style.overflow = "scroll";
-                    document.querySelector(".top_Panel").classList.remove("hidden");
-                });
+                closeButton.addEventListener('click', clearServiceItem);
 
                 const backdrop = document.createElement("div");
                 backdrop.classList.add("page_Background");
@@ -228,6 +215,10 @@ const autoSlide = () => {
     
     if(selectedService()) {
 
+        if (window.innerWidth < 1220) {
+            return; // cancels the function to avoid a bug on mobile where if you quickly select an item after resizing the viewport it enables autoplay, which should be off for mobile by default.
+        }
+
         if (isPaused) {
             setTimeout(autoSlide, 5000); // checks again later if paused
             return;
@@ -250,7 +241,16 @@ const autoSlide = () => {
         
 
     }
-
+const clearServiceItem = () => {
+    const selected = document.querySelector(".selected");
+    if (selected) selected.classList.remove("selected");
+    serviceInfoPage.classList.remove('service_Info_Page_Activate');
+    thePage.style.background = "transparent";
+    thePage.innerHTML = '';
+    document.body.style.overflow = "scroll";
+    document.querySelector(".top_Panel").classList.remove("hidden");
+    navbar.style.top = `${header.clientHeight / 2}px`;
+}
 
 if (window.innerWidth > 1220) {
 
@@ -280,7 +280,7 @@ servicesList.forEach((item) => {
 
 
     let selectItem = () => {selectServiceFunction(item);
-        setTimeout(autoSlide, 5000);
+        if (window.innerWidth > 1220) {setTimeout(autoSlide, 5000)};
     };
     
     item.addEventListener('click', selectItem);
@@ -305,6 +305,10 @@ if (serviceBox) {
 
 window.addEventListener("resize", () => {
 
+    if (document.querySelector(".selected")) {
+
+        clearServiceItem();
+    }
     if (serviceBox) {
     
     if (window.innerWidth < 1220) {
@@ -329,16 +333,7 @@ window.addEventListener("resize", () => {
                 thePage.appendChild(closeButton);
 
 
-                closeButton.addEventListener('click', () => {
-                    const selected = document.querySelector(".selected");
-                    selected.classList.remove("selected");
-                    serviceInfoPage.classList.remove('service_Info_Page_Activate');
-                    thePage.style.background = "transparent";
-                    thePage.innerHTML = '';
-                    document.body.style.overflow = "scroll";
-                    document.querySelector(".top_Panel").classList.remove("hidden");
-                    navbar.style.top = `${header.clientHeight / 2}px`;
-                });
+                closeButton.addEventListener('click', clearServiceItem);
 
             }
 
