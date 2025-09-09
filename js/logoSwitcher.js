@@ -9,6 +9,10 @@
 // const imageData = ctx.getImageData(lx, ly, lw, lh);
 // const pixels = imageData.data;
 
+let lightLogo = "Images/theSpace/logo-tetri).png";
+let darkLogo = "Images/theSpace/logo-mtavari-eng(2).png";
+let currentlyLoadedImg = lightLogo;
+
 const getCoverScaleAndOffset = (img, containerWidth, containerHeight) => {
   const imgAspect = img.naturalWidth / img.naturalHeight;
   const containerAspect = containerWidth / containerHeight;
@@ -29,6 +33,7 @@ const getCoverScaleAndOffset = (img, containerWidth, containerHeight) => {
 }
 
 const mapLogoToImageCoords = (img, logo) => {
+
   const imgRect = img.getBoundingClientRect();
   const logoRect = logo.getBoundingClientRect();
 
@@ -55,12 +60,11 @@ const mapLogoToImageCoords = (img, logo) => {
 const analyzeLogoBackground = (img, logo) => {
 
   const canvas = document.createElement("canvas");
-const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-const runAnalysis = () => {
+  const runAnalysis = () => {
 
-     console.log(">>> runAnalysis start", { src: img.src, complete: img.complete, naturalW: img.naturalWidth, naturalH: img.naturalHeight, imgTag: img.tagName });
-
+   
 
   // prepare canvas and draw the image
   canvas.width = img.naturalWidth;
@@ -68,11 +72,9 @@ const runAnalysis = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(img, 0, 0);
 
-  console.log("canvas size", canvas.width, canvas.height);
 
   // compute logo area in image (natural) coordinates
   const { lx, ly, lw, lh } = mapLogoToImageCoords(img, logo);
- console.log("mapped coords (float)", { lx, ly, lw, lh });
 
   // minimal safety: integer coords clamped to canvas bounds
   const sx = Math.max(0, Math.floor(lx));
@@ -80,7 +82,6 @@ const runAnalysis = () => {
   const sw = Math.max(1, Math.floor(Math.min(lw, canvas.width - sx)));
   const sh = Math.max(1, Math.floor(Math.min(lh, canvas.height - sy)));
   
-  console.log("getImageData args (int/clamped)", { sx, sy, sw, sh });
 
 
   let pixels;
@@ -100,21 +101,62 @@ const runAnalysis = () => {
   }
 
   const avgBrightness = count ? total / count : 0;
-  console.log("Average brightness:", avgBrightness);
+
+  const fadeIn = (logoType) =>  {
+
+    if(parseInt(getComputedStyle(logo).opacity) !== 0) {
+      setTimeout(fadeIn, 200, logoType);
+      console.log("returned" + typeof(parseInt(getComputedStyle(logo).opacity)))
+      return;
+    }
+    else {
+      logo.src = logoType;
+      logo.style.opacity = `100`;
+    }
+      
+  }
+      
+
+  const fadeEffect = (arg) => {
+
+      // setTimeout(() => {
+          logo.style.transition = `all 200ms ease-in-out`;
+          logo.style.opacity = `0`;
+          fadeIn(arg);
+      // }, 100)
+
+  };
 
   if (avgBrightness < 128) {
-    logo.src = "Images/theSpace/logo-tetri).png";
-  } else {
-    logo.src = "Images/theSpace/logo-mtavari-eng(2).png";
-  }
-};
+        
+        if (currentlyLoadedImg !== lightLogo) {
+          currentlyLoadedImg = lightLogo;
+          
+          setTimeout(fadeEffect, 200, lightLogo)
+          
+        }
+      } else {
+        
+        
+        if (currentlyLoadedImg !== darkLogo) {
+          currentlyLoadedImg = darkLogo;
+          
+          setTimeout(fadeEffect, 200, darkLogo)
+        }
+
+      }
+
+}
+
+
 
 // run immediately if already loaded, otherwise wait for load
-if (img.complete && img.naturalWidth) {
-  runAnalysis();
-} else {
-  img.addEventListener('load', runAnalysis, { once: true });
-  img.addEventListener('error', () => console.error('Carousel image failed to load'), { once: true });
-}
+  if (img.complete && img.naturalWidth) {
+    runAnalysis();
+  } else {
+    img.addEventListener('load', runAnalysis, { once: true });
+    img.addEventListener('error', () => console.error('Carousel image failed to load'), { once: true });
+  }
 
-}
+  }
+
