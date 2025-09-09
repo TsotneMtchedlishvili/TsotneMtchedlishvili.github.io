@@ -2,6 +2,7 @@
 
 // DOM refs
 const slidesContainer = document.querySelector('.carousel_List');
+const allSlides = Array.from(document.querySelectorAll('.carousel_Item'));
 const slides = Array.from(slidesContainer.children);
 const prevBtn = document.querySelector('.carousel_Button--left');
 const nextBtn = document.querySelector('.carousel_Button--right');
@@ -22,6 +23,8 @@ function updateCarousel() {
 function goTo(offset) {
   currentIndex = (currentIndex + offset + slideCount) % slideCount;
   updateCarousel();
+  console.log(allSlides[currentIndex].firstElementChild)
+  analyzeLogoBackground(allSlides[currentIndex].firstElementChild, document.querySelector(".header_Logo"))
 }
 
 // Event wiring
