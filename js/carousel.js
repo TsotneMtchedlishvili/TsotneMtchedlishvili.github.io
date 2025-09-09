@@ -10,6 +10,7 @@ const indicators = Array.from(document.querySelectorAll('.carousel_Indicator'));
 
 let currentIndex = 0;
 const slideCount = slides.length;
+let currentSlideImage = allSlides[currentIndex].firstElementChild;
 
 // Move slides + update trackers
 function updateCarousel() {
@@ -23,8 +24,8 @@ function updateCarousel() {
 function goTo(offset) {
   currentIndex = (currentIndex + offset + slideCount) % slideCount;
   updateCarousel();
-  console.log(allSlides[currentIndex].firstElementChild)
-  analyzeLogoBackground(allSlides[currentIndex].firstElementChild, document.querySelector(".header_Logo"))
+  currentSlideImage = allSlides[currentIndex].firstElementChild;
+  analyzeLogoBackground(currentSlideImage, document.querySelector(".header_Logo"))
 }
 
 // Event wiring

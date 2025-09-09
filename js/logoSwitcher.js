@@ -8,7 +8,7 @@
 
 // const imageData = ctx.getImageData(lx, ly, lw, lh);
 // const pixels = imageData.data;
-
+const siteLogo = document.querySelector(".header_Logo");
 let lightLogo = "Images/theSpace/logo-tetri).png";
 let darkLogo = "Images/theSpace/logo-mtavari-eng(2).png";
 let currentlyLoadedImg = lightLogo;
@@ -37,7 +37,7 @@ const mapLogoToImageCoords = (img, logo) => {
   const imgRect = img.getBoundingClientRect();
   const logoRect = logo.getBoundingClientRect();
 
-  const { scale, offsetX, offsetY } = getCoverScaleAndOffset(
+  const {scale, offsetX, offsetY } = getCoverScaleAndOffset(
     img,
     imgRect.width,
     imgRect.height
@@ -58,6 +58,10 @@ const mapLogoToImageCoords = (img, logo) => {
 
 
 const analyzeLogoBackground = (img, logo) => {
+
+  if(window.innerWidth <= 1220) {
+    return
+  }
 
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
@@ -160,3 +164,23 @@ const analyzeLogoBackground = (img, logo) => {
 
   }
 
+
+  window.addEventListener("resize", () => {
+
+    if(window.innerWidth <= 1220) {
+
+      if(currentlyLoadedImg!== lightLogo) {
+
+        currentlyLoadedImg = lightLogo;
+        siteLogo.src = lightLogo;
+        console.log("changed")
+      }
+
+    }
+    else {
+
+      analyzeLogoBackground(currentSlideImage,siteLogo);
+      console.log(currentSlideImage)
+    }
+     
+  })
