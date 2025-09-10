@@ -96,6 +96,7 @@ const wwaIntro = document.querySelector('.wwa_Intro');
 const serviceBox = document.querySelector(".service_Box");
 const serviceText = document.querySelector(".service_Text")
 let isPaused = false;
+let quedued = false;
 const selectServiceFunction = (item) => {
 
         thePage.classList.remove("slide_Up");
@@ -209,17 +210,19 @@ const selectServiceFunction = (item) => {
 
 const autoSlide = () => {
     let selectedService = () => document.querySelector(".selected");
-    console.log(selectedService())
     let selectedServiceIndex;
     let nextSelection;
     
     if(selectedService()) {
+        if (quedued) return;
+        quedued = true;
 
         if (window.innerWidth < 1220) {
             return; // cancels the function to avoid a bug on mobile where if you quickly select an item after resizing the viewport it enables autoplay, which should be off for mobile by default.
         }
 
         if (isPaused) {
+            setTimeout(() => {quedued = false;}, 5000);
             setTimeout(autoSlide, 5000); // checks again later if paused
             return;
         }
@@ -236,7 +239,10 @@ const autoSlide = () => {
 
         }
         
+        
+        setTimeout(() => {quedued = false;}, 5000); // This is here to prevent a rapid fire autoslide after repeatedly selecting and deselecting a service window, this ensures that multiple async autoslide functions do not get queued together.
         setTimeout(autoSlide, 5000);
+        
     }
         
 
