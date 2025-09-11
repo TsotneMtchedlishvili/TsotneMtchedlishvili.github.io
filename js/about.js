@@ -363,7 +363,10 @@ window.addEventListener("resize", () => {
         console.log(serviceBox.style.marginLeft);
         console.log(parseFloat(getComputedStyle(serviceBox).gap));
         console.log(wwaIntro.clientWidth);
-        wwaIntro.style.width = `${serviceBox.getBoundingClientRect().width - serviceInfoPage.clientWidth + serviceText.clientWidth + 2* parseFloat(getComputedStyle(serviceBox).gap)}px`;
+        // if(wwaIntro.getBoundingClientRect.width !== serviceBox.getBoundingClientRect.width) {
+
+            wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
+        // }
         console.log(wwaIntro.clientWidth);
         if (serviceInfoPage.clientHeight > 1) {
 
