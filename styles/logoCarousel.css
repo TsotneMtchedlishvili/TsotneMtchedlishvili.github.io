@@ -1,9 +1,11 @@
 .quick_Buy {
     background-color: var(--secondary-color);
-    height: clamp(160px, 25vw + 20vh, 320px);
+    /* height: clamp(160px, 25vw + 20vh, 320px); */
+    height: clamp(75px, 35vh, 540px);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
     
   }
 
@@ -11,7 +13,6 @@
     padding: clamp(5px, 1.25vh, 200px) 0;
     gap: clamp(5px, 1.25vh, 200px);
     color: var(--text-color);
-
     list-style: none;
     display: flex;
 
@@ -39,16 +40,17 @@
     background-color: var(--distinguished-window);
     min-height: min-content;
     /* max-height: unset; */
-    /* height: calc(clamp(160px, 25vw + 20vh, 320px) - 2*clamp(5px, 1.25vh, 200px)); */
+    height: calc(clamp(160px, 25vw + 20vh, 320px) - 2*clamp(5px, 1.25vh, 200px));
     width: 0;
   }
 
   .item_Thumbnail {
 
-    /* height: 0;
+    /* height: 0; */
     min-height: 0;
-    width: 100%; */
+    width: 100%;
     overflow: hidden;
+    display: flex;
     
 
   }
@@ -66,7 +68,7 @@
   }
 
   .item_Title {
-    /* overflow: hidden; */
+    font-size: var(--font-size-title-one);
   }
 
   .carousel_Item button {
@@ -74,7 +76,7 @@
     width: auto;
     padding: 3%;
     /* max-height: fit-content; */
-    font-size: var(--btn-text-small);
+    font-size: var(--btn-text-small-phone);
     padding: auto;
     border-radius: clamp(5px, 1vw, 10px);
 
@@ -136,6 +138,23 @@
     fill: var(--main-color-one);
   }
 
+  @media (min-width: 800px) and  (max-width: 900px) {
+
+    .item_Title {
+
+      font-size: var(--font-size-title-two);
+    }
+  }
+
+  @media (min-width: 800px) and  (max-width: 900px) {
+
+    .item_Title {
+
+      font-size: var(--font-size-title-two);
+    }
+  }
+
+
 
   @media (min-width: 900px) {
 
@@ -144,20 +163,63 @@
     
   }
 
-      .carousel_Scroll_Button {
+    .carousel_Scroll_Button {
 
-      position: absolute;
-      /* height: 20px; */
-      /* background: rgba(255, 255, 255, 0.541);
-      backdrop-filter: blur(4px); */
-      outline:unset;
-      border-width: 2px;
-      border-style: solid;
-      /* border-color: var(--text-color-lightened); */
-      width: clamp(50px, 3vw, 100px);
-      /* padding: 2%; */
-      height: clamp(160px, 14vw, 1000px);
-      cursor: pointer;
-      transition: 300ms all ease;
+    position: absolute;
+    /* height: 20px; */
+    /* background: rgba(255, 255, 255, 0.541);
+    backdrop-filter: blur(4px); */
+    outline:unset;
+    border-width: 2px;
+    border-style: solid;
+    /* border-color: var(--text-color-lightened); */
+    width: clamp(50px, 3vw, 100px);
+    /* padding: 2%; */
+    height: clamp(160px, 14vw, 1000px);
+    cursor: pointer;
+    transition: 300ms all ease;
+  }
+
+    .carousel_Item button {
+
+    font-size: var(--btn-text-small);
+
+  }
+
+  .item_Title {
+
+      font-size: var(--font-size-title-three);
     }
+
+
+}
+
+  @media (min-width: 2000px) {
+
+
+    .quick_Buy {
+      background-color: var(--secondary-color);
+      height: clamp(160px, 16vw, 640px);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    
+    }
+
+    .carousel_Item {
+
+    /* padding: clamp(5px, 2.5%, 20px); */
+    row-gap: clamp(2.5px, 0.625vh, 100px);
+    background-color: var(--distinguished-window);
+    min-height: min-content;
+    /* max-height: unset; */
+    height: calc(clamp(160px, 25vw + 20vh, 640px) - 2*clamp(5px, 1.25vh, 200px));
+    width: 0;
+  }
+
+  .item_Title {
+
+    font-size: clamp();
+  }
+
   }

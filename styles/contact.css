@@ -293,7 +293,7 @@ h1 {
     .contact_Banner {
     
         border-radius: 20px;
-        height: 700px;
+        /* height: 700px; */
         width: 80vw;
         padding: 40px;
         background-color: var(--primary-color);
@@ -530,28 +530,28 @@ h1 {
     .contact_Banner_Container {
     
         min-height: calc(100vh - clamp(100px, 5.3vw, 200px));
-        padding: 0;
+        /* padding: 0; */
 
     }
     
     .contact_Banner {
     
         border-radius: Clamp(20px, 1.2vw, 40px);
-        height: max(80vh, 1400px);
+        /* height: clamp(); */
         width: 80vw;
         padding: Clamp(40px, 2.4vw, 80px);
     }
     
     .contact_Card {
         /* background-color: var(--contact-card); */
-        width: clamp(300px, 20.5vw, 800px);
-        height: clamp(300px, 15.5vw, 600px);
+        width: clamp(300px, 24.5vw, 800px);
+        height: clamp(300px, 16.5vw, 600px);
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: Clamp(20px, 1.2vw, 40px);
+        /* gap: Clamp(20px, 1.2vw, 40px); */
     
         border-radius: Clamp(20px, 1.2vw, 40px);
     }
@@ -585,7 +585,10 @@ h1 {
 
     .contact_desc{
 
-        font-size: clamp(1.25rem, 1.3vw, 2.3rem);
+        font-size: clamp(0.5rem, 0.8vw + 0.5rem, 2.5rem);
+        /* font-size: clamp(1.25rem, 1.3vw, 2.3rem); */
+        max-height: clamp(100px, 5.5vw, 200px);
+        overflow: hidden;
     }
     
     .learn_More_Container {
@@ -604,7 +607,7 @@ h1 {
         text-decoration: none;
         /* color:#12bbf8; */
         /* font-family: Arial, Helvetica, sans-serif; */
-        font-size: clamp(1.25rem, 1.3vw, 2.5rem);
+        font-size: clamp(0.5rem, 0.8vw + 0.5rem, 2.5rem);
         height: clamp(50px, 2.6vw, 100px);
         display: flex;
         align-items: center;

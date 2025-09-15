@@ -18,6 +18,7 @@ function updateCarousel() {
   indicators.forEach((dot, i) => {
     dot.classList.toggle('active_Slide', i === currentIndex);
   });
+  
 }
 
 // Navigation helpers
@@ -41,6 +42,9 @@ indicators.forEach((dot, i) => {
   dot.addEventListener('click', () => {
     currentIndex = i;
     updateCarousel();
+    currentSlideImage = allSlides[currentIndex].firstElementChild;
+    analyzeLogoBackground(currentSlideImage, document.querySelector(".header_Logo"))
+
   });
 });
 
