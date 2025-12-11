@@ -161,14 +161,11 @@ const selectServiceFunction = (item) => {
 
             if (item.classList.contains("selected")) {
 
-                item.classList.remove("selected");
-                serviceInfoPage.classList.remove('service_Info_Page_Activate');
-                thePage.style.background = "transparent";
-                // for (const child of thePage.children) {
-                //     child.style.display = "none"
-                //   }
+                // item.classList.remove("selected");
+                // serviceInfoPage.classList.remove('service_Info_Page_Activate');
+                // thePage.style.background = "transparent";
     
-                thePage.innerHTML = '';
+                // thePage.innerHTML = '';
                 
                 
     
