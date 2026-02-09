@@ -54,15 +54,15 @@ padding: 0;
 
   
 
---gradient-one: #8ad88c;
+--gradient-one: #fbfffb;
 
---gradient-two: #3ea041;
+--gradient-two: #7e7e7e;
 
   
 
---gradient-one-hover: #79be7c;
+--gradient-one-hover: #ffffff;
 
---gradient-two-hover: #348536;
+--gradient-two-hover: #474747;
 
   
   
@@ -85,9 +85,9 @@ padding: 0;
 
 --background-color: #CFDAE3;
 
---accent-color-one: #A5D6A7;
+--accent-color-one: #ffffff;
 
---accent-color-two: #A5D6A7;
+--accent-color-two: #d8d8d8;
 
 --accent-color-three: #20a5da;
 
