@@ -1348,7 +1348,7 @@ body {
         /* border-radius: 20px; */
         /* border-radius: 0; */
         
-        overflow-y: scroll;
+        overflow-y: hidden;
         /* scrollbar-color: #00b2d6 #181818; */
     }
     
@@ -1503,7 +1503,7 @@ body {
     .page_Description p {
     
         font-size: clamp(0.5rem, 1rem + 0.2vw, 1.3rem);
-        overflow: scroll;
+        overflow: hidden;
     }
     
     .learn_More_Container {
@@ -2345,7 +2345,7 @@ body {
     
         font-size: clamp(1.3rem, 1rem + 0.5vw, 2.9rem);
         text-align: justify;
-        overflow: scroll;
+        overflow: hidden;
     }
     
     .learn_More_Page {
