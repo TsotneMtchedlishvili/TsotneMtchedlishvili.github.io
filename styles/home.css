@@ -13,6 +13,42 @@
 
   }
 
+  /* .mgh_Container {
+
+    width: max-content;
+    height: auto;
+    background-color: var(--primary-color);
+    position: absolute;
+    z-index: 1;
+
+
+  }
+
+  .mgh_Container:hover {
+
+    display:block;
+
+  } */
+
+
+  .main_Page_Heading {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    padding: clamp(0.2rem, 1.5vw + 0.5rem, 1.5rem);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    font-weight: 900;
+    font-size: var(--font-size-title-two);
+    text-align: center;
+    border: 2px solid;
+    border-color: white;
+    animation-name: slideDownHomeHeading;
+    animation-duration: 1.5s;
+  }
+
   .carousel {
   position: relative;    /* contain absolutely‑positioned children */
   overflow: hidden;      /* clip the sliding list */

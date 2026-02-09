@@ -29,3 +29,14 @@
     
     }
 }
+
+@keyframes slideDownHomeHeading {
+    0% {
+        transform: translate(-50%, -150%); /* Start 100px down from its final position */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translate(-50%, -50%); /* End at its original Y position */
+        opacity: 1; /* End fully visible */
+    }
+}
