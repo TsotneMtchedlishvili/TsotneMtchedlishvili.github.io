@@ -24,13 +24,16 @@ const truncateString = (str, num) => {
 
 const sizeAdjustment = (item) => {
 
+    console.log("rolax" + logoCarouselThumbnail.clientHeight)
+    container.style.height = `${carousel.clientHeight}px`;
     let trueSize = ((logoCarouselThumbnail.clientHeight / 60 * 100 + parseFloat(getComputedStyle(item).rowGap) + desc.clientHeight));
-    let ratio = trueSize/carousel.clientHeight;
+    console.log(trueSize)
+    let ratio = 1/carousel.clientHeight;
     let itemThumbnail = item.children[0];
     let thumbnailPicture = itemThumbnail.children[0];
-    let itemTitile = item.children[1];
-    let itemDescription = item.children[2];
-    let itemButton = item.children[3];
+    // let itemTitile = item.children[1];
+    // let itemDescription = item.children[2];
+    // let itemButton = item.children[3];
     // console.log(title.clientHeight + "hello")
     // itemThumbnail.style.height = `${1.5 * (itemButton.clientHeight + itemTitile.clientHeight + itemDescription.clientHeight)}px`
     // console.log(itemThumbnail.style.minHeight)
@@ -39,7 +42,8 @@ const sizeAdjustment = (item) => {
     // itemThumbnail.style.height = `${(button.clientHeight + title.clientHeight + desc.clientHeight)}px !important`;
     // console.log(item.children)
     //Logo Carousel Thumbail is supposed to be 60% of the entire item card, for this reason once its height is calced it is divided by 60 and multiplied by 100 to determine the item card size, adjusting for row and padding size.
-    item.style.height = `${trueSize/ratio - 2*parseFloat(getComputedStyle(container).padding)}px`;
+    
+    item.style.height = `${container.clientHeight - 2*parseFloat(getComputedStyle(container).padding)}px`;
     item.style.minWidth = `${item.clientHeight}px`;
     // console.log(ratio)
     
@@ -81,11 +85,13 @@ const sizeAdjustment = (item) => {
       console.log("they are even")}
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Now your DOM text and layout are ready
+window.addEventListener("load", () => {
   
   items.forEach((item)=> {
-    sizeAdjustment(item);
+    
+    requestAnimationFrame(() => {
+    items.forEach(item => sizeAdjustment(item));
+  });
     title[items.indexOf(item)].textContent = truncateString(title[items.indexOf(item)].textContent, 20);
   });
 });

@@ -38,7 +38,7 @@
     flex-direction: column;
     row-gap: clamp(2.5px, 0.625vh, 100px);
     background-color: var(--distinguished-window);
-    min-height: min-content;
+    /* min-height: min-content; */
     /* max-height: unset; */
     height: calc(clamp(160px, 25vw + 20vh, 320px) - 2*clamp(5px, 1.25vh, 200px));
     width: 0;
