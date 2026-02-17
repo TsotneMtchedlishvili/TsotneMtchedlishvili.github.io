@@ -128,7 +128,7 @@ const selectServiceFunction = (item) => {
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
-                thePage.classList.add("slide_Up");
+                // thePage.classList.add("slide_Up");
 
 
                 const closeButton = document.createElement("div");
@@ -308,23 +308,29 @@ if (serviceBox) {
 
 window.addEventListener("resize", () => {
 
-    if (document.querySelector(".selected")) {
+    if (window.innerWidth < 1220 && document.querySelector(".selected")) {
 
         clearServiceItem();
     }
+
+    if(window.innerWidth > 1220){
+        wwaIntro.style.width = `90vw`;
+    }
+
     if (serviceBox) {
     
     if (window.innerWidth < 1220) {
 
         serviceBox.style.marginLeft = `0px`;
-        wwaIntro.style.width = `90vw`;
+        // wwaIntro.style.width = `90vw`;
+        // console.log("thing 1 on resize")
 
         if(serviceInfoPage.clientHeight > 1) {
             
 
             if (!document.querySelector(".closeBtn")) {
 
-                console.log("button Made")
+                // console.log("button Made")
                 const closeButton = document.createElement("div");
 
                 const closeButtonIcon = document.createElement("img");
@@ -343,7 +349,7 @@ window.addEventListener("resize", () => {
             if(!document.querySelector(".page_Background")) {
 
                 const backdrop = document.createElement("div");
-                console.log("Backdrop Made");
+                // console.log("Backdrop Made");
                 backdrop.classList.add("page_Background");
                 thePage.appendChild(backdrop);
                 document.body.style.overflow = "hidden";
@@ -355,16 +361,17 @@ window.addEventListener("resize", () => {
         }
     }
     else {
-        console.log(serviceBox.style.marginLeft);
+        // console.log(serviceBox.style.marginLeft);
         serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
-        console.log(serviceBox.style.marginLeft);
-        console.log(parseFloat(getComputedStyle(serviceBox).gap));
-        console.log(wwaIntro.clientWidth);
+        // console.log(serviceBox.style.marginLeft);
+        // console.log(parseFloat(getComputedStyle(serviceBox).gap));
+        // console.log(wwaIntro.clientWidth);
         // if(wwaIntro.getBoundingClientRect.width !== serviceBox.getBoundingClientRect.width) {
 
             wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
+            console.log("2 executed")
         // }
-        console.log(wwaIntro.clientWidth);
+        // console.log(wwaIntro.clientWidth);
         if (serviceInfoPage.clientHeight > 1) {
 
             // console.log("x1")
@@ -374,12 +381,12 @@ window.addEventListener("resize", () => {
         
                 if (document.querySelector(".page_Background")){
                     document.querySelector(".page_Background").remove();
-                    console.log("111")
+                    // console.log("111")
                 }
 
                 if (document.querySelector(".closeBtn")){
                     document.querySelector(".closeBtn").remove();
-                    console.log("222")
+                    // console.log("222")
                 }
             
 
