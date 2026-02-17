@@ -313,6 +313,13 @@ window.addEventListener("resize", () => {
         clearServiceItem();
     }
 
+    if (window.innerWidth > 1220 && !document.querySelector(".selected")) {
+
+        clearServiceItem();
+        selectServiceFunction(servicesList[0])
+
+    }
+
     if(window.innerWidth > 1220){
         wwaIntro.style.width = `90vw`;
     }
