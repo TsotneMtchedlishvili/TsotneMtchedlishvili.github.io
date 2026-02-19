@@ -190,6 +190,16 @@ header {
     
 }
 
+.estimated_Time {
+    display: flex;
+    align-items: center;
+}
+.category_Tag {
+
+    display: flex;
+    align-items: center;
+}
+
 .project_Info {
 
     width: 90%;
@@ -366,7 +376,7 @@ header {
 
     color: var(--text-color);
     font-family: var(--default-font-family);
-    font-size: clamp(1.25rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 3vw, 1.50rem);
 
     /* box-shadow: 0px 0px 20px rgb(0, 0, 0); */
 
