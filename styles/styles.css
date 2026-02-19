@@ -1,109 +1,111 @@
+@import url(https://fonts.google.com/specimen/Stack+Sans+Headline);
+
 *, *::before, *::after {
     box-sizing: border-box;
 
-margin: 0;
+    margin: 0;
 
-padding: 0;
+    padding: 0;
 
-  
+    /* font-family: Stack-Sans-Headline; */
 
-/* Variables */
+    /* Variables */
 
-  
+      
 
---text-color: #ffffff;
+    --text-color: #ffffff;
 
---text-color-alt: #0f304b;
+    --text-color-alt: #0f304b;
 
---text-color-alt-two: #ffffff;
+    --text-color-alt-two: #ffffff;
 
---default-font-family: Arial, Helvetica, sans-serif;
+    --default-font-family: Arial, Helvetica, sans-serif;
 
---section-separator-unit: clamp(48px, 3rem, 96px);
+    --section-separator-unit: clamp(48px, 3rem, 96px);
 
---section-separator-unit-big: clamp(48px, 6rem, 96px);
+    --section-separator-unit-big: clamp(48px, 6rem, 96px);
 
---nav-color: #85A1B89d;
+    --nav-color: #85A1B89d;
 
---nav-text-color: #0D2539;
+    --nav-text-color: #0D2539;
 
-  
+      
 
---btn-text-small-phone: clamp(0.2rem, 1.5vw + 0.5rem, 1.5rem);
---btn-text-small: clamp(0.2rem, 0.6vw + 0.5rem, 1.4rem);
+    --btn-text-small-phone: clamp(0.2rem, 1.5vw + 0.5rem, 1.5rem);
+    --btn-text-small: clamp(0.2rem, 0.6vw + 0.5rem, 1.4rem);
 
---font-size-title-one: clamp(1rem, 2.3vw + 0.8rem, 2rem);
---font-size-title-two: clamp(0.2rem, 2vw + 0.6rem, 2rem);
---font-size-title-three: clamp(0.2rem, 0.8vw + 0.4rem, 2rem);
+    --font-size-title-one: clamp(1rem, 2.3vw + 0.8rem, 2rem);
+    --font-size-title-two: clamp(0.2rem, 2vw + 0.6rem, 2rem);
+    --font-size-title-three: clamp(0.2rem, 0.8vw + 0.4rem, 2rem);
 
---primary-color: #4F728E;
+    --primary-color: #4F728E;
 
---primary-darker: #274863;
+    --primary-darker: #274863;
 
---secondary-color: #274863;
+    --secondary-color: #274863;
 
---tertiary-color: #CFDAE3;
+    --tertiary-color: #CFDAE3;
 
---tertiary-darker: #1f1e1e;
+    --tertiary-darker: #1f1e1e;
 
---quaternary-color: #4F728E;
+    --quaternary-color: #4F728E;
 
---quaternary-lighter: #303030;
+    --quaternary-lighter: #303030;
 
---quinary-color: #2b2b2b;
+    --quinary-color: #2b2b2b;
 
-  
+      
 
---gradient-one: #fbfffb;
+    --gradient-one: #fbfffb;
 
---gradient-two: #7e7e7e;
+    --gradient-two: #7e7e7e;
 
-  
+      
 
---gradient-one-hover: #ffffff;
+    --gradient-one-hover: #ffffff;
 
---gradient-two-hover: #474747;
+    --gradient-two-hover: #474747;
 
-  
-  
+      
+      
 
---distinguished-window: #0D2539;
+    --distinguished-window: #0D2539;
 
-  
+      
 
---footer-background-color: #85A1B8;
+    --footer-background-color: #85A1B8;
 
---dimmed-link: #3b566e;
+    --dimmed-link: #3b566e;
 
-  
+      
 
---contact-tag: #20a5da62;
+    --contact-tag: #20a5da62;
 
---contact-card: #0D2539;
+    --contact-card: #0D2539;
 
-  
+      
 
---background-color: #CFDAE3;
+    --background-color: #CFDAE3;
 
---accent-color-one: #ffffff;
+    --accent-color-one: #ffffff;
 
---accent-color-two: #d8d8d8;
+    --accent-color-two: #d8d8d8;
 
---accent-color-three: #20a5da;
+    --accent-color-three: #20a5da;
 
---border-radius-mobile-large: clamp(10px, 4vw, 30px);
+    --border-radius-mobile-large: clamp(10px, 4vw, 30px);
 
---border-radius-mobile-smaller: clamp(5px, 2vw, 15px);
+    --border-radius-mobile-smaller: clamp(5px, 2vw, 15px);
 
---border-radius-picture-one: clamp(10px, 4vw, 30px);
+    --border-radius-picture-one: clamp(10px, 4vw, 30px);
 
-/* DO NOT DELETE BELOW THIS */
+    /* DO NOT DELETE BELOW THIS */
 
-  
+      
 
---footer-Text: #174163;
+    --footer-Text: #174163;
 
---footer-headers: #072d4d;
+    --footer-headers: #072d4d;
     
   }
 
