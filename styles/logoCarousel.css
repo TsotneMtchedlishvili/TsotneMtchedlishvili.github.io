@@ -208,11 +208,8 @@
 
     .carousel_Item {
 
-    /* padding: clamp(5px, 2.5%, 20px); */
     row-gap: clamp(2.5px, 0.625vh, 100px);
     background-color: var(--distinguished-window);
-    min-height: min-content;
-    /* max-height: unset; */
     height: calc(clamp(160px, 25vw + 20vh, 640px) - 2*clamp(5px, 1.25vh, 200px));
     width: 0;
   }
