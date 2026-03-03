@@ -1,0 +1,287 @@
+/* partners.css — fixed sizing & spacing (drop in place of your current file) */
+
+/* 1) global reset and sensible box-sizing to avoid accidental overflow */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background: var(--primary-darker);
+  color: var(--text-color);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", Helvetica;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- preserve original carousel variables --- */
+:root{
+  /* tweak these if you want different min / preferred / max sizes */
+  --logo-min: 4.25rem;      /* smallest reasonable size */
+  --logo-preferred: 7.5vw;  /* preferred responsive size */
+  --logo-max: 12rem;        /* largest reasonable size */
+  --logo-gap: 1.5rem;       /* gap between logos (kept relative) */
+
+  /* general layout tokens */
+  --max-width: 1400px;
+  --content-pad: clamp(12px, 2.2vw, 40px);
+  --gap: clamp(10px, 2vw, 26px);
+  --card-radius: 12px;
+  --muted: var(--text-color);
+  --accent: var(--accent-color-one);
+}
+
+/* PAGE CONTAINER */
+.container{
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: var(--content-pad);
+}
+
+/* small, defensive constraint to avoid accidental horizontal overflow */
+.page-main, .site-header, .site-footer { overflow-x: hidden; }
+
+/* HEADER / LEAD */
+.site-header{
+  padding-block: clamp(18px, 4vw, 44px);
+  /* background: linear-gradient(180deg, rgba(15,98,254,0.03), transparent 60%); */
+}
+.site-title{
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  margin: 0 0 0.35rem 0;
+  line-height: 1.06;
+}
+.lead{
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.5; /* improved readability */
+  max-width: 80ch;
+}
+
+/* --- carousel: preserve original look & sizing (no color changes) --- */
+.carousel{
+  overflow:hidden;
+  width:100%;
+  background: var(--contact-card);
+  padding-block: 12px;
+  padding-inline: clamp(8px, 3vw, 20px);
+  border-radius: 12px;
+}
+
+/* ensure track won't create horizontal overflow: padding-inline is small and track can scroll */
+.carousel-track{
+  display:flex;
+  gap:var(--logo-gap);
+  align-items:center;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; /* firefox */
+  padding-inline: 6px;
+  touch-action: pan-y;
+  /* avoid accidental vertical stretching */
+  align-content:center;
+}
+
+/* hide native scrollbars visually (but keep scroll) */
+.carousel-track::-webkit-scrollbar{ display:none; }
+
+/* responsive logo sizing using clamp() so the browser handles sizing */
+/* keep a hard max to prevent monstrous logos on very large screens */
+.logo{
+  flex:0 0 auto;
+  width: clamp(var(--logo-min), var(--logo-preferred), var(--logo-max));
+  max-width: 28vw;              /* defensive: will never exceed 28vw */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* keep images responsive inside the logo box & never alter colours */
+.logo img{
+  width: 100%;
+  height: auto;
+  display:block;
+  max-height: calc(var(--logo-max) * 1.05);
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  filter: none; /* explicit — do not desaturate logos */
+}
+
+/* dragging visual */
+.carousel-track.dragging{
+  user-select:none;
+  cursor:grabbing;
+  touch-action: none;
+}
+
+/* PARTNERS GRID AREA */
+.partners-section{
+  margin-block: clamp(14px, 3vw, 36px);
+}
+.partners-tools{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: var(--gap);
+  flex-wrap:wrap;
+}
+.partners-title{
+  margin:0;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+}
+
+/* search box sizing that doesn't choke on small screens */
+.search-wrap{
+  display:inline-block;
+  min-width: 160px;
+  width: clamp(180px, 36%, 420px);
+}
+.search-wrap input{
+  width:100%;
+  box-sizing:border-box;
+  padding: clamp(8px,1.2vh,12px);
+  border-radius: 10px;
+  border: 1px solid #e6e9ee;
+  font-size: clamp(0.95rem, 1vw, 1rem);
+  outline: none;
+}
+.search-wrap input:focus{
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: var(--accent);
+}
+
+/* fluid responsive columns — slightly larger minimum for better readability */
+.partners-grid{
+  display:grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(190px, 20vw, 320px), 1fr));
+  align-items: start;
+}
+
+/* Partner card base */
+.partner-card{
+  background: linear-gradient(180deg, var(--distinguished-window), var(--distinguished-window));
+  border-radius: var(--card-radius);
+  padding: clamp(12px, 1.8vw, 18px);
+  display:flex;
+  gap: 14px;
+  align-items:center;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.04);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* hover/focus affordance */
+.partner-card:focus,
+.partner-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(17,24,39,0.08);
+  outline: none;
+}
+
+/* logo area inside a card (kept modest size) */
+.partner-card .card-logo{
+  width: clamp(64px, 12vw, 120px);
+  height: clamp(48px, 8vh, 92px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
+  background: #fff;
+  flex-shrink:0;
+  padding: clamp(6px,1.2vw,10px);
+  box-shadow: 0 6px 14px rgba(12,18,35,0.04) inset;
+}
+.partner-card img{
+  max-width:100%;
+  max-height:100%;
+  object-fit: contain;
+  display:block;
+}
+
+/* readable card content */
+.partner-card .card-body{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+  min-width: 0;
+}
+.partner-card .card-title{
+  font-weight:600;
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  margin:0;
+  line-height:1.15;
+  /* allow wrapping on small screens to avoid truncation */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
+}
+.partner-card .card-excerpt{
+  color:var(--muted);
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  margin:0;
+  line-height:1.45;
+  display:block;
+}
+
+/* small tweak to make keyboard focus more visible */
+a.partner-card:focus-visible,
+.partner-card:focus-visible{
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  outline: none;
+}
+
+/* MOBILE / NARROW SCREEN LAYOUT ADJUSTMENTS */
+@media (max-width: 720px) {
+  /* more breathing room */
+  :root { --gap: 14px; }
+
+  .site-header { padding-block: 18px; }
+  .lead { font-size: 0.98rem; line-height: 1.6; }
+
+  /* reduce carousel track gap and logo max to avoid overflow */
+  :root { --logo-gap: 1rem; --logo-preferred: 22vw; --logo-max: 10rem; }
+
+  .partners-tools { gap: 10px; align-items:flex-start; }
+
+  /* stack partner cards vertically for better tap targets and readability */
+  .partner-card{
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+  .partner-card .card-logo{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 6px;
+    display:flex;
+    justify-content:center;
+  }
+  .partner-card .card-body { gap: 8px; }
+  .partners-grid { grid-template-columns: 1fr; }
+}
+
+/* WIDE SCREENS: avoid logos getting absurdly huge */
+@media (min-width: 1600px){
+  :root{
+    --max-width: 1800px;
+    --logo-max: 14rem;
+    --logo-preferred: 6.5vw;
+  }
+  .carousel { padding-inline: clamp(14px, 3vw, 28px); }
+  .logo { max-width: 26vw; } /* defensive */
+}
+
+/* final safety: ensure images never overflow their containers */
+img { max-width: 100%; height: auto; display:block; }
