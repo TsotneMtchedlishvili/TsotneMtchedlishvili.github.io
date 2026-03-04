@@ -128,7 +128,6 @@ const selectServiceFunction = (item) => {
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
-                // thePage.classList.add("slide_Up");
 
 
                 const closeButton = document.createElement("div");
@@ -159,18 +158,7 @@ const selectServiceFunction = (item) => {
         }
         else {
 
-            if (item.classList.contains("selected")) {
-
-                // item.classList.remove("selected");
-                // serviceInfoPage.classList.remove('service_Info_Page_Activate');
-                // thePage.style.background = "transparent";
-    
-                // thePage.innerHTML = '';
-                
-                
-    
-            }
-            else if (!item.classList.contains("selected")) {
+            if (!item.classList.contains("selected")) {
     
                 let selected = document.querySelector(".selected");
                 
