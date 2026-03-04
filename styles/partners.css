@@ -10,7 +10,7 @@ html, body {
   margin: 0;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  background: var(--primary-darker);
+  background: var(--primary-color);
   color: var(--text-color);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", Helvetica;
   line-height: 1.4;
@@ -48,11 +48,17 @@ html, body {
 /* HEADER / LEAD */
 .site-header{
   padding-block: clamp(18px, 4vw, 44px);
+  height: 50vh;
+  background-image: url(https://metacomputing.io/cdn/shop/files/Our-Partners_1800x600_ff31e18f-00db-4202-9ee0-87a45930f14e.png?v=1765418800&width=1500);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: clamp(14px, 3vw, 36px);
   /* background: linear-gradient(180deg, rgba(15,98,254,0.03), transparent 60%); */
 }
 .site-title{
   font-size: clamp(1.4rem, 2.2vw, 2.2rem);
-  margin: 0 0 0.35rem 0;
+  margin: 10vh 0 0.35rem 0;
   line-height: 1.06;
 }
 .lead{
@@ -191,15 +197,16 @@ html, body {
 
 /* logo area inside a card (kept modest size) */
 .partner-card .card-logo{
-  width: clamp(64px, 12vw, 120px);
+  width: clamp(48px, 8vh, 92px);
   height: clamp(48px, 8vh, 92px);
+  max-width: clamp(64px, 12vw, 120px);;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius: 8px;
   background: #fff;
   flex-shrink:0;
-  padding: clamp(6px,1.2vw,10px);
+  padding: clamp(3px,0.3vw,12px);
   box-shadow: 0 6px 14px rgba(12,18,35,0.04) inset;
 }
 .partner-card img{
