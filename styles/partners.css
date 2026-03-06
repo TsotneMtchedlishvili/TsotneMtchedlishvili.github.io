@@ -84,7 +84,7 @@ html, body {
   display:flex;
   gap:var(--logo-gap);
   align-items:center;
-  overflow-x:auto;
+  overflow-x:scroll;
   scroll-behavior:smooth;
   -webkit-overflow-scrolling:auto;
   scrollbar-width:none; /* firefox */
