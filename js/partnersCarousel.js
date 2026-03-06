@@ -1,7 +1,3 @@
-// partnersCarousel.js
-// Modernized (ES-next style) refactor of your robust infinite carousel.
-// Behaviour preserved exactly; only syntax and small readability tweaks updated.
-
 const track = document.querySelector('.carousel-track');
 if (!track) throw new Error('Missing .carousel-track');
 
@@ -9,7 +5,7 @@ let isPointerDown = false;
 let startX = 0;
 let startScroll = 0;
 let rafId = null;
-let autoplaySpeed = 0.6; // px per RAF frame
+let autoplaySpeed = 1; // px per RAF frame
 let isAutoplaying = true;
 
 // Collect the initial original items (the block we will replicate)
@@ -134,14 +130,14 @@ const wrapSeamless = (originalBlockWidth, copiesCount) => {
   let copiesCount = ensureCopies(originalWidth);
 
   // recompute after clones added (protect against endless loops)
-  let attempts = 0;
-  while (attempts < CLONE_LOOP_MAX_ITER) {
-    const newOriginalWidth = computeOriginalBlockWidth(originalItems) || originalWidth;
-    if (Math.abs(newOriginalWidth - originalWidth) < 0.5) break;
-    originalWidth = newOriginalWidth;
-    copiesCount = ensureCopies(originalWidth);
-    attempts++;
-  }
+  // let attempts = 0;
+  // while (attempts < CLONE_LOOP_MAX_ITER) {
+  //   const newOriginalWidth = computeOriginalBlockWidth(originalItems) || originalWidth;
+  //   if (Math.abs(newOriginalWidth - originalWidth) < 0.5) break;
+  //   originalWidth = newOriginalWidth;
+  //   copiesCount = ensureCopies(originalWidth);
+  //   attempts++;
+  // }
 
   copiesCount = Math.max(1, Math.round(track.scrollWidth / Math.max(originalWidth, 1)));
   const centerIndex = Math.floor(copiesCount / 2);
