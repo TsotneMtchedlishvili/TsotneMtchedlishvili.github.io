@@ -93,51 +93,53 @@ const setScrollLeftInstant = (x) => {
 
 // Seamless wrap: keep the visible window inside the "center" copy. Guarded against infinite loops
 const wrapSeamless = (originalBlockWidth, copiesCount) => {
-  if (!originalBlockWidth || copiesCount < 3) return;
+  if (!originalBlockWidth || copiesCount < 3) return 0;
 
   const centerIndex = Math.floor(copiesCount / 2);
+
   const leftThreshold = originalBlockWidth * (centerIndex - 1);
   const rightThreshold = originalBlockWidth * (centerIndex + 1);
 
-  const MAX_WRAPS = 8;
-  let wraps = 0;
-  let wrapped = false;
+  const cur = track.scrollLeft;
 
-  while (track.scrollLeft >= rightThreshold && wraps < MAX_WRAPS) {
-    setScrollLeftInstant(track.scrollLeft - originalBlockWidth);
-    wraps++;
-    wrapped = true;
-  }
-  while (track.scrollLeft <= leftThreshold && wraps < MAX_WRAPS) {
-    setScrollLeftInstant(track.scrollLeft + originalBlockWidth);
-    wraps++;
-    wrapped = true;
+  // If inside the window, nothing to do
+  if (cur > leftThreshold && cur < rightThreshold) return 0;
+
+  // If on or beyond the right side, compute how many blocks to subtract
+  if (cur >= rightThreshold) {
+    // number of blocks beyond the rightThreshold
+    const overflow = cur - rightThreshold;
+    // we must move back at least one block; compute how many whole blocks to subtract
+    const blocks = Math.floor(overflow / originalBlockWidth) + 1;
+    const delta = blocks * originalBlockWidth;
+    const target = cur - delta;
+
+    // commit in one shot
+    setScrollLeftInstant(target);
+    return blocks; // positive = subtracted that many blocks
   }
 
-  if (wrapped && isPointerDown) {
-    startScroll = track.scrollLeft;
+  // If on or beyond the left side, compute how many blocks to add
+  if (cur <= leftThreshold) {
+    const under = leftThreshold - cur;
+    const blocks = Math.floor(under / originalBlockWidth) + 1;
+    const delta = blocks * originalBlockWidth;
+    const target = cur + delta;
+    setScrollLeftInstant(target);
+    return -blocks; // negative = added that many blocks
   }
+
+  return 0;
 };
 
 // --- Main initialization ---
 (async () => {
-  const CLONE_LOOP_MAX_ITER = 12;
-
+  
   await waitForImagesToLoad(originalItems, 1500);
   disableImageDraggable();
 
   let originalWidth = computeOriginalBlockWidth(originalItems) || 1;
   let copiesCount = ensureCopies(originalWidth);
-
-  // recompute after clones added (protect against endless loops)
-  // let attempts = 0;
-  // while (attempts < CLONE_LOOP_MAX_ITER) {
-  //   const newOriginalWidth = computeOriginalBlockWidth(originalItems) || originalWidth;
-  //   if (Math.abs(newOriginalWidth - originalWidth) < 0.5) break;
-  //   originalWidth = newOriginalWidth;
-  //   copiesCount = ensureCopies(originalWidth);
-  //   attempts++;
-  // }
 
   copiesCount = Math.max(1, Math.round(track.scrollWidth / Math.max(originalWidth, 1)));
   const centerIndex = Math.floor(copiesCount / 2);
@@ -157,9 +159,22 @@ const wrapSeamless = (originalBlockWidth, copiesCount) => {
   track.addEventListener('pointermove', (e) => {
     if (!isPointerDown) return;
     e.preventDefault();
-    const dx = e.clientX - startX;
+
+    const clientX = e.clientX;
+    const dx = clientX - startX;
+
+    // Move according to the drag
     setScrollLeftInstant(startScroll - dx);
-    wrapSeamless(originalWidth, copiesCount);
+
+    // call the new wrap function which returns number of wrapped blocks
+    const wrapsDone = wrapSeamless(originalWidth, copiesCount);
+
+    // If a wrap happened while the pointer is down, re-zero the drag baseline
+    if (wrapsDone !== 0 && isPointerDown) {
+      // reset the reference positions so dx is relative to the current finger pos
+      startScroll = track.scrollLeft;
+      startX = clientX;
+    }
   });
 
   const endDrag = (e) => {
@@ -205,6 +220,7 @@ const wrapSeamless = (originalBlockWidth, copiesCount) => {
   };
 
   track.addEventListener('scroll', () => {
+    if (isPointerDown) return;
     wrapSeamless(originalWidth, copiesCount);
   }, { passive: true });
 
