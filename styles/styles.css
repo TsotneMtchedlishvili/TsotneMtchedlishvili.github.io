@@ -13,9 +13,9 @@
 
       
 
-    --text-color: #ffffff;
+    --text-color: #2f2a26;
 
-    --text-color-alt: #0f304b;
+    --text-color-alt: #5c534c;
 
     --text-color-alt-two: #ffffff;
 
@@ -25,11 +25,10 @@
 
     --section-separator-unit-big: clamp(48px, 6rem, 96px);
 
-    --nav-color: #85A1B89d;
+    --nav-color: #f6f3eecc;
 
-    --nav-text-color: #0D2539;
+    --nav-text-color: #3a332e;
 
-      
 
     --btn-text-small-phone: clamp(0.2rem, 1.5vw + 0.5rem, 1.5rem);
     --btn-text-small: clamp(0.2rem, 0.6vw + 0.5rem, 1.4rem);
@@ -38,60 +37,56 @@
     --font-size-title-two: clamp(0.2rem, 2vw + 0.6rem, 2rem);
     --font-size-title-three: clamp(0.2rem, 0.8vw + 0.4rem, 2rem);
 
-    --primary-color: #4F728E;
+    --primary-color: #d8d2c8;
 
-    --primary-darker: #274863;
+    --primary-darker: #bfb6a8;
 
-    --secondary-color: #274863;
+    --secondary-color: #8a8176;
 
-    --tertiary-color: #CFDAE3;
+    --tertiary-color: #f4f1ec;
 
-    --tertiary-darker: #1f1e1e;
+    --tertiary-darker: #3b342f;
 
-    --quaternary-color: #4F728E;
+    /* --quaternary-color: #4F728E; */
 
-    --quaternary-lighter: #303030;
+    --quaternary-color: #cfc7bb;
 
-    --quinary-color: #2b2b2b;
+    --quaternary-lighter: #6b6258;
 
-      
+    --quinary-color: #4b443d;
 
-    --gradient-one: #fbfffb;
 
-    --gradient-two: #7e7e7e;
+    --gradient-one: #ffffff;
 
-      
+    --gradient-two: #e3ddd4;
+
 
     --gradient-one-hover: #ffffff;
 
-    --gradient-two-hover: #474747;
+    --gradient-two-hover: #d6cfc5;
 
-      
-      
 
-    --distinguished-window: #0D2539;
 
-      
+    --distinguished-window: #afa79c;
 
-    --footer-background-color: #85A1B8;
 
-    --dimmed-link: #3b566e;
+    --footer-background-color: #f3efe9;
 
-      
+    --dimmed-link: #6f665c;
 
-    --contact-tag: #20a5da62;
 
-    --contact-card: #0D2539;
+    --contact-tag: #ebe6df62;
 
-      
+    --contact-card: #f7f3ee;
 
-    --background-color: #CFDAE3;
 
-    --accent-color-one: #ffffff;
+    --background-color: #faf8f5;
 
-    --accent-color-two: #d8d8d8;
+    --accent-color-one: #b9b1a5;
 
-    --accent-color-three: #20a5da;
+    --accent-color-two: #e6dfd3;
+
+    --accent-color-three: #c9b8a3;
 
     --border-radius-mobile-large: clamp(10px, 4vw, 30px);
 
@@ -101,11 +96,10 @@
 
     /* DO NOT DELETE BELOW THIS */
 
-      
 
-    --footer-Text: #174163;
+    --footer-Text: #7a7268;
 
-    --footer-headers: #072d4d;
+    --footer-headers: #4e463f;
     
   }
 
@@ -133,7 +127,7 @@
     /* padding: clamp(5px, 1vw, 25px) clamp(10px, 1.4vw, 50px); */
     border-radius: 50px;
     font-weight: bold;
-    background: #274863;
+    background: var(--secondary-color);
     /* background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%); */
   }
 
@@ -150,7 +144,7 @@
   .generic_Button:hover {
 
     cursor: pointer;
-    background: #4e8abb;
+    background: #353535;
     transition: all 100ms ease-in-out;
     /* background: linear-gradient(220deg, var(--gradient-one-hover) 8%, var(--gradient-two-hover) 98%); */
     
@@ -687,7 +681,7 @@
     display: inline-block;
     content: "";
     background-image: url(../Images/Icons/socials/tiktok-svgrepo-com\(1\).svg);
-    background-color: #003f58;
+    background-color: #414141;
   }
 
 
@@ -1101,7 +1095,7 @@
       display: inline-block;
       content: "";
       background-image: url(../Images/Icons/socials/tiktok-svgrepo-com\(1\).svg);
-      background-color: #003f58;
+      /* background-color: #003f58; */
     }
   
     .tos {
@@ -1382,7 +1376,7 @@
       display: inline-block;
       content: "";
       background-image: url(../Images/Icons/socials/tiktok-svgrepo-com\(1\).svg);
-      background-color: #003f58;
+      /* background-color: #003f58; */
     }
   
     .tos {

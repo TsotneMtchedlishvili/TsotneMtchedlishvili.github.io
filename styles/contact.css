@@ -1,5 +1,5 @@
 header {
-    background-color: var(--background-color);
+    background-color: var(--tertiary-color);
 }
 .titling_Container {
     text-align: center;
@@ -42,7 +42,7 @@ h1 {
 .contact_Banner_Container {
 
     min-height: calc(100vh - 100px);
-    background-color: var(--background-color);
+    background-color: var(--tertiary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .contact_Card {
-    background-color: var(--contact-card);
+    background-color: var(--secondary-color);
     width: clamp(150px, 70vw, 350px);
     height: clamp(min-content, 60vw, 350px);
     padding: 20px;
@@ -279,7 +279,7 @@ h1 {
     .contact_Banner_Container {
     
         min-height: calc(100vh - 100px);
-        background-color: var(--background-color);
+        /* background-color: var(--tertiary-color); */
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -95,12 +95,12 @@ header {
 
 .pressed {
 
-    color: var(--accent-color-one);
+    color: var(--accent-color-two);
 }
 
 .category:hover {
 
-    color: var(--accent-color-one);
+    color: var(--accent-color-two);
     cursor: pointer;
 }
 

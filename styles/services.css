@@ -3,7 +3,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--background-color);
+    background-color: var(--tertiary-color);
 }
 
 main {
@@ -22,7 +22,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    background-color: var(--background-color);
+    background-color: var(--tertiary-color);
     background-attachment: fixed;
     background-blend-mode:overlay;
 
@@ -181,7 +181,7 @@ h1 span{
     background-size: cover;
     background-image: url(https://cdn.prod.website-files.com/6727558e5c774a0b63d63d12/67bb3e1f23b017da45589047_hero-bg.avif);
 
-    color: var(--text-color);
+    color: var(--text-color-alt-two);
     font-family: var(--default-font-family);
     overflow: hidden;
 }
@@ -487,7 +487,7 @@ h1 span{
         background-size: cover;
         background-image: url(https://cdn.prod.website-files.com/6727558e5c774a0b63d63d12/67bb3e1f23b017da45589047_hero-bg.avif);
 
-        color: var(--text-color);
+        /* color: var(--text-color); */
         font-family: var(--default-font-family);
         overflow: hidden;
     }
