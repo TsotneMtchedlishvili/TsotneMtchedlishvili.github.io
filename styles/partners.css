@@ -86,10 +86,10 @@ html, body {
   align-items:center;
   overflow-x:auto;
   scroll-behavior:smooth;
-  -webkit-overflow-scrolling:auto;
+  -webkit-overflow-scrolling: auto;
   scrollbar-width:none; /* firefox */
   padding-inline: 6px;
-  touch-action: pan-y;
+  touch-action: pan-x;
   /* avoid accidental vertical stretching */
   align-content:center;
 }
