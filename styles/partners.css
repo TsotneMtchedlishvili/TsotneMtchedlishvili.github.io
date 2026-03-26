@@ -85,11 +85,11 @@ html, body {
   gap:var(--logo-gap);
   align-items:center;
   overflow-x:auto;
-  scroll-behavior:smooth;
-  -webkit-overflow-scrolling: auto;
+  scroll-behavior:auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width:none; /* firefox */
   padding-inline: 6px;
-  touch-action: pan-x;
+  touch-action: none;
   /* avoid accidental vertical stretching */
   align-content:center;
 }
