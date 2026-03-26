@@ -93,6 +93,7 @@ const setScrollLeftInstant = (x) => {
 
 // Seamless wrap: keep the visible window inside the "center" copy. Guarded against infinite loops
 const wrapSeamless = (originalBlockWidth, copiesCount) => {
+  
   if (!originalBlockWidth || copiesCount < 3) return 0;
 
   const centerIndex = Math.floor(copiesCount / 2);
@@ -336,9 +337,18 @@ const wrapSeamless = (originalBlockWidth, copiesCount) => {
     if (e.ctrlKey) setTimeout(recomputeAndRecenter, 120);
   }, { passive: true });
 
+  let lastWidth = window.innerWidth;
+
   window.addEventListener('resize', () => {
+    if (Math.abs(lastWidth - window.innerWidth) < 1) {
+      console.log("resizzle not")
+      return;
+    }
+    console.log("resizzle")
+    lastWidth =  window.innerWidth;
     setTimeout(recomputeAndRecenter, 80);
   });
+  
   window.addEventListener('orientationchange', () => {
     setTimeout(recomputeAndRecenter, 160);
   });
