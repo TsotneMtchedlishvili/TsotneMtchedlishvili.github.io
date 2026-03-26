@@ -513,7 +513,7 @@
     padding: 5vh 20px;
 
     font-family: var(--default-font-family);
-    font-size: clamp(0.5rem, 0.5rem + 4vw, 1.2rem);
+    font-size: clamp(0.5rem, 0.5rem + 4vw, 1.1rem);
     color: var(--footer-Text);
   }
 
