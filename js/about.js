@@ -172,25 +172,15 @@ const selectServiceFunction = (item) => {
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
                 thePage.style.background = "var(--distinguished-window)";
     
-                // for (const child of thePage.children) {
-                //     child.style.display = "flex"
-                //   }
-    
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
                 thePage.classList.add("slide_Up");
 
-                
-                
-                
-    
             }
 
         }
         
-        
-        // serviceInfoPage.classList.add('service_Info_Page_Activate');
 }
 
 const autoSlide = () => {
@@ -252,11 +242,6 @@ if (window.innerWidth > 1220) {
             selectServiceFunction(servicesList[0]);
         }
     }
-    // else {
-
-    //     selectedService = servicesList.findIndex((selection) => {selection.classList.contains("selected")});
-    //     console.log(selectedService)
-    // }
 
     setTimeout(autoSlide, 5000);
     serviceBox.addEventListener('mouseenter', () => {isPaused = true;});
@@ -278,9 +263,6 @@ servicesList.forEach((item) => {
 
 });
 
-    // console.log(serviceBox.clientWidth);
-    // console.log(serviceInfoPage.clientWidth);
-    // console.log(serviceText.clientWidth);
 if (serviceBox) {
     
     if (window.innerWidth < 1220) {
@@ -317,15 +299,12 @@ window.addEventListener("resize", () => {
     if (window.innerWidth < 1220) {
 
         serviceBox.style.marginLeft = `0px`;
-        // wwaIntro.style.width = `90vw`;
-        // console.log("thing 1 on resize")
 
         if(serviceInfoPage.clientHeight > 1) {
             
 
             if (!document.querySelector(".closeBtn")) {
 
-                // console.log("button Made")
                 const closeButton = document.createElement("div");
 
                 const closeButtonIcon = document.createElement("img");
@@ -344,7 +323,6 @@ window.addEventListener("resize", () => {
             if(!document.querySelector(".page_Background")) {
 
                 const backdrop = document.createElement("div");
-                // console.log("Backdrop Made");
                 backdrop.classList.add("page_Background");
                 thePage.appendChild(backdrop);
                 document.body.style.overflow = "hidden";
@@ -356,38 +334,23 @@ window.addEventListener("resize", () => {
         }
     }
     else {
-        // console.log(serviceBox.style.marginLeft);
         serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
-        // console.log(serviceBox.style.marginLeft);
-        // console.log(parseFloat(getComputedStyle(serviceBox).gap));
-        // console.log(wwaIntro.clientWidth);
-        // if(wwaIntro.getBoundingClientRect.width !== serviceBox.getBoundingClientRect.width) {
-
-            wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
-            console.log("2 executed")
-        // }
-        // console.log(wwaIntro.clientWidth);
+        wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
         if (serviceInfoPage.clientHeight > 1) {
 
-            // console.log("x1")
+            document.body.style.overflow = "scroll";
+            document.querySelector(".top_Panel").classList.remove("hidden");
+    
+            if (document.querySelector(".page_Background")){
+                document.querySelector(".page_Background").remove();
+            }
 
-                document.body.style.overflow = "scroll";
-                document.querySelector(".top_Panel").classList.remove("hidden");
-        
-                if (document.querySelector(".page_Background")){
-                    document.querySelector(".page_Background").remove();
-                    // console.log("111")
-                }
-
-                if (document.querySelector(".closeBtn")){
-                    document.querySelector(".closeBtn").remove();
-                    // console.log("222")
-                }
+            if (document.querySelector(".closeBtn")){
+                document.querySelector(".closeBtn").remove();
+            }
             
-
         }
     }
 }
 })
-    // console.log(serviceBox.style.marginLeft);
 

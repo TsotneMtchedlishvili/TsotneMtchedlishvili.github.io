@@ -1,6 +1,4 @@
 const acc = document.getElementsByClassName("accordion");
-// const dropDownButton = document.getElementsByClassName("drop_Down_Button_Accordion")
-
 const toggleHide = (element) => {
 
   element.children[1].classList.toggle("hidden")

@@ -10,7 +10,6 @@ if (window.innerWidth < 1000) {
 
     topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
     topPanel.style.borderRadius = `${topPanel.clientHeight * 0.6}px`;
-    // console.log(parseInt(topPanel.style.margin));
     header.style.height = `${logoAndHamburger.clientHeight}px`;
 }
 else {
@@ -25,9 +24,6 @@ toggleBtn.addEventListener("click", () => {
         
         if (retracted) {
 
-            // navbarContainer.style.display = "flex";
-
-            // topPanel.classList.add("hamburger_Pressed");
             topPanel.style.height = `${2 * logoAndHamburger.clientHeight + navbarContainer.clientHeight}px`;
             retracted = false;
             if (topPanel.clientHeight === logoAndHamburger.clientHeight) {
@@ -38,18 +34,10 @@ toggleBtn.addEventListener("click", () => {
         }
         else {
 
-            
             retracted = true;
-            // topPanel.classList.remove("hamburger_Pressed");
-            
             topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
 
-            // navbarContainer.style.display = "none";
-            
-            
-
         }
-
 
   });
 
@@ -61,8 +49,6 @@ toggleBtn.addEventListener("click", () => {
         header.style.height = `${logoAndHamburger.clientHeight}px`
         topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
         
-        
-        // topPanel.style.height = `${2 * logoAndHamburger.clientHeight + navbarContainer.clientHeight}px`;
         toggleBtn.classList.remove("hamburger_Pressed");
         topPanel.style.borderRadius = `${logoAndHamburger.clientHeight * 0.6}px`;
     }
@@ -71,17 +57,13 @@ toggleBtn.addEventListener("click", () => {
         retracted = true;
         header.style.height = `${logoAndHamburger.clientHeight}px`
         topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
-        
-        
-        // topPanel.style.height = `${2 * logoAndHamburger.clientHeight + navbarContainer.clientHeight}px`;
+                
         toggleBtn.classList.remove("hamburger_Pressed");
         
         topPanel.style.borderRadius = `${logoAndHamburger.clientHeight * 0.6}px`;
-        // console.log(topPanel.style.borderRadius);
     }
     else {
-        
-        // topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
+
         navbar.clientHeight > logoAndHamburger.clientHeight ? topPanel.style.height = `${navbar.clientHeight}px`: topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
         header.style.height = `max-content`;
         navbar.style.top = `${header.clientHeight / 2}px`;
