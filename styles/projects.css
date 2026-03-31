@@ -46,10 +46,10 @@ header {
 
     padding: 2vw 5vw;
     font-size: clamp(0.3rem, 5vw, 1rem);
-    color: var(--accent-color-one);
-    border: 2px solid var(--accent-color-one);
+    color: var(--tertiary-darker);
+    border: 2px solid var(--tertiary-darker);
     border-radius: clamp(10px, 2vw, 30px);
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     transition: all 200ms ease; 
 }
 
