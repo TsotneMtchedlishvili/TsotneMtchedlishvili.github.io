@@ -3,8 +3,6 @@ const thumbnail = Array.from(document.querySelectorAll('.thumbnail'));
 const serviceContainer = document.querySelector(".service_Container");
 const serviceDescripton = document.querySelectorAll(".service_Description")
 
-// console.log(button);
-// console.log(thumbnail);
 
 buttonServices.forEach((item) => {
     item.addEventListener('mouseenter', () => {

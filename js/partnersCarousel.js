@@ -341,10 +341,8 @@ const wrapSeamless = (originalBlockWidth, copiesCount) => {
 
   window.addEventListener('resize', () => {
     if (Math.abs(lastWidth - window.innerWidth) < 1) {
-      console.log("resizzle not")
       return;
     }
-    console.log("resizzle")
     lastWidth =  window.innerWidth;
     setTimeout(recomputeAndRecenter, 80);
   });
