@@ -94,7 +94,8 @@ const serviceTextContent = {
 
 const wwaIntro = document.querySelector('.wwa_Intro');
 const serviceBox = document.querySelector(".service_Box");
-const serviceText = document.querySelector(".service_Text")
+const serviceText = document.querySelector(".service_Text");
+let autoSlideOngoing = false;
 let isPaused = false;
 let quedued = false;
 const selectServiceFunction = (item) => {
@@ -187,6 +188,7 @@ const autoSlide = () => {
     let selectedService = () => document.querySelector(".selected");
     let selectedServiceIndex;
     let nextSelection;
+    autoSlideOngoing = true;
     
     if(selectedService()) {
         if (quedued) return;
@@ -214,14 +216,16 @@ const autoSlide = () => {
 
         }
         
-        
+        autoSlideOngoing = false;
         setTimeout(() => {quedued = false;}, 5000); // This is here to prevent a rapid fire autoslide after repeatedly selecting and deselecting a service window, this ensures that multiple async autoslide functions do not get queued together.
         setTimeout(autoSlide, 5000);
         
     }
         
+    
+}
 
-    }
+
 const clearServiceItem = () => {
     const selected = document.querySelector(".selected");
     if (selected) selected.classList.remove("selected");
@@ -278,9 +282,11 @@ if (serviceBox) {
 
 window.addEventListener("resize", () => {
 
-    if (window.innerWidth < 1220 && document.querySelector(".selected")) {
+    if (window.innerWidth < 1220) {
 
         clearServiceItem();
+        // if (autoSlideOngoing) {console.log(autoSlideOngoing)};
+        setTimeout(clearServiceItem, 100);
     }
 
     if (window.innerWidth > 1220 && !document.querySelector(".selected")) {
@@ -296,61 +302,61 @@ window.addEventListener("resize", () => {
 
     if (serviceBox) {
     
-    if (window.innerWidth < 1220) {
+        if (window.innerWidth < 1220) {
 
-        serviceBox.style.marginLeft = `0px`;
+            serviceBox.style.marginLeft = `0px`;
 
-        if(serviceInfoPage.clientHeight > 1) {
-            
+            if(serviceInfoPage.clientHeight > 1) {
+                
 
-            if (!document.querySelector(".closeBtn")) {
+                if (!document.querySelector(".closeBtn")) {
 
-                const closeButton = document.createElement("div");
+                    const closeButton = document.createElement("div");
 
-                const closeButtonIcon = document.createElement("img");
-                closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
-                closeButtonIcon.height = 40;
+                    const closeButtonIcon = document.createElement("img");
+                    closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
+                    closeButtonIcon.height = 40;
 
-                closeButton.appendChild(closeButtonIcon);
-                closeButton.classList.add("closeBtn");
-                thePage.appendChild(closeButton);
+                    closeButton.appendChild(closeButtonIcon);
+                    closeButton.classList.add("closeBtn");
+                    thePage.appendChild(closeButton);
 
 
-                closeButton.addEventListener('click', clearServiceItem);
+                    closeButton.addEventListener('click', clearServiceItem);
+
+                }
+
+                if(!document.querySelector(".page_Background")) {
+
+                    const backdrop = document.createElement("div");
+                    backdrop.classList.add("page_Background");
+                    thePage.appendChild(backdrop);
+                    document.body.style.overflow = "hidden";
+                    document.querySelector(".top_Panel").classList.add("hidden");
+                }
+
+
 
             }
+        }
+        else {
+            serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
+            wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
+            if (serviceInfoPage.clientHeight > 1) {
 
-            if(!document.querySelector(".page_Background")) {
+                document.body.style.overflow = "scroll";
+                document.querySelector(".top_Panel").classList.remove("hidden");
+        
+                if (document.querySelector(".page_Background")){
+                    document.querySelector(".page_Background").remove();
+                }
 
-                const backdrop = document.createElement("div");
-                backdrop.classList.add("page_Background");
-                thePage.appendChild(backdrop);
-                document.body.style.overflow = "hidden";
-                document.querySelector(".top_Panel").classList.add("hidden");
+                if (document.querySelector(".closeBtn")){
+                    document.querySelector(".closeBtn").remove();
+                }
+                
             }
-
-
-
         }
     }
-    else {
-        serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
-        wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
-        if (serviceInfoPage.clientHeight > 1) {
-
-            document.body.style.overflow = "scroll";
-            document.querySelector(".top_Panel").classList.remove("hidden");
-    
-            if (document.querySelector(".page_Background")){
-                document.querySelector(".page_Background").remove();
-            }
-
-            if (document.querySelector(".closeBtn")){
-                document.querySelector(".closeBtn").remove();
-            }
-            
-        }
-    }
-}
 })
 

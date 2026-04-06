@@ -9,8 +9,8 @@
 // const imageData = ctx.getImageData(lx, ly, lw, lh);
 // const pixels = imageData.data;
 const siteLogo = document.querySelector(".header_Logo");
-let lightLogo = "Images/theSpace/logo-tetri).png";
-let darkLogo = "Images/theSpace/logo-mtavari-eng(2).png";
+let lightLogo = "../Images/theSpace/logo-tetri).png";
+let darkLogo = "../Images/theSpace/logo-mtavari-eng(2).png";
 let currentlyLoadedImg = lightLogo;
 
 const getCoverScaleAndOffset = (img, containerWidth, containerHeight) => {

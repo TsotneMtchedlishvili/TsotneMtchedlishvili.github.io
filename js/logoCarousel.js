@@ -49,7 +49,6 @@ const sizeAdjustment = (item) => {
     else { 
       thumbnailPicture.style.width = "auto";
       thumbnailPicture.style.height = "auto";
-    
     }
 }
 

@@ -1,4 +1,5 @@
 const acc = document.getElementsByClassName("accordion");
+
 const toggleHide = (element) => {
 
   element.children[1].classList.toggle("hidden")
