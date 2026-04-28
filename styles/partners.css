@@ -250,6 +250,11 @@ a.partner-card:focus-visible,
   outline: none;
 }
 
+.generic_Button {
+
+  line-height: normal;
+}
+
 /* MOBILE / NARROW SCREEN LAYOUT ADJUSTMENTS */
 @media (max-width: 720px) {
   /* more breathing room */
