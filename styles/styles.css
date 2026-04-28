@@ -121,7 +121,7 @@
 
     color: white;
     width: max-content;
-    
+    text-decoration: none;
     font-size: clamp(0.5rem, 3.4vw, 2rem);
     border: none;
     /* padding: clamp(5px, 1vw, 25px) clamp(10px, 1.4vw, 50px); */
@@ -131,14 +131,16 @@
     /* background: linear-gradient(220deg, var(--gradient-one) 8%, var(--gradient-two) 98%); */
   }
 
-  .generic_Button a{
+  .gneric_Button_Text {
 
+    text-emphasis: none;
     display: inline-block;
     padding: 1.2vh 1vw;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: white;
+    font-family: var(--default-font-family)
   }
 
   .generic_Button:hover {
@@ -483,6 +485,7 @@
     border-top-left-radius: clamp(0.2rem, 1vw, 2rem);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    font-family: var(--default-font-family);
   }
 
   .language_Selector button {
@@ -820,7 +823,7 @@
       /* background: linear-gradient(220deg, rgb(34, 194, 226) 8%, rgb(0, 106, 192) 98%); */
     }
   
-    .generic_Button a{
+    .gneric_Button_Text {
   
       display: inline-block;
       /* padding: 1.2vh 1vw; */
@@ -1373,7 +1376,7 @@
     
   }
 
-  .navbarContainer > .generic_Button a {
+  .navbarContainer > .gneric_Button_Text {
 
     width: 100%;
     height: 100%;
