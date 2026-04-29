@@ -51,10 +51,10 @@
                 </nav>
 
                  <div class="language_Selector">
-                <button class="language_Button"><img src="../Images/Icons/translation-svgrepo-com.svg" alt="Translation Icon" class="translation_Icon" height="25">Languages</button>
+                <button class="language_Button"><img src="../Images/Icons/translation-svgrepo-com.svg" alt="" aria-hidden="true" class="translation_Icon" height="25">Languages</button>
                 <div class="language_List">
-                    <a href="/"><img src="../Images/Flags/flag-for-flag-georgia-svgrepo-com.svg" alt="The flag of Georgia" class="language_Flag" height="25"> Georgian</a>
-                    <a href="/en/"><img src="../Images/Flags/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="The flag of UK" class="language_Flag" height="25"> English</a>
+                    <a href="/"><img src="../Images/Flags/flag-for-flag-georgia-svgrepo-com.svg" alt="" aria-hidden="true" class="language_Flag" height="25"> Georgian</a>
+                    <a href="/en/"><img src="../Images/Flags/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="" aria-hidden="true" class="language_Flag" height="25"> English</a>
                 </div>
                 </div>
 
@@ -69,31 +69,31 @@
     <div class="intro_Home">
 
         <h1 class="main_Page_Heading">Real Estate Project Management Company</h1>
-        <div class="carousel">
-            <button class="carousel_Button carousel_Button--left">
+        <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Project Gallery">
+            <button class="carousel_Button carousel_Button--left" aria-label="Previous slide">
                 <img src="./Images/Webpage/carouselArrow.svg"
-                height="30" width="auto" alt="">
+                height="30" width="auto" alt="" aria-hidden="true">
             </button>
             <ul class="carousel_List">
-                <li class="carousel_Item">
+                <li class="carousel_Item" id="slide-One" role="tabpanel" aria-labelledby="dot-one" aria-hidden="false">
                     <img src="./Images/Carousel/renovation1.jpg" alt="">
                 </li>
-                <li class="carousel_Item">
+                <li class="carousel_Item" id="slide-Two" role="tabpanel" aria-labelledby="dot-two" aria-hidden="true">
                      <img src="./Images/Carousel/renovation2.jpg" alt="">
                 </li>
-                <li class="carousel_Item">
+                <li class="carousel_Item" id="slide-Three" role="tabpanel" aria-labelledby="dot-three" aria-hidden="true">
                      <img src="./Images/Carousel/renovation3.jpeg" alt="">
                 </li>
             </ul>
-            <button class="carousel_Button carousel_Button--right">
+            <button class="carousel_Button carousel_Button--right" aria-label="Next slide">
                 <img src="./Images/Webpage/carouselArrow.svg"
-                height="30" width="auto" alt="">
+                height="30" width="auto" alt="" aria-hidden="true">
             </button>
             <div class="carousel_Tracker">
-                <div class="carousel_Centerer">
-                    <button class="carousel_Indicator active_Slide"></button>
-                    <button class="carousel_Indicator"></button>
-                    <button class="carousel_Indicator"></button>
+                <div class="carousel_Centerer" role="tablist" aria-label="Slideshow Navigation">
+                    <button class="carousel_Indicator active_Slide" id="dot-one" role="tab" aria-selected="true" aria-label="Slide 1" aria-controls="slide-One"></button>
+                    <button class="carousel_Indicator" id="dot-two" role="tab" aria-selected="false" aria-label="Slide 2" aria-controls="slide-Two"></button>
+                    <button class="carousel_Indicator" id="dot-three" role="tab" aria-selected="false" aria-label="Slide 3"  aria-controls="slide-Three"></button>
                 </div>
             </div>
         </div>

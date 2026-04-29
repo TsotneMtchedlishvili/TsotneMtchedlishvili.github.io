@@ -16,15 +16,27 @@ let currentSlideImage = allSlides[currentIndex].firstElementChild;
 function updateCarousel() {
   slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
   indicators.forEach((dot, i) => {
-    dot.classList.toggle('active_Slide', i === currentIndex);
+    const isActive = i === currentIndex;
+    dot.classList.toggle('active_Slide', isActive);
+    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
   
+}
+
+const accessibilityAdjustment = () => {
+
+  allSlides.forEach((slide, i) => {
+    const isHidden = i !== currentIndex;
+    slide.setAttribute('aria-hidden', isHidden ? 'true' : 'false');
+    slide.setAttribute('tabindex', isHidden ? '-1' : '0');
+  });
 }
 
 // Navigation helpers
 function goTo(offset) {
   currentIndex = (currentIndex + offset + slideCount) % slideCount;
   updateCarousel();
+  accessibilityAdjustment();
   currentSlideImage = allSlides[currentIndex].firstElementChild;
   analyzeLogoBackground(currentSlideImage, document.querySelector(".header_Logo"))
 }
@@ -42,6 +54,7 @@ indicators.forEach((dot, i) => {
   dot.addEventListener('click', () => {
     currentIndex = i;
     updateCarousel();
+    accessibilityAdjustment();
     currentSlideImage = allSlides[currentIndex].firstElementChild;
     analyzeLogoBackground(currentSlideImage, document.querySelector(".header_Logo"))
 
