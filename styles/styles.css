@@ -399,6 +399,8 @@
 
   .navbarToggleBtn {
 
+    background-color: transparent;
+    border: none;
     height: 33px;
     width: 33px;
     display: flex;
