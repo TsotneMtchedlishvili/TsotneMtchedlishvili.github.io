@@ -53,7 +53,7 @@ const closeLangList = (winWidth) => {
 
     }
 
-    
+    languageButton.setAttribute("aria-expanded", "false");
 
 }
 
@@ -104,6 +104,8 @@ const openLangList = (winWidth) => {
         languageButton.style.borderBottomLeftRadius = "0";
     }
     
+    languageButton.setAttribute("aria-expanded", "true");
+
 
 }
 
@@ -116,7 +118,7 @@ const calcWindowWidth = () => {
 const switcherAction = () => {
 
     let resolution = calcWindowWidth()
-    languageList.clientHeight ? closeLangList(resolution) : openLangList(resolution);
+    languageList.clientHeight ? closeLangList(resolution) : openLangList(resolution); 
 
 }
 
