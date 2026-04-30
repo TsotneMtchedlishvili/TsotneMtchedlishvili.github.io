@@ -6,6 +6,35 @@ const navbarContainer = document.querySelector(".navbarContainer");
 const header = document.querySelector(".home_Header");
 let retracted = true;
 
+const menuOpen = () => {
+
+    topPanel.style.height = `${2 * logoAndHamburger.clientHeight + navbarContainer.clientHeight}px`;
+    retracted = false;
+    if (topPanel.clientHeight === logoAndHamburger.clientHeight) {
+
+        topPanel.style.borderRadius = `${topPanel.clientHeight * 0.6}px`;
+    }
+    toggleBtn.setAttribute("aria-expanded", "true")
+
+}
+
+const menuClose = () => {
+
+    retracted = true;
+    topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
+    toggleBtn.setAttribute("aria-expanded", "false");
+
+}
+
+const menuToggle = () => {
+
+    setTimeout(()=>{
+        toggleBtn.classList.toggle("hamburger_Pressed");
+        if (retracted) menuOpen();
+        else menuClose();
+    }, 100)
+}
+
 if (window.innerWidth < 1000) {
 
     topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
@@ -18,47 +47,32 @@ else {
     navbar.style.top = `${header.clientHeight / 2}px`;
 }
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", menuToggle);
 
-    toggleBtn.classList.toggle("hamburger_Pressed");
-        
-        if (retracted) {
-
-            topPanel.style.height = `${2 * logoAndHamburger.clientHeight + navbarContainer.clientHeight}px`;
-            retracted = false;
-            if (topPanel.clientHeight === logoAndHamburger.clientHeight) {
-
-                topPanel.style.borderRadius = `${topPanel.clientHeight * 0.6}px`;
-            }
-            
-        }
-        else {
-
-            retracted = true;
-            topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
-
-        }
-
-  });
-
-  window.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
 
     if (window.innerWidth < 1000 && window.innerWidth >= 800) {
 
+        // menuClose();
+
         retracted = true;
-        header.style.height = `${logoAndHamburger.clientHeight}px`
         topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
+        header.style.height = `${logoAndHamburger.clientHeight}px`
+        
         
         toggleBtn.classList.remove("hamburger_Pressed");
         topPanel.style.borderRadius = `${logoAndHamburger.clientHeight * 0.6}px`;
+        if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false")
     }
     else if (window.innerWidth < 800) {
 
+        // menuClose();
         retracted = true;
+        toggleBtn.setAttribute("aria-expanded", "false")
         header.style.height = `${logoAndHamburger.clientHeight}px`
         topPanel.style.height = `${logoAndHamburger.clientHeight}px`;
                 
-        toggleBtn.classList.remove("hamburger_Pressed");
+        if (toggleBtn) toggleBtn.classList.remove("hamburger_Pressed");
         
         topPanel.style.borderRadius = `${logoAndHamburger.clientHeight * 0.6}px`;
     }
@@ -68,7 +82,7 @@ toggleBtn.addEventListener("click", () => {
         header.style.height = `max-content`;
         navbar.style.top = `${header.clientHeight / 2}px`;
     }
-    
 
 
-  });
+
+});
