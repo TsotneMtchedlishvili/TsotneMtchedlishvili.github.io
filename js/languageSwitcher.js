@@ -54,6 +54,7 @@ const closeLangList = (winWidth) => {
     }
 
     languageButton.setAttribute("aria-expanded", "false");
+    languageList.setAttribute("hidden", "");
 
 }
 
@@ -105,6 +106,7 @@ const openLangList = (winWidth) => {
     }
     
     languageButton.setAttribute("aria-expanded", "true");
+    languageList.removeAttribute("hidden");
 
 
 }
