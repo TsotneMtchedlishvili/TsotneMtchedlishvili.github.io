@@ -117,6 +117,10 @@
     user-select: none;
   }
 
+  button {
+    font: inherit;
+  }
+
   .generic_Button {
 
     color: white;
