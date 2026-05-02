@@ -98,6 +98,7 @@ const serviceText = document.querySelector(".service_Text");
 let autoSlideOngoing = false;
 let isPaused = false;
 let quedued = false;
+
 const selectServiceFunction = (item) => {
 
         thePage.classList.remove("slide_Up");
@@ -266,7 +267,7 @@ if (window.innerWidth > 1220) {
 }
 
 
-servicesList.forEach((item) => {
+servicesList.forEach((item, i, items) => {
 
 
     let selectItem = () => {selectServiceFunction(item);
@@ -274,6 +275,54 @@ servicesList.forEach((item) => {
     };
     
     item.addEventListener('click', selectItem);
+
+    item.addEventListener('keydown', (e) => {
+
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectItem();
+        }
+
+        if (e.key === 'ArrowUp') {
+
+            e.preventDefault();
+            items[i-1] ? items[i-1].focus() : items[items.length - 1].focus()
+
+        }
+        else if (e.key === 'ArrowDown') {
+
+            e.preventDefault();
+            items[i+1] ? items[i+1].focus() : items[0].focus()
+
+        }
+        else if (e.key === 'ArrowLeft') {
+
+            e.preventDefault();
+            let contactButton = serviceText.children[2];
+            contactButton.focus();
+            contactButton.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    items[i].focus();
+                }
+            }, { once: true });
+
+        }
+        else if (e.key === 'ArrowRight') {
+
+            e.preventDefault();
+            let learnMoreButton = serviceBox.querySelector(".learn_More_Page");
+            learnMoreButton.focus();
+            learnMoreButton.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    items[i].focus();
+                }
+            }, { once: true });
+
+        }
+
+    });
 
 });
 
