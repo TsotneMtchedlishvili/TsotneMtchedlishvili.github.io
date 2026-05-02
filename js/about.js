@@ -119,10 +119,15 @@ const selectServiceFunction = (item) => {
                 if (selected) {
     
                     selected.classList.remove("selected");
+
+                    selected.setAttribute('aria-expanded', 'false');
                     
                 }
                 
                 item.classList.add("selected");
+
+                item.setAttribute('aria-expanded', 'true');
+
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
                 thePage.style.background = "var(--distinguished-window)";
     
@@ -148,9 +153,7 @@ const selectServiceFunction = (item) => {
                 backdrop.classList.add("page_Background");
                 thePage.appendChild(backdrop);
                 document.body.style.overflow = "hidden"
-                 document.querySelector(".top_Panel").classList.add("hidden");
-
-                
+                document.querySelector(".top_Panel").classList.add("hidden");
                 
                 
     
@@ -166,6 +169,7 @@ const selectServiceFunction = (item) => {
                 if (selected) {
     
                     selected.classList.remove("selected");
+                    selected.setAttribute('aria-expanded', 'false');
                     
                 }
                 
@@ -177,6 +181,8 @@ const selectServiceFunction = (item) => {
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
                 thePage.classList.add("slide_Up");
+
+                item.setAttribute('aria-expanded', 'true');
 
             }
 
@@ -228,7 +234,11 @@ const autoSlide = () => {
 
 const clearServiceItem = () => {
     const selected = document.querySelector(".selected");
-    if (selected) selected.classList.remove("selected");
+    if (selected) {
+
+        selected.setAttribute('aria-expanded', 'false');
+        selected.classList.remove("selected");
+    }
     serviceInfoPage.classList.remove('service_Info_Page_Activate');
     thePage.style.background = "transparent";
     thePage.innerHTML = '';
