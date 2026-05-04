@@ -7,7 +7,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Renovation Operations</h3>
+                                    <h4 id="service-title">Renovation Operations</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -18,7 +18,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Construction Operations</h3>
+                                    <h4 id="service-title">Construction Operations</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -29,7 +29,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Landscaping</h3>
+                                    <h4 id="service-title">Landscaping</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -40,7 +40,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Coordination with architects and designers</h3>
+                                    <h4 id="service-title">Coordination with architects and designers</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -51,7 +51,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>HVAC systems installation</h3>
+                                    <h4 id="service-title">HVAC systems installation</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -62,7 +62,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Furniture Production Oversight</h3>
+                                    <h4 id="service-title">Furniture Production Oversight</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -73,7 +73,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Cleaning Operations</h3>
+                                    <h4 id="service-title">Cleaning Operations</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -84,7 +84,7 @@ const serviceTextContent = {
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
-                                    <h3>Purchase and Logistics of Building Material</h3>
+                                    <h4 id="service-title">Purchase and Logistics of Building Material</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
@@ -130,6 +130,10 @@ const selectServiceFunction = (item) => {
                 item.setAttribute('aria-expanded', 'true');
 
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
+                serviceInfoPage.setAttribute('role', 'dialog');
+                serviceInfoPage.setAttribute('aria-modal', 'true');
+                serviceInfoPage.setAttribute('aria-labelledby', 'service-title');
+
                 thePage.style.background = "var(--distinguished-window)";
     
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
@@ -137,7 +141,8 @@ const selectServiceFunction = (item) => {
                 thePage.classList.remove("slide_Up");
 
 
-                const closeButton = document.createElement("div");
+                const closeButton = document.createElement("button");
+                closeButton.setAttribute('aria-label', 'Close service details');
 
                 const closeButtonIcon = document.createElement("img");
                 closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
@@ -260,8 +265,10 @@ if (window.innerWidth > 1220) {
 
     setTimeout(autoSlide, 5000);
     serviceBox.addEventListener('mouseenter', () => {isPaused = true;});
-    serviceBox.addEventListener('mouseleave', () => {isPaused = false;});
-    if (serviceBox.matches(':hover')) {
+    serviceBox.addEventListener('mouseleave', () => {if(!serviceBox.matches(':focus-within')) isPaused = false;});
+    serviceBox.addEventListener('focusin', () => { isPaused = true; });
+    serviceBox.addEventListener('focusout', () => {if(!serviceBox.matches(':hover')) isPaused = false;});
+    if (serviceBox.matches(':hover') || serviceBox.matches(':focus-within')) {
         isPaused = true;
     }
 }
