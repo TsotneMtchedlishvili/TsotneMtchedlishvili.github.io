@@ -125,20 +125,22 @@ const selectServiceFunction = (item) => {
                     
                 }
                 
+                let lastFocused = document.activeElement;
+
                 item.classList.add("selected");
 
                 item.setAttribute('aria-expanded', 'true');
-
-                serviceInfoPage.classList.add('service_Info_Page_Activate');
-                serviceInfoPage.setAttribute('role', 'dialog');
-                serviceInfoPage.setAttribute('aria-modal', 'true');
-                serviceInfoPage.setAttribute('aria-labelledby', `${thePage.getElementsByTagName("h4").item(0).id}`);
 
                 thePage.style.background = "var(--distinguished-window)";
     
                 let topic = item.getElementsByTagName("h4").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
+
+                serviceInfoPage.classList.add('service_Info_Page_Activate');
+                serviceInfoPage.setAttribute('role', 'dialog');
+                serviceInfoPage.setAttribute('aria-modal', 'true');
+                serviceInfoPage.setAttribute('aria-labelledby', `${thePage.getElementsByTagName("h4").item(0).id}`);
 
 
                 const closeButton = document.createElement("button");
@@ -153,7 +155,12 @@ const selectServiceFunction = (item) => {
                 thePage.appendChild(closeButton);
 
 
-                closeButton.addEventListener('click', clearServiceItem);
+                closeButton.addEventListener('click', () => {
+
+                    clearServiceItem();
+                    if (lastFocused) lastFocused.focus();
+                    document.removeEventListener('keydown', modalEscHandler)
+                });
 
                 const backdrop = document.createElement("div");
                 backdrop.classList.add("page_Background");
@@ -161,7 +168,37 @@ const selectServiceFunction = (item) => {
                 document.body.style.overflow = "hidden"
                 document.querySelector(".top_Panel").classList.add("hidden");
                 
+                if (lastFocused) closeButton.focus();
+
+                thePage.addEventListener('keydown', (e) => {
+                    if (e.key !== 'Tab') return;
+
+                    const focusables = thePage.querySelectorAll('button, a, input, [tabindex]:not([tabindex="-1"])');
+                    
+                    if(focusables.length > 0) {
+                        const first = focusables[0];
+                        const last = focusables[focusables.length - 1];
+
+                        if (e.shiftKey && document.activeElement === first) {
+                            last.focus();
+                            e.preventDefault();
+                        } else if (!e.shiftKey && document.activeElement === last) {
+                            first.focus();
+                            e.preventDefault();
+                        }
+                    }
+
+                });
+
+                const modalEscHandler = (e) => {
+                    if (e.key === 'Escape') {
+                        document.removeEventListener('keydown', modalEscHandler);
+                        clearServiceItem();
+                        lastFocused.focus();
+                    }
+                }
                 
+                document.addEventListener('keydown', modalEscHandler);
     
             }
 
