@@ -683,7 +683,7 @@ body {
     align-items: center;
 }
 
-.why_Choose_Us_Section h2 {
+/* .why_Choose_Us_Section h2 {
 
     font-size: clamp(1.5rem, 10vw, 2.25rem);
     display: flex;
@@ -691,7 +691,7 @@ body {
     color: var(--primary-darker);
     font-weight: 600;
     
-}
+} */
 
 .why_Choose_Container {
 
@@ -1673,14 +1673,14 @@ body {
         align-items: center;
     }
     
-    .why_Choose_Us_Section h2 {
+    /* .why_Choose_Us_Section h2 {
     
         font-size: clamp(1.5rem, 10vw, 2.25rem);
         display: flex;
         justify-content: center;
         margin-bottom: var(--section-separator-unit);
         
-    }
+    } */
     
     .why_Choose_Container {
     
@@ -2448,11 +2448,11 @@ body {
         padding: 0 0 calc(2*var(--section-separator-unit-big)) 0;
     }
     
-    .why_Choose_Us_Section h2 {
+    /* .why_Choose_Us_Section h2 {
     
         font-size: clamp(2.25rem, 10vw, 5rem);
         
-    }
+    } */
     
     .why_Choose_Container {
     
