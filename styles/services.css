@@ -253,6 +253,7 @@ h1 span{
 .why_Choose_Heading {
 
     font-size: clamp(1.5rem, 8vw, 3rem);
+    width: 100%;
 }
 
 .why_Choose_Titiling {
@@ -558,6 +559,7 @@ h1 span{
     .why_Choose_Heading {
 
         font-size: clamp(1.5rem, 5vw, 2.5rem);
+        
     }
 
     .why_Choose_Titiling {
