@@ -3,13 +3,15 @@ const languageButton = document.querySelector('.language_Button');
 const languageList = document.querySelector('.language_List');
 
 
+languageList.querySelectorAll("a").forEach((item) => {item.tabIndex  = -1});
 
-languageList.clientHeight ? languageList.style.height = "0px" : languageList.style.height = "max-content";
+if (languageList.clientHeight > 0){languageList.style.minHeight = "0px"; languageList.style.height = "0px";} 
 
 const closeLangList = (winWidth) => {
 
     
     if (winWidth >= 2000) {
+        languageList.style.minHeight = "0px"
         languageList.style.height = "0px"
         languageList.style.border = "none"
         languageSelector.style.borderBottomRightRadius = "clamp(1rem, 2vw, 3rem)";
@@ -24,6 +26,7 @@ const closeLangList = (winWidth) => {
     }
     else if (winWidth >= 1000){
 
+        languageList.style.minHeight = "0px"
         languageList.style.height = "0px"
         languageList.style.border = "none"
         languageSelector.style.borderBottomRightRadius = "clamp(1rem, 2vw, 3rem)";
@@ -39,6 +42,7 @@ const closeLangList = (winWidth) => {
     }
     else {
 
+        languageList.style.minHeight = "0px"
         languageList.style.height = "0px"
         languageList.style.border = "none"
         languageSelector.style.borderBottomRightRadius = "clamp(0.2rem, 1vw, 2rem)";
@@ -55,6 +59,7 @@ const closeLangList = (winWidth) => {
 
     languageButton.setAttribute("aria-expanded", "false");
     languageList.setAttribute("hidden", "");
+    languageList.querySelectorAll("a").forEach((item) => {item.tabIndex  = -1});
 
 }
 
@@ -64,6 +69,7 @@ const openLangList = (winWidth) => {
 
     if (winWidth >= 2000){
 
+        languageList.style.minHeight = "max-content"
         languageList.style.height = "max-content"
         languageList.style.border = "0.2vh solid var(--nav-text-color)"
         languageSelector.style.borderBottomRightRadius = "0";
@@ -81,6 +87,7 @@ const openLangList = (winWidth) => {
     }
     else if (winWidth >= 1000){
 
+        languageList.style.minHeight = "max-content"
         languageList.style.height = "max-content"
         languageList.style.border = "0.2vh solid var(--nav-text-color)"
         languageSelector.style.borderBottomRightRadius = "0";
@@ -97,6 +104,7 @@ const openLangList = (winWidth) => {
 
     }
     else {
+        languageList.style.minHeight = "max-content"
         languageList.style.height = "max-content"
         languageList.style.border = "1px solid var(--nav-text-color)"
         languageSelector.style.borderBottomRightRadius = "0";
@@ -107,7 +115,7 @@ const openLangList = (winWidth) => {
     
     languageButton.setAttribute("aria-expanded", "true");
     languageList.removeAttribute("hidden");
-
+    languageList.querySelectorAll("a").forEach((item) => {item.tabIndex  = 0});
 
 }
 
@@ -118,11 +126,22 @@ const calcWindowWidth = () => {
 }
 
 const switcherAction = () => {
+    let resolution = calcWindowWidth();
+    const isExpanded = languageButton.getAttribute("aria-expanded") === "true";
+    
+    if (isExpanded) {
+        closeLangList(resolution);
+    } else {
+        openLangList(resolution);
+    }
+};
 
-    let resolution = calcWindowWidth()
-    languageList.clientHeight ? closeLangList(resolution) : openLangList(resolution); 
-
-}
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && languageButton.getAttribute("aria-expanded") === "true") {
+        closeLangList(calcWindowWidth());
+        languageButton.focus(); // Return focus to the button
+    }
+});
 
 languageButton.addEventListener('click', () => {
 
