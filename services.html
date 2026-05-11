@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
 
     <meta property="og:title" content="Services | The Space Renovations">
     <meta property="og:description" content="Explore our full range of services including renovation, construction, landscaping, and property management.">
     <meta property="og:image" content="placeholder">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thespacerenovations.com/services.html">
     
     <link rel="canonical" href="https://thespacerenovations.com/services.html">
 
@@ -25,21 +28,21 @@
         <div class="top_Panel">
 
             <div class="logo_And_Hamburger">
-                <img class="header_Logo" src="../Images/theSpace/logo-tetri).png" 
+                <img class="header_Logo" src="Images/theSpace/logo-tetri).png" 
                 alt="The Space Renovations Logo" width="90">
 
-                <div class="navbarToggleBtn">
+                <button class="navbarToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
                     <div class="hamburger_Line hl1"></div>
                     <div class="hamburger_Line hl2">
                         <div class="hl_Piece1"></div>
                         <div class="hl_Piece2"></div>
                     </div>
                     <div class="hamburger_Line hl3"></div>
-                </div>
+                </button>
             </div>
 
             <div class="navbarContainer">
-                <nav class="global_Nav">
+                <nav class="global_Nav" aria-label="Main navigation">
                     <ul class="nav_List">
                         <li class="nav_Link"><a href="/">Home</a></li>
                         <li class="nav_Link"><a href="services.html">Services</a></li>
@@ -50,15 +53,16 @@
                 </nav>
 
                  <div class="language_Selector">
-                <button class="language_Button"><img src="../Images/Icons/translation-svgrepo-com.svg" alt="Translation Icon" class="translation_Icon" height="25">Languages</button>
-                <div class="language_List">
-                    <a href="/services.html"><img src="../Images/Flags/flag-for-flag-georgia-svgrepo-com.svg" alt="The flag of Georgia" class="language_Flag" height="25"> Georgian</a>
-                    <a href="/en/services.html"><img src="../Images/Flags/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="The flag of UK" class="language_Flag" height="25"> English</a>
+                <button class="language_Button" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu">
+                    <img src="../Images/Icons/translation-svgrepo-com.svg" alt="" aria-hidden="true" class="translation_Icon" height="25">Languages
+                </button>
+                <div class="language_List" id="language-menu">
+                    <a href="services.html"><img src="../Images/Flags/flag-for-flag-georgia-svgrepo-com.svg" alt="" aria-hidden="true" class="language_Flag" height="25"> Georgian</a>
+                    <a href="/en/services.html"><img src="../Images/Flags/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="" aria-hidden="true" class="language_Flag" height="25"> English</a>
                 </div>
                 </div>
 
                 <a class="generic_Button" href="contact.html"><span class="gneric_Button_Text" style="text-decoration: inherit; color: inherit;">Contact Us</span></a>
-            </div>
 
             
         </div>
@@ -71,117 +75,119 @@
             <h1>We build for you,<br> find out about our <span>best services</span></h1>
         </div>
 
-        <div class="services_Intro">
-            <h2 class="services_Heading">What We Offer</h2>
-            <p class="intro_Description">
-                At The Space, we specialize in creating and maintaining exceptional spaces. From stunning home renovations to vibrant landscapes and seamless property management, our expert team delivers quality and precision every step of the way.
-            </p>
-        </div>
+        <section aria-labelledby="servicesHeading">
+            <div class="services_Intro">
+                <h2 class="services_Heading" id="servicesHeading">What We Offer</h2>
+                <p class="intro_Description">
+                    At The Space, we specialize in creating and maintaining exceptional spaces. From stunning home renovations to vibrant landscapes and seamless property management, our expert team delivers quality and precision every step of the way.
+                </p>
+            </div>
 
-        <div class="quick_Buy">
-            <button class="carousel_Scroll_Button left_Scroll_Button">
-                <svg class="arrow_Left_Svg" fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="m1352.005.012 176.13 176.13-783.864 783.989 783.864 783.74L1352.005 1920 391.887 960.13z" fill-rule="evenodd"></path> </g></svg>
-            </button>
-            <ul class="quick_Buy_Carousel">
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://cdn.prod.website-files.com/64a4ff71754d001d8b63f41d/64a50acd5fab23fac7baca5f_REBUILD%20Construction%20Webflow%20Template%20-%20interior%20plan-p-800.jpeg"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://thumbs.dreamstime.com/b/professional-caucasian-gardener-building-plants-irrigation-system-developed-garden-industrial-theme-plants-irrigation-system-157982906.jpg"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://theremotegroup.com/wp-content/uploads/2024/05/Property-Management-Company-scaled.webp"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://imgs.search.brave.com/N5TCtvoVG3D-9zotey9Qiq5G-By73cfHuP0QB-HApts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE1/MDQ5MTgxNy9waG90/by9hcmNoaXRlY3Qt/bG9va2luZy1hdC1m/bG9vci1wbGFuLW9u/LWRlc2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9UOXZi/Vk0xalVmclNLcXd3/WG1scF9VZW9LY3VV/anhtcTdKenFtLXl1/V0k9"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://t3.ftcdn.net/jpg/10/90/34/40/360_F_1090344066_emRaz82WCy0e1zjY1jM4fDW4rrV2Yh0D.jpg"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://p2mnet.com/wp-content/uploads/2016/10/Aegis-furniture2-1920x1080.jpg"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://mistyclean.com/wp-content/uploads/2024/07/Banner-img-Professional-cleaning-Services-in-Maryland-scaled.webp"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-                <li class="carousel_Item">
-                    <div class="item_Thumbnail">
-                        <img src="https://www.mintsoft.com/media/chzlxsn3/types_of_warehouse_blog.png?width=1200&height=630&v=1dab8149acd8d70"
-                         class="thumbnail" alt=""></div>
-                    <h3 class="item_Title">Our superb services12345adwasdawda</h3>
-                    <p class="item_Price"> </p>
-                    <button class="standard_Button_One learn_More">
-                        Learn More
-                    </button>
-                </li>
-            </ul>
-            <button class="carousel_Scroll_Button right_Scroll_Button">
-                <svg class="arrow_Right_Svg" fill="" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M568.13.012 392 176.142l783.864 783.989L392 1743.87 568.13 1920l960.118-959.87z" fill-rule="evenodd"></path> </g></svg>
-            </button>
-        </div>  
+            <div class="quick_Buy">
+                <button class="carousel_Scroll_Button left_Scroll_Button" tabindex="-1" aria-hidden="true">
+                    <svg class="arrow_Left_Svg" fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="m1352.005.012 176.13 176.13-783.864 783.989 783.864 783.74L1352.005 1920 391.887 960.13z" fill-rule="evenodd"></path> </g></svg>
+                </button>
+                <ul class="quick_Buy_Carousel">
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://cdn.prod.website-files.com/64a4ff71754d001d8b63f41d/64a50acd5fab23fac7baca5f_REBUILD%20Construction%20Webflow%20Template%20-%20interior%20plan-p-800.jpeg"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://thumbs.dreamstime.com/b/professional-caucasian-gardener-building-plants-irrigation-system-developed-garden-industrial-theme-plants-irrigation-system-157982906.jpg"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://theremotegroup.com/wp-content/uploads/2024/05/Property-Management-Company-scaled.webp"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://imgs.search.brave.com/N5TCtvoVG3D-9zotey9Qiq5G-By73cfHuP0QB-HApts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE1/MDQ5MTgxNy9waG90/by9hcmNoaXRlY3Qt/bG9va2luZy1hdC1m/bG9vci1wbGFuLW9u/LWRlc2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9UOXZi/Vk0xalVmclNLcXd3/WG1scF9VZW9LY3VV/anhtcTdKenFtLXl1/V0k9"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://t3.ftcdn.net/jpg/10/90/34/40/360_F_1090344066_emRaz82WCy0e1zjY1jM4fDW4rrV2Yh0D.jpg"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://p2mnet.com/wp-content/uploads/2016/10/Aegis-furniture2-1920x1080.jpg"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://mistyclean.com/wp-content/uploads/2024/07/Banner-img-Professional-cleaning-Services-in-Maryland-scaled.webp"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                    <li class="carousel_Item">
+                        <div class="item_Thumbnail">
+                            <img src="https://www.mintsoft.com/media/chzlxsn3/types_of_warehouse_blog.png?width=1200&height=630&v=1dab8149acd8d70"
+                            class="thumbnail" alt=""></div>
+                        <h3 class="item_Title">Our superb services12345adwasdawda</h3>
+                        <p class="item_Price"> </p>
+                        <button class="standard_Button_One learn_More">
+                            Learn More
+                        </button>
+                    </li>
+                </ul>
+                <button class="carousel_Scroll_Button right_Scroll_Button" tabindex="-1" aria-hidden="true">
+                    <svg class="arrow_Right_Svg" fill="" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M568.13.012 392 176.142l783.864 783.989L392 1743.87 568.13 1920l960.118-959.87z" fill-rule="evenodd"></path> </g></svg>
+                </button>
+            </div>  
+        </section>
         
-        <div class="why_Choose_Container">
+        <section class="why_Choose_Container" aria-labelledby="whyChooseHeading">
             <div class="backdrop_Styling">
                 <div class="why_Choose_Titiling">
-                    <p>Why Choose Us</p>
-                    <h2 class="why_Choose_Heading">
-                        The expertise you can trust!
+                    <!-- <p>Why Choose Us</p> -->
+                    <h2 class="why_Choose_Heading" id="whyChooseHeading">
+                        Why Choose Us
                     </h2>
                 </div>
 
                 <div class="why_Choose_Centerer">
-                    <div class="why_Card_Container">
+                    <ul class="why_Card_Container">
 
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -193,9 +199,9 @@
                                     From planning to execution — we manage every detail so you don’t have to.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -207,9 +213,9 @@
                                     No hidden fees. Clear budgeting and honest pricing from day one.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -221,9 +227,9 @@
                                     We deliver on time — every time. Your schedule is our priority.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -235,9 +241,9 @@
                                     Work with trusted experts in renovation, landscaping, and property management.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -249,9 +255,9 @@
                                     Every space is unique. We offer solutions designed specifically for your needs.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                        <div class="why_Choose_Card">
+                        <li class="why_Choose_Card">
                             <div class="icon_Container">
                                 <img src="" alt="" class="why_Choose_Icon">
                             </div>
@@ -263,15 +269,15 @@
                                     We don’t just finish projects — we build long-term satisfaction and trust.
                                 </p>
                             </div>
-                        </div>
+                        </li>
     
-                    </div>
+                    </ul>
                 </div>
 
             </div>
-        </div>
+        </section>
 
-        <div class="quote_Section">
+        <section class="quote_Section" aria-labelledby="quoteHeading">
 
             <div class="quote_Container">
                 <div class="img_Quote_Container">
@@ -280,7 +286,7 @@
                 </div>
                 <div class="quote_Desc_Positioner">
                     <div class="quote_Desc_Container">
-                        <h2>Get a quote, for free!</h2>
+                        <h2 id="quoteHeading">Get a quote, for free!</h2>
                         <p>At The Space Renovations, we pride ourselves on delivering exceptional service and craftsmanship in every project we undertake. Whether you're envisioning a complete home renovation, transforming your outdoor space, or seeking reliable property management solutions, our dedicated team is here to help bring your vision to life.</p>
                         <a class="generic_Button" href="contact.html"><span class="gneric_Button_Text" style="text-decoration: inherit; color: inherit;">Contact Us</span></a>
                     </div>
@@ -288,7 +294,7 @@
                 
             </div>
 
-        </div>
+        </section>
 
     </main>
     <footer>
@@ -296,7 +302,7 @@
             <img src="../Images/theSpace/logo-mtavari-eng(2).png"
                  alt="Company Logo" class="footer_Logo" width="50">
             <div class="footer_Column">
-                <h4>Contact</h4>
+                <h3>Contact</h3>
                 <address>
                     <div class="description_Footer"><div class="footer_Icon_One"></div> Tbilisi, Takaishvili st. 3</div>
                     <div class="description_Footer"><div class="footer_Icon_Two"></div> Phone: <span><a href="tel:+995599203120">+995 599 203 120</a></span></div>
@@ -304,7 +310,7 @@
                 </address>
             </div>
             <div class="footer_Column">
-                <h4>Links</h4>
+                <h3>Links</h3>
                 <ul>
                     <li class="nav_Link"><a href="../index.html">Home</a></li>
                     <li class="nav_Link"><a href="../pages/projects.html">Projects</a></li>
@@ -315,12 +321,12 @@
                 </ul>
             </div>
             <div class="footer_Column">
-                <h4>Social Media</h4>
+                <h3>Social Media</h3>
                 <ul>
-                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_One"></div><a href="">LinkedIn</a></li>
-                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Two"></div><a href="">Facebook</a></li>
-                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Three"></div><a href="">Instagram</a></li>
-                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Four"></div><a href="">Tiktok</a></li>
+                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_One" aria-hidden="true"></div><a href="">LinkedIn</a></li>
+                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Two" aria-hidden="true"></div><a href="">Facebook</a></li>
+                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Three" aria-hidden="true"></div><a href="">Instagram</a></li>
+                    <li class="social_Link"><div class="footer_Social_Icon" id="soc_Four" aria-hidden="true"></div><a href="">Tiktok</a></li>
                 </ul>
             </div>
         </div>
