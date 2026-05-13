@@ -1700,11 +1700,11 @@
     font-size: 125%;  /* 16px * 1.25 = 20px */
   }
 
-  .nav_List {
+  /* .nav_List { */
 
     /* font-size: clamp(2.8rem, 1vw, 4rem); */
 
-  }
+  /* } */
 }
 
 
