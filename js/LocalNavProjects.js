@@ -1,90 +1,209 @@
 const navFilter = document.querySelector(".nav_Filter");
-let filterButton;
-let navFilterButtons = Array.from(document.getElementsByClassName("category"));
-let MenuFilterButtons = Array.from(document.getElementsByClassName("category")) ?? null;
+
+const filters = [
+    {
+        className: "all",
+        label: "All Projects"
+    },
+    {
+        className: "residential",
+        label: "Residential Construction"
+    },
+    {
+        className: "renovation",
+        label: "Renovation"
+    },
+    {
+        className: "landscaping",
+        label: "Landscaping"
+    }
+];
+
+
+
+const createCategoryButtons = () => {
+
+    return filters.map((filter, index) => {
+
+        return `
+            <button
+                class="category ${filter.className} ${index === 0 ? "pressed" : ""}"
+                data-category="${filter.className}"
+                aria-pressed="${index === 0 ? "true" : "false"}">
+                ${filter.label}
+            </button>
+        `;
+
+    }).join("");
+
+};
+
 
 
 const assignBtnsFunctionality = (buttons) => {
 
     buttons.forEach((button) => {
-    
+
         button.addEventListener("click", () => {
 
+            buttons.forEach((btn) => {
 
-        for(let i = 0; i < buttons.length; i++) {
+                btn.classList.remove("pressed");
+                btn.setAttribute("aria-pressed", "false");
 
-            if (buttons[i].classList.contains("pressed") && buttons[i] !== button) {
+            });
 
-                buttons[i].classList.remove("pressed");
-                console.log(button)
-            }
-            
-        }
+            button.classList.add("pressed");
+            button.setAttribute("aria-pressed", "true");
 
-        button.classList.toggle("pressed");
-        fillOutList(projectList, button, projects);
+            fillOutList(projectList, button, projects);
 
-    })})
-}
-
-
-
-if (window.innerWidth < 750) {
-
-    navFilter.innerHTML = `<button class="filter_Button"">Filters</button>`;
-    let filterBtn = document.querySelector(".filter_Button");
-    filterBtn.addEventListener("click", () => {
-
-        const filterElement = document.createElement("div");
-        filterElement.classList.add("filter_Element");
-        filterElement.innerHTML = `<button class="category all pressed">All Projects</button>
-        <button class="category residential">Residential Construction</button>
-        <button class="category renovation">Renovation</button>
-        <button class="category landscaping">Landscaping</button>`
-        navFilter.appendChild(filterElement);
-    
-        const closeButtonLocal = document.createElement("div");
-    
-        const closeButtonIcon = document.createElement("img");
-        closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
-        closeButtonIcon.height = 40;
-    
-        closeButtonLocal.appendChild(closeButtonIcon);
-        closeButtonLocal.classList.add("closeBtn");
-        filterElement.appendChild(closeButtonLocal);
-    
-        const backdrop = document.createElement("div");
-        backdrop.classList.add("page_Background");
-        navFilter.appendChild(backdrop);
-        document.body.style.overflow = "hidden";
-    
-        backdrop.style.top = "0";
-        backdrop.style.left = "0";
-        backdrop.style.zIndex = "1";
-        filterElement.style.zIndex = "2";
-
-        MenuFilterButtons = Array.from(document.getElementsByClassName("category"))
-        assignBtnsFunctionality(MenuFilterButtons);
-    
-        closeButtonLocal.addEventListener('click', () => {
-            document.body.style.overflow = "scroll";
-            filterElement.remove();
-            backdrop.remove();
-    
         });
+
     });
 
-}
-else {
+};
 
-    navFilter.innerHTML = `<button class="category all pressed">All Projects</button>
-            <button class="category residential">Residential Construction</button>
-            <button class="category renovation">Renovation</button>
-            <button class="category landscaping">Landscaping</button>`;
 
-            navFilterButtons = Array.from(document.getElementsByClassName("category"));
-    assignBtnsFunctionality(navFilterButtons);
-}
+
+const openMobileFilters = () => {
+
+    const filterElement = document.createElement("div");
+    filterElement.classList.add("filter_Element");
+    filterElement.setAttribute("role", "dialog");
+    filterElement.setAttribute("aria-modal", "true");
+
+    filterElement.innerHTML = createCategoryButtons();
+
+    const closeButton = document.createElement("button");
+    closeButton.classList.add("closeBtn");
+    closeButton.setAttribute("aria-label", "Close filters");
+
+    const closeButtonIcon = document.createElement("img");
+    closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
+    closeButtonIcon.height = 40;
+    closeButtonIcon.alt = "";
+    closeButtonIcon.setAttribute("aria-hidden", "true");
+
+    closeButton.appendChild(closeButtonIcon);
+    filterElement.appendChild(closeButton);
+
+
+
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("page_Background");
+
+    
+    backdrop.style.position = "fixed";
+    backdrop.style.inset = "0";
+    backdrop.style.zIndex = "999";
+
+    filterElement.style.position = "fixed";
+    filterElement.style.zIndex = "1000";
+
+
+
+    const closeFilters = () => {
+
+        document.body.style.overflow = "";
+
+        filterElement.remove();
+        backdrop.remove();
+
+        document.removeEventListener("keydown", handleEscape);
+
+    };
+
+
+
+    const handleEscape = (e) => {
+
+        if (e.key === "Escape") {
+            closeFilters();
+        }
+
+    };
+
+
+
+    backdrop.addEventListener("click", closeFilters);
+    closeButton.addEventListener("click", closeFilters);
+    document.addEventListener("keydown", handleEscape);
+
+
+
+    navFilter.appendChild(backdrop);
+    navFilter.appendChild(filterElement);
+
+    document.body.style.overflow = "hidden";
+
+
+
+    const mobileButtons = Array.from(
+        filterElement.querySelectorAll(".category")
+    );
+
+    assignBtnsFunctionality(mobileButtons);
+
+
+
+    const firstButton = filterElement.querySelector(".category");
+    if (firstButton) firstButton.focus();
+
+};
+
+
+
+const renderDesktopFilters = () => {
+
+    navFilter.innerHTML = createCategoryButtons();
+
+    const buttons = Array.from(
+        navFilter.querySelectorAll(".category")
+    );
+
+    assignBtnsFunctionality(buttons);
+
+};
+
+
+
+const renderMobileTrigger = () => {
+
+    navFilter.innerHTML = `
+        <button
+            class="filter_Button"
+            aria-label="Open project filters">
+            Filters
+        </button>
+    `;
+
+    const filterButton = document.querySelector(".filter_Button");
+
+    filterButton.addEventListener("click", openMobileFilters);
+
+};
+
+
+
+const renderFilters = () => {
+
+    if (window.innerWidth < 750) {
+
+        renderMobileTrigger();
+
+    }
+    else {
+
+        renderDesktopFilters();
+
+    }
+
+};
+
+
+
+renderFilters();
 
 
 
@@ -92,65 +211,6 @@ window.addEventListener("resize", () => {
 
     document.body.style.overflow = "scroll";
 
-
-    if (window.innerWidth < 750) {
-
-        navFilter.innerHTML = `<button class="filter_Button">Filters</button>`;
-        filterButton = document.querySelector(".filter_Button");
-        filterButton.addEventListener("click", () => {
-
-            const filterElement = document.createElement("div");
-            filterElement.classList.add("filter_Element");
-            filterElement.innerHTML = `<button class="category all pressed">All Projects</button>
-            <button class="category residential">Residential Construction</button>
-            <button class="category renovation">Renovation</button>
-            <button class="category landscaping">Landscaping</button>`
-            navFilter.appendChild(filterElement);
-        
-            const closeButtonLocal = document.createElement("div");
-        
-            const closeButtonIcon = document.createElement("img");
-            closeButtonIcon.src = "../Images/Icons/close-circle-svgrepo-com.svg";
-            closeButtonIcon.height = 40;
-        
-            closeButtonLocal.appendChild(closeButtonIcon);
-            closeButtonLocal.classList.add("closeBtn");
-            filterElement.appendChild(closeButtonLocal);
-        
-            const backdrop = document.createElement("div");
-            backdrop.classList.add("page_Background");
-            navFilter.appendChild(backdrop);
-            document.body.style.overflow = "hidden";
-        
-            backdrop.style.top = "0";
-            backdrop.style.left = "0";
-            backdrop.style.zIndex = "1";
-            filterElement.style.zIndex = "2";
-
-            MenuFilterButtons = Array.from(document.getElementsByClassName("category"))
-            assignBtnsFunctionality(MenuFilterButtons);
-        
-            closeButtonLocal.addEventListener('click', () => {
-                document.body.style.overflow = "scroll";
-                filterElement.remove();
-                backdrop.remove();
-        
-            });
-        
-        });
-    }
-    else {
-
-        navFilter.innerHTML = `<button class="category all pressed">All Projects</button>
-                <button class="category residential">Residential Construction</button>
-                <button class="category renovation">Renovation</button>
-                <button class="category landscaping">Landscaping</button>`;
-    
-                
-
-                navFilterButtons = Array.from(document.getElementsByClassName("category"));
-                assignBtnsFunctionality(navFilterButtons);
-    }
+    renderFilters();
 
 });
-
