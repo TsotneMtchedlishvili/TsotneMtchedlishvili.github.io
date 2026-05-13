@@ -1,39 +1,36 @@
 const acc = document.getElementsByClassName("accordion");
 
-const toggleHide = (element) => {
+const togglePanel = (accordion, button, panel) => {
+  const isOpen = accordion.classList.contains("active");
 
-  element.children[1].classList.toggle("hidden")
+  accordion.classList.toggle("active", !isOpen);
+  accordion.classList.toggle("disactive", isOpen);
 
-}
+  panel.classList.toggle("hidden", isOpen);
+
+  button.setAttribute("aria-expanded", String(!isOpen));
+  panel.setAttribute("aria-hidden", String(isOpen));
+};
 
 for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function(e) {
-    
+  const accordion = acc[i];
 
-    let childrenClicked = Array.from(this.children[0].children).includes(e.target);
+  const button = accordion.querySelector(".accordion_Q");
+  const panel = accordion.querySelector(".panel");
 
-    if(e.target === this || e.target === this.children[0] || childrenClicked) {
-      if(!this.classList.contains("active") && !this.classList.contains("disactive"))
-        {
-          this.classList.toggle("active");
-          
-        }
-        else if (this.classList.contains("active") && !this.classList.contains("disactive")) {
-    
-          this.classList.toggle("active");
-          this.classList.toggle("disactive");
-        }
-        else if (!this.classList.contains("active") && this.classList.contains("disactive")) {
-    
-          this.classList.toggle("disactive");
-          this.classList.toggle("active");
-          
-        }
-        
-        toggleHide(this);
+  if (!button || !panel) continue;
+
+  button.setAttribute("aria-expanded", "false");
+  panel.setAttribute("aria-hidden", "true");
+
+  button.addEventListener("click", () => {
+    togglePanel(accordion, button, panel);
+  });
+
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      togglePanel(accordion, button, panel);
     }
-    
-    
-
   });
 }
