@@ -11,75 +11,82 @@
     outline: none;
     font-family: var(--default-font-family);
     overflow: hidden;
-    
-
+    display: block;
+    will-change: height;
 }
 
 
 .accordion.active {
-
     animation: heightopen 400ms ease forwards;
 }
 
 .accordion.active .drop_Down_Button_Acc {
-
     transition: all 400ms ease;
-    rotate: 180deg;
+    transform: rotate(180deg);
 }
 
 .accordion.disactive {
-
-    animation: heightclose 400ms ease forwards;
+    animation: heightclose 400ms ease;
 }
 
-/* .active, .accordion:hover {
-    background-color: rgb(20, 20, 20);
-  } */
 
-  .accordion_Q {
+.accordion_Q {
 
-    -webkit-user-select: none; /* Safari */
-    user-select: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+
+    width: 100%;
     height: 55px;
     padding: 18px;
     padding-right: 10px;
-  }
 
-  .drop_Down_Button_Acc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.accordion_Q span {
+    flex: 1;
+}
+
+.drop_Down_Button_Acc {
 
     height: 30px;
     width: 30px;
     background-image: url(../Images/Webpage/keyboard_arrow_down_30dp_08BFFF_FILL0_wght400_GRAD0_opsz24.svg);
     background-size: cover;
     transition: all 400ms ease;
-  }
+    flex-shrink: 0;
+}
 
-  .panel {
-
+.panel {
 
     height: calc(100% - 55px);
     padding: 20px;
-  }
+    box-sizing: border-box;
+}
 
-  .hidden {
-
+.hidden {
     display: none;
-  }
+}
 
 
-  @keyframes heightopen {
+@keyframes heightopen {
 
     from {
     height: clamp(55px, 2.3vw, 110px);
-    
     }
-    
+
     to {
     height: clamp(200px, 12vw, 400px);
-    
     }
 }
 
@@ -87,12 +94,10 @@
 
     from {
     height: clamp(200px, 12vw, 400px);
-    
     }
-    
+
     to {
     height: clamp(55px, 2.3vw, 110px);
-    
     }
 }
 
@@ -100,16 +105,14 @@
 
     from {
     rotate: 0deg;
-    
     }
-    
+
     to {
     rotate: 180deg;
-    
     }
 }
 
-  @media (min-width: 2000px) {
+@media (min-width: 2000px) {
 
   .accordion {
 
@@ -138,19 +141,16 @@
     height: calc(100% - clamp(110px, 2.3vw, 220px));
     padding: clamp(20px, 1.1vw, 40px);
     font-size: clamp(1.5rem, 1vw, 2rem);
-    
   }
 
   @keyframes heightopen {
 
     from {
     height: clamp(110px, 2.3vw, 220px);
-    
     }
-    
+
     to {
     height: clamp(200px, 12vw, 400px);
-    
     }
   }
 
@@ -158,13 +158,11 @@
 
       from {
       height: clamp(200px, 12vw, 400px);
-      
       }
-      
+
       to {
       height: clamp(110px, 2.3vw, 220px);
-      
       }
   }
 
-  }
+}
