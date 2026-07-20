@@ -175,7 +175,7 @@ h1 span{
     margin: var(--section-separator-unit) auto;
     
 
-    border-radius: 30px;
+    /* border-radius: 30px; */
 
     background-attachment: fixed;
     background-size: cover;
@@ -188,11 +188,12 @@ h1 span{
 
 .backdrop_Styling {
 
-    padding: clamp(10px, 1.5vw, 100px);
+    /* padding: clamp(10px, 1.5vw, 100px); */
     display: flex;
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
+    align-items: center;
 }
 
 .backdrop_Styling > div > p {
@@ -224,6 +225,8 @@ h1 span{
     grid-template-columns: repeat(1, minmax(auto, 1fr));
     row-gap: 20px;
     column-gap: 20px;
+    /* width: 100vw; */
+    margin-bottom: var(--section-separator-unit);
 
 
 }
@@ -254,6 +257,7 @@ h1 span{
 
     font-size: clamp(1.5rem, 8vw, 3rem);
     width: 100%;
+    margin: var(--section-separator-unit) 0;
 }
 
 .why_Choose_Titiling {
@@ -478,11 +482,12 @@ h1 span{
         flex-direction: column;
         align-items: center;
 
-        width: clamp(700px, 90%, 1400px);
+        /* width: clamp(700px, 90%, 1400px); */
+        width: 100vw;
         margin: clamp(10px, 5vh, 100px) auto;
         
 
-        border-radius: 30px;
+        /* border-radius: 30px; */
 
         background-attachment: fixed;
         background-size: cover;
@@ -495,7 +500,7 @@ h1 span{
 
     .backdrop_Styling {
 
-        padding: clamp(10px, 1.5vw, 100px);
+        /* padding: clamp(10px, 1.5vw, 100px); */
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -798,7 +803,7 @@ h1 span{
 
     .why_Choose_Container {
 
-        width: max-content;
+        /* width: max-content; */
         /* margin: var(--section-separator-unit-big) auto; */
     }
 
@@ -808,9 +813,9 @@ h1 span{
 
     .backdrop_Styling {
 
-        padding: clamp(10px, 5%, 200px);
+        /* padding: clamp(10px, 5%, 200px); */
         display: flex;
-        gap: 50px;
+        /* gap: 50px; */
         flex-direction: column;
         width: 100%;
         flex-grow: 1;
@@ -1051,18 +1056,18 @@ h1 span{
 
     .why_Choose_Container {
     
-        width: clamp(650px, 80vw, 3500px);
+        /* width: clamp(650px, 80vw, 3500px); */
         
-        border-radius: clamp(30px, 1.5vw, 60px);
+        /* border-radius: clamp(30px, 1.5vw, 60px); */
         font-size: clamp(1.5rem, 1vw, 3rem);
 
-        width: max-content;
+        /* width: max-content; */
         margin: calc(2*var(--section-separator-unit)) auto;
     }
     
     .backdrop_Styling {
     
-        padding: clamp(100px, 10vw, 200px);
+        /* padding: clamp(100px, 10vw, 200px); */
 
     }
     
@@ -1079,7 +1084,7 @@ h1 span{
         align-items: center;
         justify-content: center;
         margin-bottom: clamp(50px, 5vw, 100px);
-    
+        width: 100%;
         flex-grow: 1;
     
     }
