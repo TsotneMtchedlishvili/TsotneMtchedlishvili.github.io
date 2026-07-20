@@ -110,7 +110,8 @@ body {
     display: flex;
     justify-content: space-between;
     /* flex-direction: column-reverse; */
-    width: 90vw;
+    /* width: 90vw; */
+    width: 100vw;
     max-width: 1920px;
     margin: 0 auto;
 
@@ -1158,7 +1159,8 @@ body {
         justify-content: space-between;
         gap:2.5%;
         /* flex-direction: column-reverse; */
-        width: 95vw;
+        /* width: 95vw; */
+        width: 100vw;
         margin: 0 auto;
     
         padding: clamp(10px, 10%, 20px);
