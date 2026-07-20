@@ -198,7 +198,6 @@
 
 
     .quick_Buy {
-      background-color: var(--primary-color);
       height: clamp(160px, 16vw, 640px);
       display: flex;
       align-items: center;
@@ -209,7 +208,6 @@
     .carousel_Item {
 
     row-gap: clamp(2.5px, 0.625vh, 100px);
-    background-color: var(--distinguished-window);
     height: calc(clamp(160px, 25vw + 20vh, 640px) - 2*clamp(5px, 1.25vh, 200px));
     width: 0;
   }
