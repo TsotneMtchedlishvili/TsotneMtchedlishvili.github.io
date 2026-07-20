@@ -115,7 +115,7 @@ body {
     margin: 0 auto;
 
     padding: clamp(20px, 5%, 30px);
-    border-radius:var(--border-radius-mobile-large);
+    /* border-radius:var(--border-radius-mobile-large); */
 
     background-color: var(--quaternary-color);
 }
@@ -218,6 +218,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: max-content;
     
 
     
@@ -253,11 +254,12 @@ body {
 .service_Box {
 
     padding: 50px 20px;
-    width: 90vw;
+    /* width: 90vw; */
+    width: 100vw;
     background-color: var(--quaternary-color);
 
     /* height: 60vh; */
-    border-radius: var(--border-radius-mobile-large);
+    /* border-radius: var(--border-radius-mobile-large); */
 
     display: flex;
     align-items: center;
@@ -697,14 +699,15 @@ body {
 
     display: flex;
     flex-direction: column;
-    width: 90%;
+    /* width: 90%; */
+    width: 100vw;
     align-items: center;
     padding-bottom: 10%;
 
     
     
 
-    border-radius: 30px;
+    /* border-radius: 30px; */
 
     background-attachment: fixed;
     background-size: cover;
@@ -766,6 +769,7 @@ body {
     justify-content: center;
 
     flex-grow: 1;
+    margin-bottom: var(--section-separator-unit);
 
 }
 
@@ -793,6 +797,13 @@ body {
     backdrop-filter: blur(12px);
 }
 
+.why_Choose_Card div {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
 .why_Choose_Heading {
 
     font-size: clamp(1rem, 10vw, 2rem);
@@ -802,6 +813,9 @@ body {
 .why_Choose_Desc {
 
     font-size: clamp(0.5rem, 3.8vw, 1rem);
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
     /* font-size: clamp(0.2rem, 1.2vw + 0.5rem, 1.5rem); */
 }
 
@@ -815,13 +829,14 @@ body {
 
 .why_Choose_Titiling {
 
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    padding: 0 5%;
+    /* padding: 0 5%; */
+    margin: var(--section-separator-unit) 0;
 }
 
 /* Getting Started */
@@ -1147,7 +1162,7 @@ body {
         margin: 0 auto;
     
         padding: clamp(10px, 10%, 20px);
-        border-radius: var(--border-radius-mobile-large);
+        /* border-radius: var(--border-radius-mobile-large); */
     
         /* background-color: #242424; */
     }
@@ -1250,7 +1265,8 @@ body {
     
     .mini_Description {
     
-        height: 100%;
+        /* height: 100%; */
+        height: max-content;
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -1296,12 +1312,9 @@ body {
     .service_Box {
     
         padding: 2vw;
-        width: max-content;
-        /* background-color: #242424; */
+        /* width: max-content; */
+
         margin: 0;
-        /* height: 60vh; */
-        /* border-radius: 30px; */
-        /* border-radius: 0; */
     
         display: flex;
         flex-direction: row;
@@ -1513,7 +1526,9 @@ body {
         /* height: 300px; */
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        justify-content: start;
+        flex-grow: 1;
     }
     
     .page_Description h4{
@@ -1534,6 +1549,7 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-top: 5%;
     
     }
     
@@ -1686,13 +1702,13 @@ body {
     
         display: flex;
         flex-direction: column;
-        width: clamp(650px, 62.5vw, 2304px);
+        /* width: clamp(650px, 62.5vw, 2304px); */
         align-items: center;
         padding-bottom: 0;
         
         
     
-        border-radius: 30px;
+        /* border-radius: 30px; */
     
         background-attachment: fixed;
         background-size: cover;
@@ -1771,7 +1787,7 @@ body {
     .why_Choose_Card {
     
         padding: 10px 0;
-        height: fit-content;
+        height: clamp(130px, 6vw, 260px);
         width: unset;
         display: flex;
         /* background-color: rgba(192, 192, 192, 0.384); */
@@ -1795,13 +1811,14 @@ body {
     
     .why_Choose_Titiling {
     
-        height: 200px;
+        /* height: 200px; */
         display: flex;
         flex-direction: column;
         gap: 10px;
         justify-content: center;
         align-items: center;
-        padding: 0 5%;
+        /* padding: 0 5%; */
+        margin: var(--section-separator-unit) 0;
     }
     
     /* Getting Started */
@@ -2065,7 +2082,7 @@ body {
         width: 80vw;
         max-width: unset;
         padding: clamp(20px, 1.5vw, 60px);
-        border-radius: 60px;
+        /* border-radius: 60px; */
     }
     
     .wwa_Img_Wrapper {
@@ -2096,7 +2113,7 @@ body {
     
     .who_We_Are_Text > p {
     
-        font-size: clamp(1.5rem, 1.8vw, 4.5rem);
+        font-size: clamp(1.5rem, 1.5vw, 4.5rem);
         text-align:justify;
         margin: 0 auto;
         /* padding: 0 clamp(20px, 1.5vw, 60px);; */
@@ -2188,11 +2205,11 @@ body {
     .service_Box {
     
         padding: 2vw;
-        width: max-content;
+        /* width: max-content; */
         /* background-color: rgb(36, 36, 36); */
         margin: 0;
         /* height: 60vh; */
-        border-radius: 30px;
+        /* border-radius: 30px; */
     
         display: flex;
         flex-direction: row;
@@ -2239,7 +2256,7 @@ body {
     
     .service_Text p {
     
-        font-size: clamp(1.5rem, 1.25vw, 4.5rem);
+        font-size: clamp(1.5rem, 1.5vw, 4.5rem);
         
         
     }
@@ -2247,7 +2264,7 @@ body {
     .service_Text button {
     
         margin: 0 0;
-        font-size: clamp(1.5rem, 1.25vw, 4.5rem);
+        font-size: clamp(1.5rem, 1.5vw, 4.5rem);
         padding: clamp(20px, 0.25vw, 40px);
     
     }
@@ -2366,7 +2383,7 @@ body {
     
     .page_Description p {
     
-        font-size: clamp(1.3rem, 1rem + 0.5vw, 2.9rem);
+        font-size: clamp(1.3rem, 1rem + 0.75vw, 2.9rem);
         text-align: justify;
         overflow: hidden;
     }
@@ -2456,9 +2473,9 @@ body {
     
     .why_Choose_Container {
     
-        width: clamp(650px, 80vw, 3500px);
+        /* width: clamp(650px, 80vw, 3500px); */
         
-        border-radius: clamp(30px, 1.5vw, 60px);
+        /* border-radius: clamp(30px, 1.5vw, 60px); */
         font-size: clamp(1.5rem, 1vw, 3rem);
     }
     
@@ -2487,8 +2504,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: clamp(100px, 10vw, 200px);
-    
+        /* margin-bottom: clamp(100px, 10vw, 200px); */
+        margin-bottom: var(--section-separator-unit-big);
         flex-grow: 1;
     
     }
@@ -2506,6 +2523,7 @@ body {
     
         padding: 20px 0;
         height: fit-content;
+        height: clamp(260px, 7.5vw, 620px);
         width: clamp(700px, 36.45vw, 1400px);
         border-radius: clamp(20px, 1.2vw, 40px);
         backdrop-filter: blur(12px);
@@ -2519,7 +2537,7 @@ body {
     
     .why_Choose_Desc {
     
-        font-size: clamp(0.2rem, 1.2vw + 0.5rem, 2.5rem);
+        font-size: clamp(0.2rem, 1.2vw + 0.5rem, 2.3rem);
     }
 
     .why_Choose_Desc_Title {
@@ -2531,11 +2549,12 @@ body {
     
     .why_Choose_Titiling {
     
-        height: clamp(200px, 10vw, 400px);
+        /* height: clamp(200px, 10vw, 400px); */
         gap: clamp(10px, 0.6vw, 20px);
         justify-content: center;
         align-items: center;
-        padding: 0 5%;
+        /* padding: 0 5%; */
+        margin: var(--section-separator-unit-big) 0;
     }
     
     /* Getting Started */
@@ -2564,6 +2583,7 @@ body {
     .how_To_Start > p{
     
         font-size: clamp(2.5rem, 2vw, 3rem);
+        /* font-size: clamp(1.5rem, 1.5vw, 4.5rem); */
         margin-bottom: 3vh;
         text-align: center;
     }
