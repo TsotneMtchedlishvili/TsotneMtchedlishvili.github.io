@@ -44,7 +44,7 @@
     font-weight: 900;
     font-size: var(--font-size-title-two);
     text-align: center;
-    border: 2px solid;
+    /* border: 2px solid; */
     border-color: white;
     animation-name: slideDownHomeHeading;
     animation-duration: 1.5s;
@@ -329,6 +329,12 @@
 @media (min-width: 2500px) {
 
   /* Intro Section */
+
+
+.main_Page_Heading {
+
+  font-size: var(--font-size-title-one-big);
+}
 
 .intro_Container {
   background-color: var(--primary-color);
