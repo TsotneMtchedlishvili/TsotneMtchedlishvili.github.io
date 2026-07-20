@@ -8,7 +8,7 @@ const prevBtn = document.querySelector('.carousel_Button--left');
 const nextBtn = document.querySelector('.carousel_Button--right');
 const indicators = Array.from(document.querySelectorAll('.carousel_Indicator'));
 const liveRegion = document.querySelector('.sr-only');
-const carousel = document.querySelector('.carousel');
+// const carousel = document.querySelector('.carousel');
 
 let currentIndex = 0;
 const slideCount = slides.length;

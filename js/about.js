@@ -3,34 +3,34 @@ const serviceInfoPage = document.querySelector(".service_Info_Page");
 const thePage = document.querySelector(".page_Contents");
 const serviceTextContent = {
     "Renovation Operations": `  <div class="page_Img_Wrapper">
-                                    <img src="https://cdn.prod.website-files.com/64a4ff71754d001d8b63f41d/64a50acd5fab23fac7baca5f_REBUILD%20Construction%20Webflow%20Template%20-%20interior%20plan-p-800.jpeg" 
+                                    <img src="Images/Services/7F8A1341-HDR-панорама.jpg" 
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-renovation">Renovation Operations</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Full interior and exterior renovation — from demolition and structural work to finishes and fixtures.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
                                 </div>`,
     "Construction Operations": `<div class="page_Img_Wrapper">
-                                    <img src="https://thumbs.dreamstime.com/b/professional-caucasian-gardener-building-plants-irrigation-system-developed-garden-industrial-theme-plants-irrigation-system-157982906.jpg" 
+                                    <img src="./Images/Services/construction.jpg" 
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-construction">Construction Operations</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>New builds and major structural works, managed end-to-end with certified construction teams.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
                                 </div>`,
     "Landscaping": `<div class="page_Img_Wrapper">
-                                    <img src="https://theremotegroup.com/wp-content/uploads/2024/05/Property-Management-Company-scaled.webp" 
+                                    <img src="./Images/Services/landscaping.jpg" 
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-landscaping">Landscaping</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Outdoor design and implementation — gardens, terraces, driveways, and green spaces.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
@@ -41,18 +41,18 @@ const serviceTextContent = {
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-coordination">Coordination with architects and designers</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>We liaise directly with your architect or designer, or connect you with trusted professionals from our network.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
                                 </div>`,
     "HVAC systems installation": `<div class="page_Img_Wrapper">
-                                    <img src="https://t3.ftcdn.net/jpg/10/90/34/40/360_F_1090344066_emRaz82WCy0e1zjY1jM4fDW4rrV2Yh0D.jpg" 
+                                    <img src="./Images/Services/7F8A1768-HDR-редакт.jpg" 
                                     alt="" class="thumbnail">
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-hvac">HVAC systems installation</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Supply, installation, and commissioning of heating, ventilation, and air conditioning systems.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
@@ -63,7 +63,7 @@ const serviceTextContent = {
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-furniture">Furniture Production Oversight</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>We manage custom furniture production and procurement, ensuring quality and on-time delivery.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
@@ -74,7 +74,7 @@ const serviceTextContent = {
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-cleaning">Cleaning Operations</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Post-construction and ongoing cleaning services to prepare your space for use.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
@@ -85,7 +85,7 @@ const serviceTextContent = {
                                 </div>
                                 <div class="page_Description">
                                     <h4 id="service-title-building">Purchase and Logistics of Building Material</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>We source, price-check, and deliver all materials — saving you time and reducing costs through supplier relationships.</p>
                                     <div class="learn_More_Container">
                                     <a href="" class="learn_More_Page">Learn More</a>
                                     <div class="arrow-Right"></div></div>
@@ -378,8 +378,9 @@ if (serviceBox) {
         serviceBox.style.marginLeft = `0px`;
     }
     else {
-        serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
-        wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
+        // serviceBox.style.marginLeft = `${(window.innerWidth - (serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth)) / 2}px`;
+        // wwaIntro.style.width = `${serviceBox.clientWidth - serviceInfoPage.clientWidth + serviceText.clientWidth}px`;
+        wwaIntro.style.width = `100vw`;
 
     }
 }
@@ -401,7 +402,9 @@ window.addEventListener("resize", () => {
     }
 
     if(window.innerWidth > 1220){
-        wwaIntro.style.width = `90vw`;
+        // wwaIntro.style.width = `90vw`;
+
+        wwaIntro.style.width = `100vw`;
     }
 
     if (serviceBox) {
@@ -444,8 +447,9 @@ window.addEventListener("resize", () => {
             }
         }
         else {
-            serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
-            wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
+            // serviceBox.style.marginLeft = `${(window.innerWidth - ((3 * serviceText.clientWidth + 8 * window.innerWidth/100))) / 2}px`;
+            // wwaIntro.style.width = `${3 * serviceText.clientWidth + 8 * window.innerWidth/100}px`;
+            wwaIntro.style.width = `100vw`;
             if (serviceInfoPage.clientHeight > 1) {
 
                 document.body.style.overflow = "scroll";
