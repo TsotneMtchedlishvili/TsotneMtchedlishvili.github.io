@@ -159,7 +159,7 @@
   @media (min-width: 900px) {
 
     .quick_Buy {
-      margin: var(--section-separator-unit-big) 0;
+      margin: calc(2*var(--section-separator-unit)) 0;
     
   }
 
@@ -202,6 +202,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      margin-block: calc(2*var(--section-separator-unit));
     
     }
 

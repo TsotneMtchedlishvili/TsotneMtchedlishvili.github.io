@@ -1344,6 +1344,12 @@
   }
 
   @media (min-width: 2000px) {
+
+    *, *::before, *::after {
+
+      --section-separator-unit: clamp(48px, 6vw, 96px);
+    }
+
   /* Nav links bigger */
   .nav_List {
     font-size: clamp(1.5rem, 0.8vw + 0.5rem, 3rem);

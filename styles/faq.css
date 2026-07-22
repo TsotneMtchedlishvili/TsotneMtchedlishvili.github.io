@@ -13,7 +13,7 @@ body {
 
 .faq_Banner {
     /* height:30vh; */
-    padding: var(--section-separator-unit-big) 0;
+    padding: var(--section-separator-unit) 0;
     /* padding-bottom: 0; */
     /* background-color: var(--background-color); */
 

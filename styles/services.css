@@ -11,7 +11,7 @@ main {
     min-height: auto;
     background-color: var(--primary-color);
     /* background-color: #161616; */
-    padding-bottom: 100px;
+    padding-bottom: calc(2*var(--section-separator-unit));
 
     /* background-color: black; */
 }
@@ -261,7 +261,7 @@ h1 span{
     justify-content: center;
 
     flex-grow: 1;
-    margin-bottom: var(--section-separator-unit);
+    /* margin-bottom: var(--section-separator-unit); */
 
 }
 
@@ -339,7 +339,7 @@ h1 span{
     background-color: var(--distinguished-window);
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: calc(2*var(--section-separator-unit));
     color: var(--text-color);
     font-family: var(--default-font-family);
 }
@@ -675,7 +675,9 @@ h1 span{
         justify-content: center;
         align-items: center;
         /* padding: 0 5%; */
-        margin: var(--section-separator-unit) 0;
+        /* margin: var(--section-separator-unit) 0; */
+        margin: unset;
+        height: calc(2*var(--section-separator-unit));
     }
 
     /* quote section */
@@ -777,7 +779,7 @@ h1 span{
     .services_Intro {
 
         width: 100%;
-        padding: var(--section-separator-unit-big);
+        padding: var(--section-separator-unit);
         padding-bottom: 0;
     
         display: flex;
@@ -947,7 +949,8 @@ h1 span{
     
     .backdrop_Styling {
     
-        padding: 40px;
+        padding: var(--section-separator-unit) 40px;
+        padding-top: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1038,7 +1041,7 @@ h1 span{
         justify-content: center;
         align-items: center;
         /* padding: 0 5%; */
-        margin: var(--section-separator-unit) 0;
+        /* margin: var(--section-separator-unit) 0; */
     }
 
     /* Quote Section */
@@ -1247,6 +1250,8 @@ h1 span{
     .backdrop_Styling {
     
         padding: clamp(40px, 2.2vw, 80px);
+        padding-bottom: var(--section-separator-unit-big);
+        padding-top: 0;
 
     }
     
@@ -1270,7 +1275,7 @@ h1 span{
         align-items: center;
         justify-content: center;
         /* margin-bottom: clamp(100px, 10vw, 200px); */
-        margin-bottom: var(--section-separator-unit-big);
+        /* margin-bottom: var(--section-separator-unit-big); */
         flex-grow: 1;
     
     }
@@ -1319,7 +1324,8 @@ h1 span{
         justify-content: center;
         align-items: center;
         /* padding: 0 5%; */
-        margin: var(--section-separator-unit-big) 0;
+        /* margin: var(--section-separator-unit-big) 0; */
+        height: calc(2*var(--section-separator-unit-big));
     }
 
     /* Quote Section */

@@ -284,8 +284,8 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: var(--section-separator-unit-big) 0;
-        padding-bottom: var(--section-separator-unit-big);
+        padding: calc(2*var(--section-separator-unit)) 0;
+        padding-bottom: calc(2*var(--section-separator-unit));
         color: var(--text-color);
         font-family: Arial, Helvetica, sans-serif;
     }
