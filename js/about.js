@@ -133,7 +133,7 @@ const selectServiceFunction = (item) => {
 
                 thePage.style.background = "var(--distinguished-window)";
     
-                let topic = item.getElementsByTagName("h4").item(0).textContent;
+                let topic = item.getElementsByTagName("h3").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
 
@@ -220,7 +220,7 @@ const selectServiceFunction = (item) => {
                 serviceInfoPage.classList.add('service_Info_Page_Activate');
                 thePage.style.background = "var(--distinguished-window)";
     
-                let topic = item.getElementsByTagName("h4").item(0).textContent;
+                let topic = item.getElementsByTagName("h3").item(0).textContent;
                 thePage.innerHTML = serviceTextContent[topic];
                 thePage.classList.remove("slide_Up");
                 thePage.classList.add("slide_Up");
