@@ -42,7 +42,7 @@
     color: rgb(255, 255, 255);
     mix-blend-mode: difference;
     font-weight: 900;
-    font-size: var(--font-size-title-two);
+    /* font-size: var(--font-size-title-two); */
     text-align: center;
     /* border: 2px solid; */
     border-color: white;
@@ -333,7 +333,7 @@
 
 .main_Page_Heading {
 
-  font-size: var(--font-size-title-one-big);
+  /* font-size: var(--font-size-title-one-big); */
 }
 
 .intro_Container {
