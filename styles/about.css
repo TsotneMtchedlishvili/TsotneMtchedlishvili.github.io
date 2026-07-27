@@ -938,7 +938,8 @@ body {
 .get_In_Touch {
 
     padding: calc(2*var(--section-separator-unit)) 0;
-    padding-bottom: var(--section-separator-unit);
+    padding-top: 0;
+    background-color: var(--distinguished-window);
 }
 
 .conclusion_Container {
@@ -949,6 +950,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     gap: 30px;
+
 
 }
 
@@ -1936,7 +1938,8 @@ body {
     .get_In_Touch {
     
         padding: calc(2*var(--section-separator-unit)) 0;
-        padding-bottom: 0;
+        padding-top: 0;
+        /* padding-bottom: 0; */
     }
     
     .conclusion_Container {
@@ -2686,14 +2689,15 @@ body {
     .get_In_Touch {
     
         padding: clamp(100px, 5.3vw, 200px) 0;
-        padding: 0;
+        padding-top: 0;
+        
     }
     
     .conclusion_Container {
 
         gap: clamp(30px, 1.5vw, 60px);
         height: unset;
-        padding: calc(2*var(--section-separator-unit)) 80px;
+        padding-inline: 160px;
         padding-bottom: 0;
     
     }
