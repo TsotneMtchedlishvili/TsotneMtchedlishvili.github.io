@@ -29,6 +29,11 @@ body {
     text-align: center;
 }
 
+.faq_Banner h1 {
+
+    font-size: var(--fs-heading-lg);
+}
+
 .faq_Section {
 
     /* background-color: var(--background-color); */
@@ -58,7 +63,8 @@ body {
 .subtopic h2 {
 
     color: var(--nav-text-color);
-    font-size: clamp(1rem, 1.8vw, 2.3rem);
+    /* font-size: clamp(1rem, 1.8vw, 2.3rem); */
+    font-size: var(--fs-heading-sm);
     font-family: var(--default-font-family);
     margin-bottom: 2vh;
     text-align: center;
@@ -96,7 +102,7 @@ body {
 .subtopic h2 {
 
     color: var(--nav-text-color);
-    font-size: clamp(1rem, 1.8vw, 2.3rem);
+    /* font-size: clamp(1rem, 1.8vw, 2.3rem); */
     font-family: var(--default-font-family);
     margin-bottom: 2vh;
 }
@@ -129,7 +135,7 @@ body {
 
 .subtopic h2 {
 
-  font-size: clamp(1rem, 1.8vw, 2.3rem);
+  /* font-size: clamp(1rem, 1.8vw, 2.3rem); */
   margin-bottom: 2vh;
 }
 

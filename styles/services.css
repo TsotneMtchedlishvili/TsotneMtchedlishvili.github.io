@@ -52,7 +52,7 @@ h1 span{
 
     padding: var(--section-separator-unit) 0;
 
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-family: var(--default-font-family);
 
@@ -63,13 +63,14 @@ h1 span{
 
     font-weight: 900;
 
-    font-size: clamp(1rem, 8vw, 2rem);
+    /* font-size: clamp(1rem, 8vw, 2rem); */
     margin-bottom: 20px;
 }
 
 .intro_Description {
 
-    font-size: clamp(1rem, 1.5vw + 0.5rem, 2rem);
+    /* font-size: clamp(1rem, 1.5vw + 0.5rem, 2rem); */
+    font-size: var(--fs-body-xl);
 
 }
 
@@ -298,13 +299,14 @@ h1 span{
 
 .why_Choose_Heading {
 
-    font-size: clamp(1rem, 10vw, 2rem);
+    /* font-size: clamp(1rem, 10vw, 2rem); */
     text-align: center;
 }
 
 .why_Choose_Desc {
 
-    font-size: clamp(0.5rem, 3.8vw, 1rem);
+    /* font-size: clamp(0.5rem, 3.8vw, 1rem); */
+    font-size: var(--fs-body);
     padding-right: 10px;
     display: flex;
     align-items: center;
@@ -313,7 +315,8 @@ h1 span{
 
 .why_Choose_Desc_Title {
 
-    font-size: clamp(0.5rem, 6vw, 1.3rem);
+    /* font-size: clamp(0.5rem, 6vw, 1.3rem); */
+    font-size: var(--fs-card-lg);
     font-weight: 700;
 
     }
@@ -388,16 +391,17 @@ h1 span{
 
 }
 
-.quote_Desc_Container h2 {
+/* .quote_Desc_Container h2 {
 
     font-size: clamp(1.5rem, 7.5vw, 2.5rem);
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
 
-}
+} */
 
 .quote_Desc_Container p {
 
-    font-size: clamp(0.3rem, 4.5vw, 1.25rem);
+    /* font-size: clamp(0.3rem, 4.5vw, 1.25rem); */
+    font-size: var(--fs-body-xl);
     /* margin-bottom: 20px; */
 
 }
@@ -436,14 +440,15 @@ h1 span{
     
     .services_Heading {
     
-        font-size: clamp(0.5rem, 4.3vw, 3rem);
+        /* font-size: clamp(0.5rem, 4.3vw, 3rem); */
         margin-bottom: 20px;
     }
     
     .intro_Description {
     
-        font-size: 21px;
+        /* font-size: 21px; */
         width: 800px;
+        font-size: var(--fs-body-xl);
     
     }
     
@@ -656,13 +661,14 @@ h1 span{
     
     .why_Choose_Heading {
     
-        font-size: clamp(1rem, 10vw, 3rem);
+        /* font-size: clamp(1rem, 10vw, 3rem); */
         text-align: center;
     }
     
     .why_Choose_Desc {
     
-        font-size: clamp(0.5rem, 4.5vw, 1.25rem);
+        /* font-size: clamp(0.5rem, 4.5vw, 1.25rem); */
+        font-size: var(--fs-body);
     }
     
     
@@ -739,14 +745,15 @@ h1 span{
 
 .quote_Desc_Container h2 {
 
-    font-size: clamp(1.5rem, 7.5vw, 2.5rem);
+    /* font-size: clamp(1.5rem, 7.5vw, 2.5rem); */
     /* margin-bottom: 10px; */
 
 }
 
 .quote_Desc_Container p {
 
-    font-size: clamp(0.3rem, 4.5vw, 1.25rem);
+    /* font-size: clamp(0.3rem, 4.5vw, 1.25rem); */
+    font-size: var(--fs-body-xl);
     /* margin-bottom: 20px; */
     max-width: 80%;
 
@@ -767,12 +774,12 @@ h1 span{
 
 @media  (min-width: 1600px) {
 
-    h1 {
+    /* h1 {
 
         font-size: clamp(2rem, 30vw, 4rem);
 
-        /* transform: translate(0, -50px); */
-    }
+        transform: translate(0, -50px); --
+    } */
     
     /* Intro Section */
 
@@ -796,13 +803,13 @@ h1 span{
     
     .services_Heading {
     
-        font-size: 46px;
+        /* font-size: 46px; */
         margin-bottom: 20px;
     }
     
     .intro_Description {
     
-        font-size: 21px;
+        /* font-size: 21px; */
         width: 800px;
     
     }
@@ -1022,13 +1029,14 @@ h1 span{
     
     .why_Choose_Heading {
     
-        font-size: clamp(1rem, 10vw, 3rem);
+        /* font-size: clamp(1rem, 10vw, 3rem); */
         text-align: center;
     }
     
     .why_Choose_Desc {
     
-        font-size: clamp(0.5rem, 4.5vw, 1.25rem);
+        /* font-size: clamp(0.5rem, 4.5vw, 1.25rem); */
+        font-size: var(--fs-body);
     }
     
     
@@ -1104,14 +1112,15 @@ h1 span{
     
     .quote_Desc_Container h2 {
     
-        font-size: 46px;
+        /* font-size: 46px; */
         margin-bottom: 10px;
     
     }
     
     .quote_Desc_Container p {
     
-        font-size: 20px;
+        /* font-size: 20px; */
+        font-size: var(--fs-body-xl);
         margin-bottom: 20px;
     
     }
@@ -1125,12 +1134,12 @@ h1 span{
 }
 
 @media (min-width: 2000px) {
-     h1 {
+     /* h1 {
 
         font-size: clamp(4rem, 7vw, 8rem);
 
-        /* transform: translate(0, -50px); */
-    }
+        transform: translate(0, -50px); ---
+    } */
     
     /* Intro Section */
 
@@ -1143,13 +1152,13 @@ h1 span{
     
     .services_Heading {
     
-        font-size: clamp(3rem, 2.5vw, 6rem);
+        /* font-size: clamp(3rem, 2.5vw, 6rem); */
         margin-bottom: clamp(20px, 1vw, 40px);
     }
     
     .intro_Description {
     
-        font-size: clamp(1.5rem, 1.2vw, 3rem);
+        /* font-size: clamp(1.5rem, 1.2vw, 3rem); */
         width: clamp(800px, 41vw, 1600px);
     
     }
@@ -1301,20 +1310,17 @@ h1 span{
     
     .why_Choose_Heading {
     
-        font-size: clamp(3rem, 4vw, 5rem);
+        /* font-size: clamp(3rem, 4vw, 5rem); */
         text-align: center;
     }
     
     .why_Choose_Desc {
     
-        font-size: clamp(0.2rem, 1.2vw + 0.5rem, 2.3rem);
+        /* font-size: clamp(0.2rem, 1.2vw + 0.5rem, 2.3rem); */
+        font-size: var(--fs-body);
     }
 
-    .why_Choose_Desc_Title {
 
-    font-size: clamp(1rem, 1.8vw, 3rem);
-
-    }
     
     
     .why_Choose_Titiling {
@@ -1377,14 +1383,15 @@ h1 span{
     
     .quote_Desc_Container h2 {
     
-        font-size: clamp(3rem, 2.5vw, 6rem);
+        /* font-size: clamp(3rem, 2.5vw, 6rem); */
         margin-bottom: clamp(10px, 0.6vw, 20px);
     
     }
     
     .quote_Desc_Container p {
     
-        font-size: clamp(0.3rem, 1vw + 0.4rem, 2rem);
+        /* font-size: clamp(0.3rem, 1vw + 0.4rem, 2rem); */
+        font-size: var(--fs-body-xl);
         font-family: var(--default-font-family);
         margin-bottom: 20px;
         max-width: unset;
@@ -1405,7 +1412,8 @@ h1 span{
 
     .quote_Desc_Container p {
     
-        font-size: clamp(0.3rem, 1.5vw + 0.5rem, 2.8rem);
+        /* font-size: clamp(0.3rem, 1.5vw + 0.5rem, 2.8rem); */
+        font-size: var(--fs-body-xl);
         font-family: var(--default-font-family);
         margin-bottom: 20px;
         max-width: unset;

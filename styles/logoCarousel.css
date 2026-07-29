@@ -68,7 +68,8 @@
   }
 
   .item_Title {
-    font-size: var(--font-size-title-one);
+    /* font-size: var(--font-size-title-one); */
+    font-size: var(--fs-body);
   }
 
   .carousel_Item button {
@@ -76,7 +77,8 @@
     width: auto;
     padding: 3%;
     /* max-height: fit-content; */
-    font-size: var(--btn-text-small-phone);
+    /* font-size: var(--btn-text-small-phone); */
+    font-size: var(--fs-body-sm);
     padding: auto;
     border-radius: clamp(5px, 1vw, 10px);
 
@@ -142,7 +144,8 @@
 
     .item_Title {
 
-      font-size: var(--font-size-title-two);
+      /* font-size: var(--font-size-title-two); */
+      font-size: var(--fs-body);
     }
   }
 
@@ -150,7 +153,8 @@
 
     .item_Title {
 
-      font-size: var(--font-size-title-two);
+      /* font-size: var(--font-size-title-two); */
+      font-size: var(--fs-body);
     }
   }
 
@@ -182,13 +186,15 @@
 
     .carousel_Item button {
 
-    font-size: var(--btn-text-small);
+    /* font-size: var(--btn-text-small); */
+    font-size: var(--fs-body-sm);
 
   }
 
   .item_Title {
 
-      font-size: var(--font-size-title-three);
+      /* font-size: var(--font-size-title-three); */
+      font-size: var(--fs-body);
     }
 
 
@@ -215,7 +221,18 @@
 
   .item_Title {
 
-    font-size: clamp();
+    /* font-size: clamp(); */
+    font-size: var(--fs-body);
   }
 
+  }
+
+  @media (min-width: 3000px) {
+
+    .carousel_Item button {
+
+    /* font-size: var(--btn-text-small); */
+    font-size: var(--fs-card-sm);
+
+  }
   }

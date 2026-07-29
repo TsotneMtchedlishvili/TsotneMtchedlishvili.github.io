@@ -57,14 +57,16 @@ html, body {
   /* background: linear-gradient(180deg, rgba(15,98,254,0.03), transparent 60%); */
 }
 .site-title{
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  /* font-size: clamp(1.4rem, 2.2vw, 2.2rem); */
+  font-size: var(--fs-heading-lg);
   margin: 10vh 0 0.35rem 0;
   line-height: 1.06;
 }
 .lead{
   margin: 0;
   color: var(--muted);
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  /* font-size: clamp(0.95rem, 1.2vw, 1.05rem); */
+  font-size: var(--fs-body);
   line-height: 1.5; /* improved readability */
   max-width: 80ch;
 }
@@ -142,7 +144,8 @@ html, body {
 }
 .partners-title{
   margin:0;
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  /* font-size: clamp(1.05rem, 1.8vw, 1.35rem); */
+  font-size: var(--fs-body-xl);
   font-weight: 400;
   color: var(--text-color);
 }
@@ -159,7 +162,8 @@ html, body {
   padding: clamp(8px,1.2vh,12px);
   border-radius: 10px;
   border: 1px solid var(--nav-text-color);
-  font-size: clamp(0.95rem, 1vw, 1rem);
+  /* font-size: clamp(0.95rem, 1vw, 1rem); */
+  font-size:  var(--fs-body);
   outline: none;
 }
 .search-wrap input:focus{
@@ -227,7 +231,8 @@ html, body {
 }
 .partner-card .card-title{
   font-weight:600;
-  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  /* font-size: clamp(0.98rem, 1.2vw, 1.08rem); */
+  font-size: var(--fs-card-sm);
   margin:0;
   line-height:1.15;
   /* allow wrapping on small screens to avoid truncation */
@@ -237,7 +242,7 @@ html, body {
 }
 .partner-card .card-excerpt{
   color:var(--muted);
-  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  font-size: var(--fs-body);
   margin:0;
   line-height:1.45;
   display:block;
@@ -319,7 +324,7 @@ a.partner-card:focus-visible,
 }
 .partners-title{
   margin:0;
-  font-size: clamp(1.05rem, 1.8vw, 2.46rem);
+  /* font-size: clamp(1.05rem, 1.8vw, 2.46rem); */
 }
 
 /* search box sizing that doesn't choke on small screens */
@@ -333,7 +338,8 @@ a.partner-card:focus-visible,
   padding: clamp(8px, 1.2vh, 24px);
   border-radius: clamp(10px, 0.52vw 20px);
   border: 2px solid var(--nav-text-color);
-  font-size: clamp(0.95rem, 1vw, 1.6rem);
+  /* font-size: clamp(0.95rem, 1vw, 1.6rem); */
+  font-size: var(--fs-body);
 }
 .search-wrap input:focus{
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
@@ -391,12 +397,12 @@ a.partner-card:focus-visible,
 
   .partner-card .card-title{
 
-    font-size: clamp(0.98rem, 1.2vw, 1.27rem);
+    /* font-size: clamp(0.98rem, 1.2vw, 1.27rem); */
     line-height:1.15;
   }
   .partner-card .card-excerpt{
     color:var(--muted);
-    font-size: clamp(0.9rem, 0.95vw, 1.64rem);
+    /* font-size: clamp(0.9rem, 0.95vw, 1.64rem); */
     line-height:1.45;
   }
 
@@ -414,7 +420,7 @@ a.partner-card:focus-visible,
         padding: clamp(8px, 1.2vh, 24px);
         border-radius: clamp(10px, 0.52vw, 30px);
         border: 2px solid var(--nav-text-color);
-        font-size: clamp(0.95rem, 1vw, 1.6rem);
+        /* font-size: clamp(0.95rem, 1vw, 1.6rem); */
       }
 
     .partner-card{
@@ -430,12 +436,12 @@ a.partner-card:focus-visible,
 
     .partner-card .card-title{
 
-      font-size: clamp(0.98rem, 1.2vw, 1.7rem);
+      /* font-size: clamp(0.98rem, 1.2vw, 1.7rem); */
       line-height:1.25;
     }
     .partner-card .card-excerpt{
       color:var(--muted);
-      font-size: clamp(0.9rem, 0.95vw, 1.64rem);
+      /* font-size: clamp(0.9rem, 0.95vw, 1.64rem); */
       line-height:1.6;
     }
 
